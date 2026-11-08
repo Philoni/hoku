@@ -1,0 +1,66 @@
+# Generates Hoku.xcodeproj:  xcodegen generate
+# The team comes from the environment (scripts/build-app.sh finds it automatically).
+name: Hoku
+options:
+  bundleIdPrefix: io.github.philoni
+  deploymentTarget:
+    macOS: "26.0"
+  developmentLanguage: de
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    DEVELOPMENT_TEAM: ${HOKU_TEAM}
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_HARDENED_RUNTIME: YES
+    MARKETING_VERSION: 0.4.0
+    CURRENT_PROJECT_VERSION: 1
+    DEAD_CODE_STRIPPING: YES
+
+packages:
+  HueKit:
+    path: Packages/HueKit
+
+targets:
+  Hoku:
+    type: application
+    platform: macOS
+    sources:
+      - App
+      - path: Resources/AppIcon.icns
+        buildPhase: resources
+    dependencies:
+      - package: HueKit
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Hoku
+        CFBundleIconFile: AppIcon
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        LSUIElement: true
+        LSApplicationCategoryType: public.app-category.utilities
+        NSLocalNetworkUsageDescription: Hoku steuert deine Hue Bridge direkt im lokalen Netzwerk.
+        NSBonjourServices: [_hue._tcp]
+        CFBundleURLTypes:
+          - CFBundleURLName: io.github.philoni.hoku
+            CFBundleURLSchemes: [hoku]
+        # See App/Support/Features.swift. Off unless a build passes HOKU_AWAY_REMINDER=YES.
+        HokuAwayReminder: $(HOKU_AWAY_REMINDER)
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.philoni.hoku
+        PRODUCT_NAME: Hoku
+        HOKU_AWAY_REMINDER: "NO"
+
+schemes:
+  Hoku:
+    build:
+      targets:
+        Hoku: all
+    run:
+      config: Debug
+    archive:
+      config: Release

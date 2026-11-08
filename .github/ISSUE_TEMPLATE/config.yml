@@ -1,0 +1,13 @@
+# Docs: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+# Requires Discussions to be enabled (categories "Q&A" and "Ideas").
+blank_issues_enabled: false
+contact_links:
+  - name: Question / Frage
+    url: https://github.com/Philoni/hoku/discussions/categories/q-a
+    about: How do I…? Setup help, Siri, Apple Home. / Wie geht…? Hilfe bei Einrichtung, Siri, Apple Home.
+  - name: Security vulnerability / Sicherheitslücke
+    url: https://github.com/Philoni/hoku/security/advisories/new
+    about: Please report security problems privately, not as a public issue.
+  - name: Problem with the Hue Bridge, lamps or the Hue app
+    url: https://www.philips-hue.com/support
+    about: Hoku is not made by Signify. Hardware, firmware and Hue app problems go to Philips Hue support.

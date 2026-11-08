@@ -1,0 +1,27 @@
+# Tests HueKit, builds the app without signing, and makes sure no personal data slipped in.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Privacy check
+        run: scripts/privacy-check.sh
+      - name: HueKit tests
+        run: swift test --package-path Packages/HueKit
+      - name: Build app (unsigned)
+        run: |
+          brew install xcodegen
+          HOKU_TEAM= xcodegen generate --quiet
+          xcodebuild -project Hoku.xcodeproj -scheme Hoku -configuration Release \
+            -derivedDataPath build/DerivedData -quiet \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO DEVELOPMENT_TEAM="" build

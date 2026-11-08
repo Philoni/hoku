@@ -1,0 +1,63 @@
+name: Feature request / Idee
+description: Suggest an idea or improvement for Hoku. / Schlag eine Idee oder Verbesserung vor.
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! English or German is fine. Open-ended ideas and "would it be possible…" questions fit
+        better in [Discussions → Ideas](https://github.com/Philoni/hoku/discussions/categories/ideas).
+        Please check [open ideas](https://github.com/Philoni/hoku/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) first – it may already be planned.
+
+        Hoku stays **local-only**: no accounts, no cloud, no telemetry. Ideas that need these won't be implemented.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve? / Welches Problem löst es?
+      description: Describe the situation, not only the solution. "Every evening I…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: How could Hoku help? / Wie könnte Hoku helfen?
+      description: What would you click, say (Siri) or see? Sketches and screenshots are welcome.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Menu bar panel / rooms / lamps / scenes
+        - Siri / Shortcuts / Control Center
+        - Alarm / routines / timers / automations
+        - Effects / colours / entertainment / sync
+        - Several bridges / several Macs / family
+        - Setup / installation / updates
+        - Accessibility / languages
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives / workarounds
+      description: How do you do it today (Hue app, Apple Home, Shortcuts, another app)?
+
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you like to help build it?
+      options:
+        - "No, just the idea"
+        - Yes, I'd like to open a pull request
+        - I can help test
+    validations:
+      required: true

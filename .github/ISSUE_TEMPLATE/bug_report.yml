@@ -1,0 +1,147 @@
+# Syntax: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# The labels below must exist in the repository (runbook §4.3), otherwise GitHub silently drops them.
+name: Bug report / Fehler melden
+description: Something in Hoku doesn't work as expected. / Etwas in Hoku funktioniert nicht wie erwartet.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time! English or German is fine. / Danke! Deutsch oder Englisch ist beides okay.
+
+        **Before you start:** please check the pinned issue *"Known issues"* on the [issues page](https://github.com/Philoni/hoku/issues) –
+        especially *"Bridge not reachable after a reboot"* (an Apple bug: toggle Hoku off/on in System Settings → Privacy & Security → Local Network)
+        and *"several copies of Hoku installed"*.
+        **Security problems** → please report them privately instead: https://github.com/Philoni/hoku/security/advisories/new
+
+  - type: input
+    id: hoku-version
+    attributes:
+      label: Hoku version
+      description: Hoku → Settings → About (e.g. 0.9.0). Built from source? Add the commit (`git rev-parse --short HEAD`).
+      placeholder: "0.9.0"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: Apple menu → About This Mac, or run `sw_vers -productVersion` in Terminal.
+      placeholder: "26.7.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mac
+    attributes:
+      label: Mac
+      options:
+        - Apple silicon (M1 or newer)
+        - Intel
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you install Hoku?
+      options:
+        - Download from GitHub Releases / website
+        - Built from source (make install / Xcode)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bridge
+    attributes:
+      label: Hue Bridge model
+      description: Hue app → Settings → Hue Bridges → ⓘ. The round first-generation bridge (v1) is not supported.
+      options:
+        - Hue Bridge (v2, square)
+        - Hue Bridge Pro
+        - More than one bridge
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: bridge-software
+    attributes:
+      label: Bridge software version (optional)
+      description: Hue app → Settings → Hue Bridges → ⓘ → Software.
+      placeholder: "1.7x.xxxxxxxxx"
+
+  - type: dropdown
+    id: apple-home
+    attributes:
+      label: Is your bridge also added to Apple Home or another platform (Matter, Google Home)?
+      options:
+        - "No"
+        - Apple Home (HomeKit or Matter)
+        - Google Home / other Matter platform
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Installation / "Open Anyway" / Gatekeeper
+        - Setup assistant / pairing / finding the bridge
+        - Local Network permission
+        - Menu bar panel / rooms / lamps / scenes
+        - Siri / Shortcuts / Control Center
+        - Alarm / routines / sleep timer / lock screen
+        - Device check / suggestions
+        - Installation & Updates
+        - Performance / battery / CPU
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened? / Was ist passiert?
+      description: Also tell us what you expected instead. Screenshots or a short screen recording help a lot.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the panel with ⌃⌥L
+        2. Drag the "Living Room" card to 30 %
+        3. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional, but very helpful)
+      description: |
+        Reproduce the problem, then run this in Terminal and paste the relevant part (or attach the file):
+        `log show --last 15m --style compact --predicate 'process == "Hoku"' > ~/Desktop/hoku-log.txt`
+        Crashed? Attach the newest `Hoku-*.ips` from `~/Library/Logs/DiagnosticReports` (Console app → Crash Reports).
+        Several copies installed? `mdfind "kMDItemCFBundleIdentifier == io.github.philoni.hoku"`
+        **Please remove anything private first:** bridge key (`hue-application-key`), bridge ID, IP addresses, names you don't want to share.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: Only one copy of Hoku is installed (in Applications).
+        - label: I removed private data (bridge key, IP addresses, personal names) from logs and screenshots.
+          required: true

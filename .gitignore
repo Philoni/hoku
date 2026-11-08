@@ -1,0 +1,12 @@
+.build/
+build/
+*.app
+.DS_Store
+.swiftpm/
+Hoku.xcodeproj/
+App/Info.plist
+App/Hoku.entitlements
+
+# Personal patterns for scripts/privacy-check.sh (never commit)
+.privacy-patterns.local
+dist/

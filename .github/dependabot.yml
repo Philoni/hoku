@@ -1,0 +1,18 @@
+# Keeps the SHA-pinned GitHub Actions in .github/workflows/*.yml up to date (Dependabot updates the SHA and the
+# "# vX.Y.Z" comment). Swift packages are deliberately NOT included: Sparkle is pinned with exactVersion and
+# only updated by hand after reading its release notes (it is part of the signing/update chain).
+# Docs: https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"                 # covers .github/workflows
+    schedule:
+      interval: "monthly"          # a solo maintainer does not need weekly noise
+    cooldown:
+      default-days: 7              # only propose versions that have been public for a week
+    groups:
+      actions:
+        patterns: ["*"]            # one PR per month for all actions
+    commit-message:
+      prefix: "CI"
+    open-pull-requests-limit: 3
