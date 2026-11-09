@@ -21,11 +21,18 @@ struct SettingsView: View {
                 VStack(spacing: 7) {
                     SectionTitle(text: "Bedienung")
                     VStack(spacing: 10) {
-                        HStack {
-                            Label("Hoku öffnen", systemImage: "keyboard")
-                            Spacer()
-                            HotKeyRecorder(combination: $model.hotKeyCombination)
+                        Button {
+                            push(.shortcuts)
+                        } label: {
+                            HStack {
+                                Label("Tastenkürzel", systemImage: "keyboard")
+                                Spacer()
+                                Text(shortcutSummary).foregroundStyle(.secondary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            }
+                            .contentShape(Rectangle())
                         }
+                        .buttonStyle(PressableStyle())
                         Divider().opacity(0.4)
                         SettingSwitch(title: "Beim Anmelden starten", systemImage: "power.circle", isOn: $model.launchesAtLogin)
                         Divider().opacity(0.4)
@@ -194,6 +201,11 @@ struct SettingsView: View {
         ]
     }
 
+    private var shortcutSummary: String {
+        let count = model.shortcuts.count
+        return count == 0 ? model.hotKeyCombination.displayString : "\(model.hotKeyCombination.displayString) + \(count)"
+    }
+
     private var leftOnStatus: String {
         if model.leftOn.isEnabled { return "An" }
         return model.cloud.isConnected ? "Aus" : "Einrichten"
@@ -216,48 +228,6 @@ struct SettingsView: View {
             Spacer(minLength: 0)
         }
         .font(.system(size: 11.5, design: .rounded))
-    }
-}
-
-/// Click, then press the new shortcut. Esc cancels.
-private struct HotKeyRecorder: View {
-    @Binding var combination: HotKey.Combination
-    @State private var isRecording = false
-    @State private var monitor: Any?
-
-    var body: some View {
-        Button {
-            isRecording ? stop() : start()
-        } label: {
-            Text(isRecording ? "Kürzel drücken …" : combination.displayString)
-                .font(.system(size: 12, weight: .semibold, design: .rounded))
-                .frame(minWidth: 70)
-        }
-        .buttonStyle(.glass)
-        .controlSize(.small)
-        .help("Klicken und neue Tastenkombination drücken")
-        .onDisappear(perform: stop)
-    }
-
-    private func start() {
-        isRecording = true
-        monitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
-            MainActor.assumeIsolated {
-                if event.keyCode == 53 { // Esc
-                    stop()
-                } else if let new = HotKey.Combination(event: event) {
-                    combination = new
-                    stop()
-                }
-            }
-            return nil
-        }
-    }
-
-    private func stop() {
-        isRecording = false
-        if let monitor { NSEvent.removeMonitor(monitor) }
-        monitor = nil
     }
 }
 
