@@ -202,15 +202,15 @@ struct SettingsView: View {
     }
 
     private var examples: [String] {
-        let room = store.sortedRooms.first?.name ?? "Wohnzimmer"
-        let scene = store.sortedRooms.first.flatMap { store.scenes(in: $0).first?.name } ?? "Entspannen"
+        let room = store.sortedRooms.first?.name ?? String(localized: "Wohnzimmer")
+        let scene = store.sortedRooms.first.flatMap { store.scenes(in: $0).first?.name } ?? String(localized: "Entspannen")
         func encode(_ text: String) -> String {
             text.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? text
         }
         return [
-            "hoku://szene/\(encode(scene))?raum=\(encode(room))",
-            "hoku://raum/\(encode(room))/umschalten",
-            "hoku://alle/aus",
+            String(localized: "hoku://szene/\(encode(scene))?raum=\(encode(room))"),
+            String(localized: "hoku://raum/\(encode(room))/umschalten"),
+            String(localized: "hoku://alle/aus"),
         ]
     }
 

@@ -52,7 +52,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ The Hue app on your phone also works when you're away."
+            "value": "%@ The Hue app on your phone also works when you’re away."
           }
         }
       }
@@ -196,7 +196,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ is at %lld %%."
+            "value": "%@ is at %lld%%."
           }
         }
       }
@@ -294,7 +294,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld %%"
+            "value": "%lld%%"
           }
         }
       }
@@ -304,7 +304,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld %% brightness"
+            "value": "%lld%% brightness"
           }
         }
       }
@@ -507,13 +507,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld light is off. It's dark at home now."
+                  "value": "%lld light is off. It’s dark at home now."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld lights are off. It's dark at home now."
+                  "value": "%lld lights are off. It’s dark at home now."
                 }
               }
             }
@@ -650,7 +650,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld of %lld handed over to the Shortcuts app …"
+            "value": "%lld of %lld handed over to the Shortcuts app…"
           }
         }
       }
@@ -870,7 +870,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "All Off"
+            "value": "All off"
           }
         }
       }
@@ -980,7 +980,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Other App Data …"
+            "value": "Other App Data…"
           }
         }
       }
@@ -1080,7 +1080,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Turning off didn't work"
+            "value": "Turning off didn’t work"
           }
         }
       }
@@ -1270,7 +1270,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Don't see your bridge? Enter its IP address"
+            "value": "Don’t see your bridge? Enter its IP address"
           }
         }
       }
@@ -1280,7 +1280,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Disconnect Bridge …"
+            "value": "Disconnect Bridge…"
           }
         }
       }
@@ -1340,7 +1340,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Then Hoku sets up exactly what you're missing."
+            "value": "Then Hoku sets up exactly what you’re missing."
           }
         }
       }
@@ -1370,7 +1370,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The sign-in window couldn't be opened."
+            "value": "The sign-in window couldn’t be opened."
           }
         }
       }
@@ -1446,7 +1446,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Your Mac isn't signed in to an Apple Account"
+            "value": "Your Mac isn’t signed in to an Apple Account"
           }
         }
       }
@@ -1596,7 +1596,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dim, switch, and pick scenes – with one click in the menu bar."
+            "value": "Dim, turn on and off, pick scenes – with one click in the menu bar."
           }
         }
       }
@@ -1851,6 +1851,16 @@
         }
       }
     },
+    "Entspannen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relax"
+          }
+        }
+      }
+    },
     "Erkannt": {
       "localizations": {
         "en": {
@@ -2081,6 +2091,16 @@
         }
       }
     },
+    "Geräte": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Devices"
+          }
+        }
+      }
+    },
     "Geräte-Check": {
       "localizations": {
         "en": {
@@ -2246,7 +2266,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "For this, Hoku needs your own free Hue app. It's a one-time setup of about five minutes. Signify requires a developer account for this (18 and older) and your agreement to its terms of use; the credentials are for you alone."
+            "value": "For this, Hoku needs your own free Hue app. It’s a one-time setup of about five minutes. Signify requires a developer account for this (18 and older) and your agreement to its terms of use; the credentials are for you alone."
           }
         }
       }
@@ -2266,7 +2286,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoku adds what Home can't: scenes & more"
+            "value": "Hoku adds what Home can’t: scenes & more"
           }
         }
       }
@@ -2356,7 +2376,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoku is loading your rooms …"
+            "value": "Hoku is loading your rooms…"
           }
         }
       }
@@ -2396,7 +2416,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoku sets up Siri commands for you without needing the app name."
+            "value": "Hoku sets up Siri commands for you, so you don’t need to say the app name."
           }
         }
       }
@@ -2406,7 +2426,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoku checks when the Mac wakes up outside your home network, is unlocked, or switches Wi-Fi – then every 30 minutes while it's awake."
+            "value": "Hoku checks when the Mac wakes up outside your home network, is unlocked, or switches Wi-Fi – then every 30 minutes while it’s awake."
           }
         }
       }
@@ -2426,7 +2446,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoku forgets the key. After that, you'll need to press the link button on the bridge again."
+            "value": "Hoku forgets the key. After that, you’ll need to press the link button on the bridge again."
           }
         }
       }
@@ -2588,7 +2608,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Contents"
+            "value": "Contains"
           }
         }
       }
@@ -2838,7 +2858,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Press shortcut …"
+            "value": "Press shortcut…"
           }
         }
       }
@@ -2928,7 +2948,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dim slowly over …"
+            "value": "Dim slowly over…"
           }
         }
       }
@@ -2998,7 +3018,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Live connected"
+            "value": "Connected"
           }
         }
       }
@@ -3018,7 +3038,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Runs on the bridge, even when your Mac sleeps"
+            "value": "Runs on the bridge, even while your Mac sleeps"
           }
         }
       }
@@ -3458,7 +3478,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Checking …"
+            "value": "Checking…"
           }
         }
       }
@@ -3864,7 +3884,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sunrise over"
+            "value": "Sunrise length"
           }
         }
       }
@@ -3974,7 +3994,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Looking for your Hue Bridge …"
+            "value": "Looking for your Hue Bridge…"
           }
         }
       }
@@ -4244,7 +4264,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Connecting to the bridge …"
+            "value": "Connecting to the bridge…"
           }
         }
       }
@@ -4254,7 +4274,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Connecting …"
+            "value": "Connecting…"
           }
         }
       }
@@ -4354,7 +4374,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Preview · %lld min in 3 sec"
+            "value": "Preview · %lld min in 3 s"
           }
         }
       }
@@ -4410,7 +4430,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Waiting for your answer in the system dialog …"
+            "value": "Waiting for your answer in the system dialog…"
           }
         }
       }
@@ -4420,7 +4440,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Waiting for the browser …"
+            "value": "Waiting for the browser…"
           }
         }
       }
@@ -4430,7 +4450,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Waiting for macOS …"
+            "value": "Waiting for macOS…"
           }
         }
       }
@@ -4600,7 +4620,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Setting up …"
+            "value": "Setting up…"
           }
         }
       }
@@ -4616,7 +4636,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Handing over … %lld/%lld"
+            "value": "Handing over… %lld/%lld"
           }
         }
       }
@@ -4627,6 +4647,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Weekend"
+          }
+        }
+      }
+    },
+    "Wohnzimmer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Living room"
           }
         }
       }
@@ -4797,6 +4827,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "in use"
+          }
+        }
+      }
+    },
+    "hoku://alle/aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hoku://all/off"
+          }
+        }
+      }
+    },
+    "hoku://raum/%@/umschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hoku://room/%@/toggle"
+          }
+        }
+      }
+    },
+    "hoku://szene/%@?raum=%@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "hoku://szene/%1$@?raum=%2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hoku://scene/%1$@?room=%2$@"
           }
         }
       }

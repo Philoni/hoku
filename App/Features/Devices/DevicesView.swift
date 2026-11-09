@@ -11,7 +11,7 @@ struct DevicesView: View {
         let devices = store.sortedDevices
 
         VStack(spacing: 10) {
-            PageHeader(title: "Geräte", subtitle: String(localized: "\(devices.count) Geräte an deiner Bridge"), onBack: pop) { EmptyView() }
+            PageHeader(title: String(localized: "Geräte"), subtitle: String(localized: "\(devices.count) Geräte an deiner Bridge"), onBack: pop) { EmptyView() }
 
             PageScroll(maxHeight: 440) {
                 VStack(spacing: 7) {

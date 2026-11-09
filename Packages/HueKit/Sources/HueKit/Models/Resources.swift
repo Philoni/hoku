@@ -187,7 +187,7 @@ public struct HueGroup: Codable, Hashable, Sendable, Identifiable {
     public var children: [ResourceIdentifier]?
     public var services: [ResourceIdentifier]?
 
-    public var name: String { metadata?.name ?? String(localized: "Unbenannt", bundle: .module) }
+    public var name: String { metadata?.name ?? String(localized: "Unbenannt", bundle: .hueKit) }
     public var isZone: Bool { type == "zone" }
 
     public var groupedLightID: String? {
@@ -294,7 +294,7 @@ public struct HueScene: Codable, Hashable, Sendable, Identifiable {
         case autoDynamic = "auto_dynamic"
     }
 
-    public var name: String { metadata?.name ?? String(localized: "Szene", bundle: .module) }
+    public var name: String { metadata?.name ?? String(localized: "Szene", bundle: .hueKit) }
 
     /// The scene has a palette the bridge can cycle through.
     public var supportsDynamic: Bool {
@@ -316,7 +316,7 @@ public struct SmartScene: Codable, Hashable, Sendable, Identifiable {
     /// "active" or "inactive".
     public var state: String?
 
-    public var name: String { metadata?.name ?? String(localized: "Smarte Szene", bundle: .module) }
+    public var name: String { metadata?.name ?? String(localized: "Smarte Szene", bundle: .hueKit) }
     public var isActive: Bool { state == "active" }
 }
 
@@ -412,7 +412,7 @@ public struct BehaviorInstance: Codable, Hashable, Sendable, Identifiable {
         case scriptID = "script_id"
     }
 
-    public var name: String { metadata?.name ?? String(localized: "Automation", bundle: .module) }
+    public var name: String { metadata?.name ?? String(localized: "Automation", bundle: .hueKit) }
     public var hour: Int? { configuration?.when?.timePoint?.time?.hour }
     public var minute: Int? { configuration?.when?.timePoint?.time?.minute }
     public var weekdays: [String] { configuration?.when?.recurrenceDays ?? [] }

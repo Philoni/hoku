@@ -92,7 +92,7 @@ extension HueStore {
     public func create(_ draft: RoutineDraft, kind: RoutineKind) async throws {
         guard let credentials,
               let script = behaviorScripts.values.first(where: { $0.name == kind.scriptName })
-        else { throw HueError.bridge(String(localized: "Die Bridge bietet diese Automation nicht an.", bundle: .module)) }
+        else { throw HueError.bridge(String(localized: "Die Bridge bietet diese Automation nicht an.", bundle: .hueKit)) }
         let body: JSONValue = [
             "type": "behavior_instance",
             "script_id": .string(script.id),
@@ -113,7 +113,7 @@ extension HueStore {
     }
 
     private func configuration(for draft: RoutineDraft, kind: RoutineKind) throws -> JSONValue {
-        guard let group = group(draft.groupID) else { throw HueError.bridge(String(localized: "Bitte einen Raum wählen.", bundle: .module)) }
+        guard let group = group(draft.groupID) else { throw HueError.bridge(String(localized: "Bitte einen Raum wählen.", bundle: .hueKit)) }
         // The Hue app lists the dimmable lights explicitly; plugs can't fade.
         let items: [JSONValue] = lights(in: group).filter(\.supportsDimming).map {
             ["rid": .string($0.id), "rtype": "light"]

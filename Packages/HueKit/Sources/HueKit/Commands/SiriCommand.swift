@@ -34,18 +34,18 @@ public struct SiriCommand: Identifiable, Hashable, Sendable {
 extension SiriCommand.Kind {
     public var title: String {
         switch self {
-        case .room: String(localized: "Räume", bundle: .module)
-        case .light: String(localized: "Lampen", bundle: .module)
-        case .scene: String(localized: "Szenen", bundle: .module)
-        case .home: String(localized: "Zuhause", bundle: .module)
+        case .room: String(localized: "Räume", bundle: .hueKit)
+        case .light: String(localized: "Lampen", bundle: .hueKit)
+        case .scene: String(localized: "Szenen", bundle: .hueKit)
+        case .home: String(localized: "Zuhause", bundle: .hueKit)
         }
     }
 }
 
 /// The words commands are built from, in the app's language: "Wohnzimmer an", "Living room on".
 enum SiriWords {
-    static var on: String { String(localized: "an", bundle: .module, comment: "Siri command ending that switches on: 'Wohnzimmer an'") }
-    static var off: String { String(localized: "aus", bundle: .module, comment: "Siri command ending that switches off: 'Wohnzimmer aus'") }
+    static var on: String { String(localized: "an", bundle: .hueKit, comment: "Siri command ending that switches on: 'Wohnzimmer an'") }
+    static var off: String { String(localized: "aus", bundle: .hueKit, comment: "Siri command ending that switches off: 'Wohnzimmer aus'") }
     /// German plural rules for names only apply to German commands.
     static var isGerman: Bool { on == "an" }
 }
@@ -96,8 +96,8 @@ extension SiriCommand {
             }
         }
 
-        commands.append(SiriCommand(name: String(localized: "Alles aus", bundle: .module), url: "hoku://alle/aus", action: .allOff, kind: .home, isRecommended: true))
-        commands.append(SiriCommand(name: String(localized: "Gute Nacht", bundle: .module), url: "hoku://alle/aus", action: .allOff, kind: .home, isRecommended: false))
+        commands.append(SiriCommand(name: String(localized: "Alles aus", bundle: .hueKit), url: "hoku://alle/aus", action: .allOff, kind: .home, isRecommended: true))
+        commands.append(SiriCommand(name: String(localized: "Gute Nacht", bundle: .hueKit), url: "hoku://alle/aus", action: .allOff, kind: .home, isRecommended: false))
 
         commands = withSpokenVariants(commands, store: store)
 

@@ -11,17 +11,17 @@ public enum HueError: Error, LocalizedError, Sendable {
     public var errorDescription: String? {
         switch self {
         case .unauthorized:
-            String(localized: "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln.", bundle: .module)
+            String(localized: "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln.", bundle: .hueKit)
         case let .bridgeUnreachable(detail):
-            String(localized: "Bridge nicht erreichbar (\(detail)).", bundle: .module)
+            String(localized: "Bridge nicht erreichbar (\(detail)).", bundle: .hueKit)
         case let .http(code, message):
-            String(localized: "Bridge-Fehler \(code)", bundle: .module) + (message.map { ": \($0)" } ?? "")
+            String(localized: "Bridge-Fehler \(code)", bundle: .hueKit) + (message.map { ": \($0)" } ?? "")
         case .linkButtonNotPressed:
-            String(localized: "Die Link-Taste wurde noch nicht gedrückt.", bundle: .module)
+            String(localized: "Die Link-Taste wurde noch nicht gedrückt.", bundle: .hueKit)
         case let .bridge(message):
             message
         case let .decoding(detail):
-            String(localized: "Antwort der Bridge nicht lesbar: \(detail)", bundle: .module)
+            String(localized: "Antwort der Bridge nicht lesbar: \(detail)", bundle: .hueKit)
         }
     }
 }
@@ -201,7 +201,7 @@ public final class HueClient: Sendable {
         components.scheme = "https"
         components.host = host
         components.path = path
-        guard let url = components.url else { throw HueError.bridgeUnreachable(String(localized: "ungültige Adresse \(host)", bundle: .module)) }
+        guard let url = components.url else { throw HueError.bridgeUnreachable(String(localized: "ungültige Adresse \(host)", bundle: .hueKit)) }
         return url
     }
 
@@ -214,7 +214,7 @@ public final class HueClient: Sendable {
             throw HueError.bridgeUnreachable(error.localizedDescription)
         }
         guard let http = response as? HTTPURLResponse else {
-            throw HueError.bridgeUnreachable(String(localized: "keine HTTP-Antwort", bundle: .module))
+            throw HueError.bridgeUnreachable(String(localized: "keine HTTP-Antwort", bundle: .hueKit))
         }
         switch http.statusCode {
         case 200..<300:

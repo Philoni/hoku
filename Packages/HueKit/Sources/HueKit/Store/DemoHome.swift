@@ -31,47 +31,47 @@ public enum DemoHome {
     }
 
     private static let rooms: [Room] = [
-        Room(name: String(localized: "Wohnzimmer", bundle: .module), archetype: "living_room", lamps: [
-            Lamp(name: String(localized: "Stehlampe", bundle: .module), archetype: "floor_shade", isOn: true, brightness: 72, xy: (0.556, 0.398)),
-            Lamp(name: String(localized: "Sofa-Lightstrip", bundle: .module), archetype: "hue_lightstrip", isOn: true, brightness: 58, xy: (0.598, 0.352)),
-            Lamp(name: String(localized: "Leselampe", bundle: .module), archetype: "table_shade", isOn: true, brightness: 64, xy: (0.501, 0.415)),
+        Room(name: String(localized: "Wohnzimmer", bundle: .hueKit), archetype: "living_room", lamps: [
+            Lamp(name: String(localized: "Stehlampe", bundle: .hueKit), archetype: "floor_shade", isOn: true, brightness: 72, xy: (0.556, 0.398)),
+            Lamp(name: String(localized: "Sofa-Lightstrip", bundle: .hueKit), archetype: "hue_lightstrip", isOn: true, brightness: 58, xy: (0.598, 0.352)),
+            Lamp(name: String(localized: "Leselampe", bundle: .hueKit), archetype: "table_shade", isOn: true, brightness: 64, xy: (0.501, 0.415)),
         ], scenes: [
-            Scene(name: String(localized: "Sonnenuntergang", bundle: .module), colors: [(0.62, 0.36), (0.56, 0.40), (0.47, 0.28)], isActive: true, isDynamic: true),
-            Scene(name: String(localized: "Entspannen", bundle: .module), mirek: 447),
-            Scene(name: String(localized: "Tropendämmerung", bundle: .module), colors: [(0.56, 0.38), (0.45, 0.21), (0.27, 0.14)], isDynamic: true),
-            Scene(name: String(localized: "Lesen", bundle: .module), mirek: 346),
-            Scene(name: String(localized: "Konzentrieren", bundle: .module), mirek: 233),
-            Scene(name: String(localized: "Nachtlicht", bundle: .module), colors: [(0.56, 0.40)]),
+            Scene(name: String(localized: "Sonnenuntergang", bundle: .hueKit), colors: [(0.62, 0.36), (0.56, 0.40), (0.47, 0.28)], isActive: true, isDynamic: true),
+            Scene(name: String(localized: "Entspannen", bundle: .hueKit), mirek: 447),
+            Scene(name: String(localized: "Tropendämmerung", bundle: .hueKit), colors: [(0.56, 0.38), (0.45, 0.21), (0.27, 0.14)], isDynamic: true),
+            Scene(name: String(localized: "Lesen", bundle: .hueKit), mirek: 346),
+            Scene(name: String(localized: "Konzentrieren", bundle: .hueKit), mirek: 233),
+            Scene(name: String(localized: "Nachtlicht", bundle: .hueKit), colors: [(0.56, 0.40)]),
         ]),
-        Room(name: String(localized: "Küche", bundle: .module), archetype: "kitchen", lamps: [
-            Lamp(name: String(localized: "Deckenspots", bundle: .module), archetype: "spot_bulb", isOn: false, mirek: 300),
-            Lamp(name: String(localized: "Arbeitsplatte", bundle: .module), archetype: "hue_lightstrip", isOn: false, xy: (0.46, 0.41)),
+        Room(name: String(localized: "Küche", bundle: .hueKit), archetype: "kitchen", lamps: [
+            Lamp(name: String(localized: "Deckenspots", bundle: .hueKit), archetype: "spot_bulb", isOn: false, mirek: 300),
+            Lamp(name: String(localized: "Arbeitsplatte", bundle: .hueKit), archetype: "hue_lightstrip", isOn: false, xy: (0.46, 0.41)),
         ], scenes: [
-            Scene(name: String(localized: "Hell", bundle: .module), mirek: 300),
-            Scene(name: String(localized: "Gemütlich", bundle: .module), mirek: 454),
+            Scene(name: String(localized: "Hell", bundle: .hueKit), mirek: 300),
+            Scene(name: String(localized: "Gemütlich", bundle: .hueKit), mirek: 454),
         ]),
-        Room(name: String(localized: "Schlafzimmer", bundle: .module), archetype: "bedroom", lamps: [
-            Lamp(name: String(localized: "Nachttisch links", bundle: .module), archetype: "table_shade", isOn: true, brightness: 26, xy: (0.42, 0.24)),
-            Lamp(name: String(localized: "Nachttisch rechts", bundle: .module), archetype: "table_shade", isOn: true, brightness: 26, xy: (0.33, 0.17)),
-            Lamp(name: String(localized: "Deckenlampe", bundle: .module), archetype: "ceiling_round", isOn: false, mirek: 366),
+        Room(name: String(localized: "Schlafzimmer", bundle: .hueKit), archetype: "bedroom", lamps: [
+            Lamp(name: String(localized: "Nachttisch links", bundle: .hueKit), archetype: "table_shade", isOn: true, brightness: 26, xy: (0.42, 0.24)),
+            Lamp(name: String(localized: "Nachttisch rechts", bundle: .hueKit), archetype: "table_shade", isOn: true, brightness: 26, xy: (0.33, 0.17)),
+            Lamp(name: String(localized: "Deckenlampe", bundle: .hueKit), archetype: "ceiling_round", isOn: false, mirek: 366),
         ], scenes: [
-            Scene(name: String(localized: "Arktische Aurora", bundle: .module), colors: [(0.17, 0.30), (0.25, 0.13), (0.33, 0.17)], isActive: true, isDynamic: true),
-            Scene(name: String(localized: "Nachtlicht", bundle: .module), colors: [(0.56, 0.40)]),
-            Scene(name: String(localized: "Entspannen", bundle: .module), mirek: 447),
+            Scene(name: String(localized: "Arktische Aurora", bundle: .hueKit), colors: [(0.17, 0.30), (0.25, 0.13), (0.33, 0.17)], isActive: true, isDynamic: true),
+            Scene(name: String(localized: "Nachtlicht", bundle: .hueKit), colors: [(0.56, 0.40)]),
+            Scene(name: String(localized: "Entspannen", bundle: .hueKit), mirek: 447),
         ]),
-        Room(name: String(localized: "Büro", bundle: .module), archetype: "office", lamps: [
-            Lamp(name: String(localized: "Schreibtisch", bundle: .module), archetype: "table_wash", isOn: true, brightness: 88, mirek: 250),
-            Lamp(name: String(localized: "Play-Bars", bundle: .module), archetype: "hue_play", isOn: true, brightness: 60, xy: (0.17, 0.12)),
-            Lamp(name: String(localized: "Regal", bundle: .module), archetype: "classic_bulb", isOn: false, mirek: 370, isPlug: false),
+        Room(name: String(localized: "Büro", bundle: .hueKit), archetype: "office", lamps: [
+            Lamp(name: String(localized: "Schreibtisch", bundle: .hueKit), archetype: "table_wash", isOn: true, brightness: 88, mirek: 250),
+            Lamp(name: String(localized: "Play-Bars", bundle: .hueKit), archetype: "hue_play", isOn: true, brightness: 60, xy: (0.17, 0.12)),
+            Lamp(name: String(localized: "Regal", bundle: .hueKit), archetype: "classic_bulb", isOn: false, mirek: 370, isPlug: false),
         ], scenes: [
-            Scene(name: String(localized: "Konzentrieren", bundle: .module), mirek: 233, isActive: true),
-            Scene(name: String(localized: "Energie tanken", bundle: .module), mirek: 181),
-            Scene(name: String(localized: "Gaming", bundle: .module), colors: [(0.17, 0.12), (0.30, 0.14), (0.16, 0.33)], isDynamic: true),
+            Scene(name: String(localized: "Konzentrieren", bundle: .hueKit), mirek: 233, isActive: true),
+            Scene(name: String(localized: "Energie tanken", bundle: .hueKit), mirek: 181),
+            Scene(name: String(localized: "Gaming", bundle: .hueKit), colors: [(0.17, 0.12), (0.30, 0.14), (0.16, 0.33)], isDynamic: true),
         ]),
-        Room(name: String(localized: "Flur", bundle: .module), archetype: "hallway", lamps: [
-            Lamp(name: String(localized: "Flurlicht", bundle: .module), archetype: "ceiling_round", isOn: false, mirek: 370),
+        Room(name: String(localized: "Flur", bundle: .hueKit), archetype: "hallway", lamps: [
+            Lamp(name: String(localized: "Flurlicht", bundle: .hueKit), archetype: "ceiling_round", isOn: false, mirek: 370),
         ], scenes: [
-            Scene(name: String(localized: "Hell", bundle: .module), mirek: 300),
+            Scene(name: String(localized: "Hell", bundle: .hueKit), mirek: 300),
         ]),
     ]
 

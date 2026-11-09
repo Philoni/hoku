@@ -32,7 +32,7 @@ extension HueClient {
                 try await Task.sleep(for: .seconds(1))
             }
         }
-        throw HueError.bridge(String(localized: "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal.", bundle: .module))
+        throw HueError.bridge(String(localized: "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal.", bundle: .hueKit))
     }
 }
 
@@ -56,7 +56,7 @@ extension HueClient {
         do {
             _ = try await resource(credentials, type: "bridge", id: "")
         } catch HueError.unauthorized {
-            throw HueError.bridge(String(localized: "Die Bridge kennt diesen Schlüssel nicht.", bundle: .module))
+            throw HueError.bridge(String(localized: "Die Bridge kennt diesen Schlüssel nicht.", bundle: .hueKit))
         }
         return credentials
     }

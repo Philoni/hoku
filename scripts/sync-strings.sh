@@ -28,3 +28,14 @@ sync() {
 }
 sync Hoku App/Localizable.xcstrings App/AppShortcuts.xcstrings
 sync HueKit Packages/HueKit/Sources/HueKit/Resources/Localizable.xcstrings
+
+# SwiftPM only builds an .lproj for languages with explicit entries, and HueKit needs
+# its German one (see Bundle.hueKit): give every key its own text as the German value.
+python3 - <<'PY'
+import json
+path = "Packages/HueKit/Sources/HueKit/Resources/Localizable.xcstrings"
+catalog = json.load(open(path))
+for key, entry in catalog["strings"].items():
+    entry.setdefault("localizations", {}).setdefault("de", {"stringUnit": {"state": "translated", "value": key}})
+json.dump(catalog, open(path, "w"), ensure_ascii=False, indent=2, sort_keys=True)
+PY

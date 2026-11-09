@@ -76,14 +76,14 @@ public enum URLCommand: Equatable, Sendable {
         switch self {
         case let .scene(name, groupName, mode):
             let group = groupName.flatMap { store.findGroup(named: $0) }
-            if let groupName, group == nil { return String(localized: "Raum „\(groupName)“ nicht gefunden.", bundle: .module) }
+            if let groupName, group == nil { return String(localized: "Raum „\(groupName)“ nicht gefunden.", bundle: .hueKit) }
             guard let scene = store.findScene(named: name, in: group) else {
-                return String(localized: "Szene „\(name)“ nicht gefunden.", bundle: .module)
+                return String(localized: "Szene „\(name)“ nicht gefunden.", bundle: .hueKit)
             }
             store.recall(scene, as: mode)
 
         case let .group(name, action, brightness):
-            guard let group = store.findGroup(named: name) else { return String(localized: "Raum „\(name)“ nicht gefunden.", bundle: .module) }
+            guard let group = store.findGroup(named: name) else { return String(localized: "Raum „\(name)“ nicht gefunden.", bundle: .hueKit) }
             let isOn = store.groupedLight(for: group)?.isOn ?? false
             if let brightness, action != .off {
                 store.setBrightness(brightness, group: group)
@@ -92,7 +92,7 @@ public enum URLCommand: Equatable, Sendable {
             }
 
         case let .light(name, action, brightness):
-            guard let light = store.findLight(named: name) else { return String(localized: "Lampe „\(name)“ nicht gefunden.", bundle: .module) }
+            guard let light = store.findLight(named: name) else { return String(localized: "Lampe „\(name)“ nicht gefunden.", bundle: .hueKit) }
             if let brightness, action != .off, light.supportsDimming {
                 store.setBrightness(brightness, light: light)
             } else {

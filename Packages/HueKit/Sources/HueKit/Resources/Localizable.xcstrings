@@ -47,6 +47,12 @@
     },
     "%lld Lampen an": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Lampen an"
+          }
+        },
         "en": {
           "variations": {
             "plural": {
@@ -69,6 +75,12 @@
     },
     "1 Lampe an": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Lampe an"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -79,16 +91,28 @@
     },
     "Alles aus": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alles aus"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "All Off"
+            "value": "All off"
           }
         }
       }
     },
     "Antwort der Bridge nicht lesbar: %@": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antwort der Bridge nicht lesbar: %@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -99,6 +123,12 @@
     },
     "Arbeitsplatte": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arbeitsplatte"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -109,6 +139,12 @@
     },
     "Arktische Aurora": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arktische Aurora"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -119,6 +155,12 @@
     },
     "Automation": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automation"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -129,6 +171,12 @@
     },
     "Bitte einen Raum wählen.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bitte einen Raum wählen."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -139,6 +187,12 @@
     },
     "Bitte melde dich erneut bei Hue an.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bitte melde dich erneut bei Hue an."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -149,6 +203,12 @@
     },
     "Bridge nicht erreichbar (%@).": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge nicht erreichbar (%@)."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -159,6 +219,12 @@
     },
     "Bridge-Fehler %lld": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge-Fehler %lld"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -169,6 +235,12 @@
     },
     "Büro": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Büro"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -179,6 +251,12 @@
     },
     "Das Zertifikat unter %@ passt nicht zur Bridge-ID.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Zertifikat unter %@ passt nicht zur Bridge-ID."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -189,6 +267,12 @@
     },
     "Deckenlampe": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deckenlampe"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -199,6 +283,12 @@
     },
     "Deckenspots": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deckenspots"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -209,6 +299,12 @@
     },
     "Der Hue-Fernzugriff ist noch nicht eingerichtet.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Hue-Fernzugriff ist noch nicht eingerichtet."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -219,6 +315,12 @@
     },
     "Die Antwort passt nicht zu dieser Anmeldung. Bitte noch einmal versuchen.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Antwort passt nicht zu dieser Anmeldung. Bitte noch einmal versuchen."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -229,6 +331,12 @@
     },
     "Die Bridge bietet diese Automation nicht an.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Bridge bietet diese Automation nicht an."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -239,6 +347,12 @@
     },
     "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -249,6 +363,12 @@
     },
     "Die Bridge kennt diesen Schlüssel nicht.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Bridge kennt diesen Schlüssel nicht."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -259,6 +379,12 @@
     },
     "Die Bridge meldet keine Lichtgruppe für das ganze Zuhause.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Bridge meldet keine Lichtgruppe für das ganze Zuhause."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -269,6 +395,12 @@
     },
     "Die Firmware der Bridge ist zu alt. Bitte in der Hue-App aktualisieren.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Firmware der Bridge ist zu alt. Bitte in der Hue-App aktualisieren."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -279,6 +411,12 @@
     },
     "Die Hue-Cloud bremst gerade. Später noch einmal versuchen.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Hue-Cloud bremst gerade. Später noch einmal versuchen."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -289,6 +427,12 @@
     },
     "Die Link-Taste wurde noch nicht gedrückt.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Link-Taste wurde noch nicht gedrückt."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -299,6 +443,12 @@
     },
     "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -309,6 +459,12 @@
     },
     "Energie tanken": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Energie tanken"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -319,6 +475,12 @@
     },
     "Entspannen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entspannen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -329,6 +491,12 @@
     },
     "Flur": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flur"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -339,6 +507,12 @@
     },
     "Flurlicht": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flurlicht"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -349,6 +523,12 @@
     },
     "Gaming": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gaming"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -359,6 +539,12 @@
     },
     "Gemütlich": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemütlich"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -369,6 +555,12 @@
     },
     "Gespeicherte Hue-Anmeldung ist beschädigt. Bitte neu einrichten.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespeicherte Hue-Anmeldung ist beschädigt. Bitte neu einrichten."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -379,6 +571,12 @@
     },
     "Gute Nacht": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gute Nacht"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -389,6 +587,12 @@
     },
     "Hell": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hell"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -399,6 +603,12 @@
     },
     "Hoku ist noch mit keiner Hue Bridge gekoppelt. Öffne Hoku und koppel deine Bridge.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku ist noch mit keiner Hue Bridge gekoppelt. Öffne Hoku und koppel deine Bridge."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -409,6 +619,12 @@
     },
     "Hue hat die Anmeldung abgelehnt (%@).": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue hat die Anmeldung abgelehnt (%@)."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -419,6 +635,12 @@
     },
     "Hue hat keinen Anmeldecode geschickt.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue hat keinen Anmeldecode geschickt."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -429,6 +651,12 @@
     },
     "Hue-Cloud nicht erreichbar (%@).": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue-Cloud nicht erreichbar (%@)."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -439,6 +667,12 @@
     },
     "Hue-Cloud-Fehler %lld": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue-Cloud-Fehler %lld"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -449,6 +683,12 @@
     },
     "Keine Lichtgruppe für das ganze Zuhause gefunden.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Lichtgruppe für das ganze Zuhause gefunden."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -459,6 +699,12 @@
     },
     "Konzentrieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konzentrieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -469,6 +715,12 @@
     },
     "Küche": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Küche"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -479,6 +731,12 @@
     },
     "Lampe": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lampe"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -489,6 +747,12 @@
     },
     "Lampe „%@“ nicht gefunden.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lampe „%@“ nicht gefunden."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -499,6 +763,12 @@
     },
     "Lampen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lampen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -509,6 +779,12 @@
     },
     "Leselampe": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leselampe"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -519,6 +795,12 @@
     },
     "Lesen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lesen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -529,6 +811,12 @@
     },
     "Nachtlicht": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nachtlicht"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -539,6 +827,12 @@
     },
     "Nachttisch links": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nachttisch links"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -549,6 +843,12 @@
     },
     "Nachttisch rechts": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nachttisch rechts"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -559,6 +859,12 @@
     },
     "Play-Bars": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play-Bars"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -569,6 +875,12 @@
     },
     "Raum „%@“ nicht gefunden.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raum „%@“ nicht gefunden."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -579,6 +891,12 @@
     },
     "Regal": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regal"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -589,6 +907,12 @@
     },
     "Ressourcen nicht lesbar": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ressourcen nicht lesbar"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -599,6 +923,12 @@
     },
     "Räume": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Räume"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -609,6 +939,12 @@
     },
     "Schlafzimmer": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schlafzimmer"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -619,6 +955,12 @@
     },
     "Schlüsselbund: %@": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schlüsselbund: %@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -629,6 +971,12 @@
     },
     "Schreibtisch": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schreibtisch"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -639,6 +987,12 @@
     },
     "Smarte Szene": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smarte Szene"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -649,6 +1003,12 @@
     },
     "Sofa-Lightstrip": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sofa-Lightstrip"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -659,6 +1019,12 @@
     },
     "Sonnenuntergang": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonnenuntergang"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -669,6 +1035,12 @@
     },
     "Stehlampe": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stehlampe"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -679,6 +1051,12 @@
     },
     "Stream beendet": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stream beendet"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -689,6 +1067,12 @@
     },
     "Szene": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szene"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -699,6 +1083,12 @@
     },
     "Szene „%@“ nicht gefunden.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szene „%@“ nicht gefunden."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -709,6 +1099,12 @@
     },
     "Szenen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szenen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -719,6 +1115,12 @@
     },
     "Tropendämmerung": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tropendämmerung"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -729,6 +1131,12 @@
     },
     "Unbenannt": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbenannt"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -739,6 +1147,12 @@
     },
     "Unerwartete Antwort der Hue-Cloud: %@": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unerwartete Antwort der Hue-Cloud: %@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -749,6 +1163,12 @@
     },
     "Wohnzimmer": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wohnzimmer"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -759,6 +1179,12 @@
     },
     "Zuhause": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuhause"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -770,6 +1196,12 @@
     "an": {
       "comment": "Siri command ending that switches on: 'Wohnzimmer an'",
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "an"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -781,6 +1213,12 @@
     "aus": {
       "comment": "Siri command ending that switches off: 'Wohnzimmer aus'",
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "aus"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -791,6 +1229,12 @@
     },
     "keine Bridge im Hue-Konto": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "keine Bridge im Hue-Konto"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -801,6 +1245,12 @@
     },
     "keine HTTP-Antwort": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "keine HTTP-Antwort"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -811,6 +1261,12 @@
     },
     "keine Tokens in der Antwort": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "keine Tokens in der Antwort"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -821,6 +1277,12 @@
     },
     "ungültige Adresse %@": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ungültige Adresse %@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",

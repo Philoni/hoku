@@ -64,11 +64,11 @@ public enum BridgeDiscovery {
     public static func bridge(at host: String, using client: HueClient) async throws -> DiscoveredBridge {
         let config = try await client.config(host: host)
         guard config.supportsCLIPv2 else {
-            throw HueError.bridge(String(localized: "Die Firmware der Bridge ist zu alt. Bitte in der Hue-App aktualisieren.", bundle: .module))
+            throw HueError.bridge(String(localized: "Die Firmware der Bridge ist zu alt. Bitte in der Hue-App aktualisieren.", bundle: .hueKit))
         }
         // The certificate must belong to the bridge that answered, and from now on only to it.
         guard client.trust.observedBridgeID(for: host) == config.bridgeID.lowercased() else {
-            throw HueError.bridge(String(localized: "Das Zertifikat unter \(host) passt nicht zur Bridge-ID.", bundle: .module))
+            throw HueError.bridge(String(localized: "Das Zertifikat unter \(host) passt nicht zur Bridge-ID.", bundle: .hueKit))
         }
         client.trust.pin(host: host, bridgeID: config.bridgeID)
         return DiscoveredBridge(
