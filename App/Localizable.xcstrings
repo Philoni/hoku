@@ -1,7 +1,1471 @@
 {
   "sourceLanguage" : "de",
   "strings" : {
+    " · %@" : {
 
+    },
+    " · Taste %lld" : {
+
+    },
+    "%@" : {
+
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ Die Hue-App auf dem Handy schaltet auch von unterwegs." : {
+
+    },
+    "%@ dimmt in %lld Minuten aus. Schlaf gut!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ dimmt in %2$lld Minuten aus. Schlaf gut!"
+          }
+        }
+      }
+    },
+    "%@ hinzufügen" : {
+
+    },
+    "%@ im %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ im %2$@"
+          }
+        }
+      }
+    },
+    "%@ in %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ in %2$@"
+          }
+        }
+      }
+    },
+    "%@ in the %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ in the %2$@"
+          }
+        }
+      }
+    },
+    "%@ ist %@." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ ist %2$@."
+          }
+        }
+      }
+    },
+    "%@ ist jetzt %@." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ ist jetzt %2$@."
+          }
+        }
+      }
+    },
+    "%@ ist nicht erreichbar" : {
+
+    },
+    "%@ leuchtet mit %lld %%." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ leuchtet mit %2$lld %%."
+          }
+        }
+      }
+    },
+    "%@ läuft im Raum %@." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ läuft im Raum %2$@."
+          }
+        }
+      }
+    },
+    "%@ · dynamisch" : {
+
+    },
+    "%@ öffnet schon Hoku." : {
+
+    },
+    "%@%@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@"
+          }
+        }
+      }
+    },
+    "%@: Batterie %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: Batterie %2$@"
+          }
+        }
+      }
+    },
+    "%@: Firmware-Update verfügbar" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld %%" : {
+
+    },
+    "%lld %% Helligkeit" : {
+
+    },
+    "%lld %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld %2$@"
+          }
+        }
+      }
+    },
+    "%lld Befehle" : {
+
+    },
+    "%lld Befehle eingerichtet" : {
+
+    },
+    "%lld Befehle einrichten" : {
+
+    },
+    "%lld Geräte an deiner Bridge" : {
+
+    },
+    "%lld Geräte brauchen Aufmerksamkeit" : {
+
+    },
+    "%lld Hinweise" : {
+
+    },
+    "%lld K" : {
+
+    },
+    "%lld Kelvin" : {
+
+    },
+    "%lld Lampen" : {
+
+    },
+    "%lld Lampen sind ausgeschaltet. Zu Hause ist es jetzt dunkel." : {
+
+    },
+    "%lld Lampen · %lld Räume · %lld Szenen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld Lampen · %2$lld Räume · %3$lld Szenen"
+          }
+        }
+      }
+    },
+    "%lld Min." : {
+
+    },
+    "%lld Minuten" : {
+
+    },
+    "%lld Räume" : {
+
+    },
+    "%lld Szenen" : {
+
+    },
+    "%lld an" : {
+
+    },
+    "%lld von %lld an" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld von %2$lld an"
+          }
+        }
+      }
+    },
+    "%lld von %lld an die Kurzbefehle-App übergeben …" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld von %2$lld an die Kurzbefehle-App übergeben …"
+          }
+        }
+      }
+    },
+    "+%lld" : {
+
+    },
+    "+%lld weitere" : {
+
+    },
+    "1 Befehl" : {
+
+    },
+    "1 Befehl eingerichtet" : {
+
+    },
+    "1 Befehl einrichten" : {
+
+    },
+    ":" : {
+
+    },
+    "Abbrechen" : {
+
+    },
+    "Abgemeldet" : {
+
+    },
+    "Abmelden" : {
+
+    },
+    "Adresse" : {
+
+    },
+    "Alle Befehle direkt über Hoku" : {
+
+    },
+    "Alle Geräte erreichbar, Batterien voll, Firmware aktuell." : {
+
+    },
+    "Alle Lampen" : {
+
+    },
+    "Alle Lichter aus" : {
+
+    },
+    "Alle Lichter ausschalten" : {
+
+    },
+    "Alle Lichter sind aus. Gute Nacht!" : {
+
+    },
+    "Alle Räume" : {
+
+    },
+    "Alles aus" : {
+
+    },
+    "Alles ausschalten" : {
+
+    },
+    "Alles bereit" : {
+
+    },
+    "Alles bleibt bei dir" : {
+
+    },
+    "Alles eingerichtet" : {
+
+    },
+    "Alles in Ordnung" : {
+
+    },
+    "Als Callback-URL eintragen:" : {
+
+    },
+    "Am iPhone – Hoku ergänzt dann Szenen & mehr" : {
+
+    },
+    "Am iPhone: Home-App → + → Gerät hinzufügen → Code unten auf der Bridge scannen." : {
+
+    },
+    "An" : {
+
+    },
+    "An / aus" : {
+
+    },
+    "Andere App-Daten …" : {
+
+    },
+    "Anhalten" : {
+
+    },
+    "Anmeldung und Fernzugriff sind von diesem Mac gelöscht. Ganz beenden: Auf developers.meethue.com unter „Remote Hue API appids“ deine Hoku-App löschen – dann gilt bei Signify keine Anmeldung mehr." : {
+
+    },
+    "Apple Account öffnen" : {
+
+    },
+    "Apple Home einrichten" : {
+
+    },
+    "Auf developers.meethue.com ein Konto anlegen und anmelden." : {
+
+    },
+    "Aufwachen" : {
+
+    },
+    "Aus" : {
+
+    },
+    "Ausdimmen über" : {
+
+    },
+    "Ausschalten" : {
+
+    },
+    "Ausschalten hat nicht geklappt" : {
+
+    },
+    "Automationen" : {
+
+    },
+    "Automatisch" : {
+
+    },
+    "Automatisch ausschalten, wenn du gehst, macht dein Handy am besten: In der Hue-App unter Automationen „Wenn ich gehe“ → alles aus. Hoku schaltet aus der Ferne nur, wenn du in der Mitteilung auf „Alles ausschalten“ klickst." : {
+
+    },
+    "Autostart: %@" : {
+
+    },
+    "Bedienung" : {
+
+    },
+    "Beenden" : {
+
+    },
+    "Bei Hue anmelden" : {
+
+    },
+    "Bei „Hoku“ einschalten" : {
+
+    },
+    "Beim Anmelden starten" : {
+
+    },
+    "Beim Anmelden starten?" : {
+
+    },
+    "Beim Entsperren wieder an" : {
+
+    },
+    "Beim Gehen" : {
+
+    },
+    "Beim Sperren, Zuklappen oder Ruhezustand" : {
+
+    },
+    "Bestimmte Lichtfarben, schnelle Wechsel oder Blinken können Unwohlsein auslösen – bei lichtempfindlichen Menschen auch Anfälle oder Migräne. Fühlst du dich unwohl, beende Effekt, Szene oder Hoku sofort." : {
+
+    },
+    "Bitte Client-ID und Client-Secret eintragen." : {
+
+    },
+    "Bridge" : {
+
+    },
+    "Bridge gefunden" : {
+
+    },
+    "Bridge gerade nicht erreichbar" : {
+
+    },
+    "Bridge nicht dabei? IP-Adresse eingeben" : {
+
+    },
+    "Bridge trennen …" : {
+
+    },
+    "Bridge trennen?" : {
+
+    },
+    "Client-ID" : {
+
+    },
+    "Client-ID und Client-Secret hier eintragen:" : {
+
+    },
+    "Client-Secret" : {
+
+    },
+    "Dann richtet Hoku genau das ein, was dir fehlt." : {
+
+    },
+    "Dann sind deine Lichter immer nur einen Klick entfernt – auch nach einem Neustart." : {
+
+    },
+    "Darf „Hoku“ nach Geräten in lokalen Netzwerken suchen?" : {
+
+    },
+    "Das Anmeldefenster ließ sich nicht öffnen." : {
+
+    },
+    "Das dauert nur ein paar Sekunden." : {
+
+    },
+    "Das machst du um diese Zeit oft: %@ im Raum %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Das machst du um diese Zeit oft: %1$@ im Raum %2$@"
+          }
+        }
+      }
+    },
+    "Datenschutz & Sicherheit → Lokales Netzwerk" : {
+
+    },
+    "Dein Hue-Konto gibt Hoku eine andere Bridge frei als die gekoppelte. Abmelden und beim Anmelden die richtige wählen." : {
+
+    },
+    "Dein Hue-Konto gibt eine andere Bridge frei als die gekoppelte." : {
+
+    },
+    "Dein Mac ist nicht mit einem Apple Account angemeldet" : {
+
+    },
+    "Deine Hue-Lichter, direkt in der Menüleiste." : {
+
+    },
+    "Den Raum %@ gibt es nicht mehr." : {
+
+    },
+    "Der Zugriff aufs lokale Netzwerk ist aus" : {
+
+    },
+    "Der runde Knopf oben auf deiner Bridge „%@“." : {
+
+    },
+    "Details stehen bei den Geräten unten." : {
+
+    },
+    "Di" : {
+
+    },
+    "Die Automation wird auch aus der Hue-App entfernt." : {
+
+    },
+    "Die Bridge ist gerade nicht erreichbar" : {
+
+    },
+    "Die IP findest du in der Hue-App unter Einstellungen → Hue Bridges → ⓘ." : {
+
+    },
+    "Die Kurzbefehle-App fragt bei jedem Befehl einmal nach – klick jeweils auf „Kurzbefehl hinzufügen“. Beim ersten Benutzen fragt macOS je Befehl noch einmal, ob er Hoku öffnen darf: dauerhaft erlauben, dann nie wieder." : {
+
+    },
+    "Die Kurzbefehle-App öffnet sich gleich – bitte bei jedem Befehl „Kurzbefehl hinzufügen“ klicken." : {
+
+    },
+    "Dimme ${room} auf ${brightness} %" : {
+
+    },
+    "Dimme ${room} in ${minutes} Minuten aus" : {
+
+    },
+    "Dimmen (mit ⌥ feiner)" : {
+
+    },
+    "Dimmen, schalten, Szenen wählen – mit einem Klick in der Menüleiste." : {
+
+    },
+    "Dimmt aus bis %@" : {
+
+    },
+    "Dimmt einen Raum langsam aus, z. B. zum Einschlafen." : {
+
+    },
+    "Direkt mit deiner Bridge. Kein Konto, Cloud nur, wenn du sie einschaltest." : {
+
+    },
+    "Direkt mit deiner Bridge. Kein Konto, keine Cloud." : {
+
+    },
+    "Do" : {
+
+    },
+    "Do. 21:30" : {
+
+    },
+    "Drück jetzt die Link-Taste" : {
+
+    },
+    "Dunkel" : {
+
+    },
+    "Dynamik anhalten" : {
+
+    },
+    "Dynamisch starten" : {
+
+    },
+    "Eigene Siri-Befehle brauchen diese Anmeldung – macOS signiert jeden Kurzbefehl darüber. Melde dich an, dann richtet Hoku die Befehle ein. Alles andere funktioniert auch ohne." : {
+
+    },
+    "Ein paar kurze Schritte, dann steuerst du deine Lichter von hier oben." : {
+
+    },
+    "Eine andere App nutzt diese Tastenkombination bereits." : {
+
+    },
+    "Einmalig" : {
+
+    },
+    "Einrichten" : {
+
+    },
+    "Einrichtung erneut starten" : {
+
+    },
+    "Einrichtung starten" : {
+
+    },
+    "Einschalten" : {
+
+    },
+    "Einschlaf-Timer" : {
+
+    },
+    "Einschlaf-Timer abbrechen" : {
+
+    },
+    "Einstellungen" : {
+
+    },
+    "Einstellungen öffnen" : {
+
+    },
+    "Einstellungen → „Licht aus, wenn ich gehe“ – beim Sperren des Macs." : {
+
+    },
+    "Endhelligkeit" : {
+
+    },
+    "Erkannt" : {
+
+    },
+    "Erlauben" : {
+
+    },
+    "Erlaubt" : {
+
+    },
+    "Erlaubt – danke!" : {
+
+    },
+    "Erneut" : {
+
+    },
+    "Erneut suchen" : {
+
+    },
+    "Erreichbar" : {
+
+    },
+    "Erscheinungsbild" : {
+
+    },
+    "Erst den Hue-Fernzugriff unten einrichten" : {
+
+    },
+    "Erzähl kurz von dir" : {
+
+    },
+    "Farbe" : {
+
+    },
+    "Farbrad" : {
+
+    },
+    "Farbtemperatur" : {
+
+    },
+    "Fertig übergeben. Sag zum Beispiel „Hey Siri, %@“." : {
+
+    },
+    "Festlegen" : {
+
+    },
+    "Fr" : {
+
+    },
+    "Funktionieren überall am Mac, auch wenn Hoku geschlossen ist." : {
+
+    },
+    "Für Fortgeschrittene" : {
+
+    },
+    "Für diese Auswahl gibt es gerade keine Befehle – du kannst sie später in den Einstellungen anlegen." : {
+
+    },
+    "Für eigene Kurzbefehle, Raycast oder Skripte – per „URLs öffnen“:" : {
+
+    },
+    "Gelöschte Szene" : {
+
+    },
+    "Gerade kein Netz erkannt. Ohne Netz meldet sich Hoku nicht." : {
+
+    },
+    "Gerät" : {
+
+    },
+    "Geräte-Check" : {
+
+    },
+    "Getrennt" : {
+
+    },
+    "Gleich fragt macOS nach. Klick dann auf „Erlauben“." : {
+
+    },
+    "Gute Nacht" : {
+
+    },
+    "Guten Abend" : {
+
+    },
+    "Guten Morgen" : {
+
+    },
+    "Hallo" : {
+
+    },
+    "Hast du ein iPhone oder iPad?" : {
+
+    },
+    "Hell" : {
+
+    },
+    "Helligkeit" : {
+
+    },
+    "Hier oben wohnt Hoku" : {
+
+    },
+    "Hier wohnt Hoku" : {
+
+    },
+    "Hinweis" : {
+
+    },
+    "Hinweise" : {
+
+    },
+    "Hoku beenden" : {
+
+    },
+    "Hoku beim Anmelden starten" : {
+
+    },
+    "Hoku braucht dafür deine eigene, kostenlose Hue-App. Einmalig, etwa fünf Minuten. Signify verlangt dafür ein Entwicklerkonto (ab 18) und die Zustimmung zu seinen Nutzungsbedingungen; die Zugangsdaten sind nur für dich." : {
+
+    },
+    "Hoku einrichten" : {
+
+    },
+    "Hoku ergänzt, was Home nicht kann: Szenen & mehr" : {
+
+    },
+    "Hoku findet deine Hue Bridge im Netzwerk und steuert deine Lichter direkt, ohne Cloud." : {
+
+    },
+    "Hoku in „Programme“ verschieben?" : {
+
+    },
+    "Hoku ist deine komplette Hue-Steuerung am Mac: Räume, Lampen und Szenen in der Menüleiste, per Tastatur und per Siri – ganz ohne Handy und ohne Cloud." : {
+
+    },
+    "Hoku ist ein Open-Source-Projekt von Philoni und keine App, kein Produkt und kein Dienst von Signify (Philips Hue). Signify unterstützt oder prüft Hoku nicht – verantwortlich ist allein Philoni. Philips und Philips Hue sind Marken ihrer jeweiligen Inhaber." : {
+
+    },
+    "Hoku ist nicht mehr gekoppelt" : {
+
+    },
+    "Hoku legt für jeden Befehl einen Kurzbefehl an. Siri führt Kurzbefehle direkt über ihren Namen aus – auch vor Apple Home. Die Kurzbefehle-App fragt pro Befehl einmal nach: „Kurzbefehl hinzufügen“ klicken. Beim ersten Benutzen fragt macOS je Befehl einmal, ob er Hoku öffnen darf – dauerhaft erlauben, dann nie wieder. Danach kannst du sie auch ins Kontrollzentrum oder die Menüleiste legen. ✦ = Sprechvariante, so wie Siri den Namen versteht (z. B. „Light Strip“ für „Lightstrip“)." : {
+
+    },
+    "Hoku lernt dein Heimnetz, sobald der Mac einmal zu Hause im WLAN ist und die Bridge sieht. Bis dahin bleibt es still." : {
+
+    },
+    "Hoku lädt gerade deine Räume …" : {
+
+    },
+    "Hoku läuft gerade aus einem Ordner wie „Downloads“." : {
+
+    },
+    "Hoku läuft gerade direkt vom Image. Hoku kopiert sich und wirft das Image danach aus." : {
+
+    },
+    "Hoku macht danach von selbst weiter." : {
+
+    },
+    "Hoku richtet Siri-Befehle ganz ohne App-Namen für dich ein." : {
+
+    },
+    "Hoku schaut nach, wenn der Mac außerhalb deines Heimnetzes aufwacht, entsperrt wird oder das WLAN wechselt – danach alle 30 Minuten, solange er wach ist." : {
+
+    },
+    "Hoku spricht direkt mit deiner Bridge" : {
+
+    },
+    "Hoku vergisst den Schlüssel. Danach musst du die Link-Taste auf der Bridge erneut drücken." : {
+
+    },
+    "Hoku wartet noch %lld Sekunden" : {
+
+    },
+    "Hoku wartet oben in der Menüleiste auf dich." : {
+
+    },
+    "Hoku öffnen" : {
+
+    },
+    "Hoku übernimmt deine Siri-Befehle" : {
+
+    },
+    "Hoku – Lichter an" : {
+
+    },
+    "Hue Bridge" : {
+
+    },
+    "Hue möchte, dass du dich neu anmeldest: Hoku → Einstellungen → Unterwegs-Hinweis." : {
+
+    },
+    "Hue-Fernzugriff" : {
+
+    },
+    "IP-Adresse, z. B. 192.168.1.20" : {
+
+    },
+    "Image" : {
+
+    },
+    "In „Programme“ funktionieren Autostart, Siri-Befehle und Updates zuverlässig. Hoku startet danach einmal neu." : {
+
+    },
+    "In „Programme“ verschieben" : {
+
+    },
+    "Inhalt" : {
+
+    },
+    "Ist dein Mac im selben Netzwerk wie die Bridge, und leuchten ihre Lämpchen?" : {
+
+    },
+    "Ja" : {
+
+    },
+    "Ja, über Apple Home" : {
+
+    },
+    "Jeder Raum, jede Lampe" : {
+
+    },
+    "Jederzeit änderbar in den Hoku-Einstellungen." : {
+
+    },
+    "Kalt" : {
+
+    },
+    "Kein beschreibbarer Programme-Ordner gefunden. Zieh Hoku bitte im Finder nach „Programme“." : {
+
+    },
+    "Keine Bridge gefunden" : {
+
+    },
+    "Keine Bridge gekoppelt." : {
+
+    },
+    "Keine Lampen" : {
+
+    },
+    "Keine Verbindung" : {
+
+    },
+    "Keins / anderes" : {
+
+    },
+    "Kerze" : {
+
+    },
+    "Klick auf das Symbol in der Menüleiste – oder drück diese Tasten, egal wo du gerade bist." : {
+
+    },
+    "Klick auf einen Raum: unten wischst du durch seine Szenen." : {
+
+    },
+    "Klick drauf · oder %@" : {
+
+    },
+    "Klicken startet die Szene · Rechtsklick: dynamisch oder statisch" : {
+
+    },
+    "Klicken und Tastenkombination drücken · ⌫ entfernt sie" : {
+
+    },
+    "Klicken und neue Tastenkombination drücken" : {
+
+    },
+    "Kopiert" : {
+
+    },
+    "Koppeln" : {
+
+    },
+    "Koppeln, und Hoku kennt deine Lichter." : {
+
+    },
+    "Kurz bevor es weitergeht" : {
+
+    },
+    "Kurzbefehl konnte nicht signiert werden. Bist du in macOS mit deinem Apple Account (iCloud) angemeldet? (%@)" : {
+
+    },
+    "Kürzel drücken …" : {
+
+    },
+    "Kürzel in den Einstellungen neu zuweisen" : {
+
+    },
+    "Lampe" : {
+
+    },
+    "Lampe ausschalten" : {
+
+    },
+    "Lampe einschalten" : {
+
+    },
+    "Lampe schalten" : {
+
+    },
+    "Lampe umschalten" : {
+
+    },
+    "Lampen" : {
+
+    },
+    "Lampen & Steckdosen" : {
+
+    },
+    "Langsam ausdimmen in …" : {
+
+    },
+    "Leertaste" : {
+
+    },
+    "Licht aus, wenn ich gehe" : {
+
+    },
+    "Licht dimmt abends langsam herunter." : {
+
+    },
+    "Licht und Gesundheit" : {
+
+    },
+    "Licht vergessen? Hoku sagt Bescheid." : {
+
+    },
+    "Lichtwecker" : {
+
+    },
+    "Live verbunden" : {
+
+    },
+    "Lokales Netzwerk" : {
+
+    },
+    "Läuft auf der Bridge, auch wenn der Mac schläft" : {
+
+    },
+    "Läuft leise in der Menüleiste." : {
+
+    },
+    "Löschen" : {
+
+    },
+    "Mehrere Bridges gefunden" : {
+
+    },
+    "Melde dich im Browser mit dem Hue-Konto an, das du auch in der Hue-App nutzt, und erlaube Hoku den Zugriff. Dein Passwort sieht Hoku dabei nie." : {
+
+    },
+    "Mi" : {
+
+    },
+    "Minuten" : {
+
+    },
+    "Mit dem iPhone kannst du Apple Home nutzen – Hoku ergänzt, was Home nicht kann: echte Hue-Szenen und dynamische Szenen, Wecker & Schlafen, Geräte-Check, alles blitzschnell in der Menüleiste. Und sind deine Lampen nicht in Home, bringt Hoku Siri am Mac trotzdem zum Leuchten." : {
+
+    },
+    "Mitteilung nicht möglich: %@" : {
+
+    },
+    "Mitteilung, wenn zu Hause noch Licht brennt" : {
+
+    },
+    "Mitteilungen sind aus – in den Systemeinstellungen erlauben" : {
+
+    },
+    "Mo" : {
+
+    },
+    "Name" : {
+
+    },
+    "Nein" : {
+
+    },
+    "Netzwerk-Einstellungen öffnen" : {
+
+    },
+    "Neue Routine" : {
+
+    },
+    "Neuer Wecker" : {
+
+    },
+    "Neutral" : {
+
+    },
+    "Nicht autorisiert" : {
+
+    },
+    "Nicht eingerichtet" : {
+
+    },
+    "Nicht erlauben" : {
+
+    },
+    "Nicht erreichbar" : {
+
+    },
+    "Nicht gekoppelt" : {
+
+    },
+    "Nicht jetzt" : {
+
+    },
+    "Nicht mehr vorhanden" : {
+
+    },
+    "Nicht mit Hue verbunden." : {
+
+    },
+    "Noch unbekannt" : {
+
+    },
+    "Nochmal prüfen" : {
+
+    },
+    "Nur Hoku am Mac" : {
+
+    },
+    "Nur im Schlüsselbund dieses Macs, nie in iCloud oder in Dateien." : {
+
+    },
+    "Nutzt du oft" : {
+
+    },
+    "Offen" : {
+
+    },
+    "Offline (%@)" : {
+
+    },
+    "Ohne Cloud – nur in deinem Netzwerk zu Hause." : {
+
+    },
+    "Ohne Wochentag: einmalig" : {
+
+    },
+    "Ohne iPhone lässt sich Apple Home nicht einrichten – Siri am Mac kennt deine Lampen dann nicht. Genau diese Lücke schließt Hoku: „Hey Siri, Zimmer an“ direkt am Mac. Dazu Szenen, Wecker und alles Weitere in der Menüleiste." : {
+
+    },
+    "Ohne ihn findet Hoku deine Bridge nicht. So schaltest du ihn ein:" : {
+
+    },
+    "Ort" : {
+
+    },
+    "Perfekt – genau da findest du Hoku." : {
+
+    },
+    "Probier’s aus: „Hey Siri, %@“" : {
+
+    },
+    "Programme" : {
+
+    },
+    "Prüfen" : {
+
+    },
+    "Raum" : {
+
+    },
+    "Raum ausschalten" : {
+
+    },
+    "Raum dimmen" : {
+
+    },
+    "Raum einschalten" : {
+
+    },
+    "Raum oder Lampe wählen" : {
+
+    },
+    "Raum schalten" : {
+
+    },
+    "Raum umschalten" : {
+
+    },
+    "Räume" : {
+
+    },
+    "Sa" : {
+
+    },
+    "Sag einfach: „Hey Siri, Zimmer an“" : {
+
+    },
+    "Schalte ${light} ${value}" : {
+
+    },
+    "Schalte ${room} ${value}" : {
+
+    },
+    "Schalter & Sensoren" : {
+
+    },
+    "Schaltet alle Lampen in einem Raum oder einer Zone an oder aus." : {
+
+    },
+    "Schaltet eine Lampe oder Steckdose um." : {
+
+    },
+    "Schaltet eine einzelne Lampe oder Steckdose an oder aus." : {
+
+    },
+    "Schaltet einen Raum an, wenn er aus ist, und aus, wenn er an ist." : {
+
+    },
+    "Schaltet jedes Licht im Zuhause aus." : {
+
+    },
+    "Schlafen gehen" : {
+
+    },
+    "Schließen" : {
+
+    },
+    "Schnell aus der Menüleiste" : {
+
+    },
+    "Schritt %lld von %lld" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Schritt %1$lld von %2$lld"
+          }
+        }
+      }
+    },
+    "Seite öffnen" : {
+
+    },
+    "Sichern" : {
+
+    },
+    "Siehst du das Symbol nicht? Systemeinstellungen → Menüleiste → „In Menüleiste erlauben“." : {
+
+    },
+    "Siri" : {
+
+    },
+    "Siri am Mac" : {
+
+    },
+    "Siri ohne Umwege" : {
+
+    },
+    "Siri-Befehle" : {
+
+    },
+    "Siri-Befehle einrichten" : {
+
+    },
+    "Siri: „Hey Siri, ‹Raum› an“ – weitere Befehle unter Einstellungen → Siri-Befehle." : {
+
+    },
+    "Smarte Szene – wechselt im Tagesverlauf" : {
+
+    },
+    "So" : {
+
+    },
+    "So funktioniert’s" : {
+
+    },
+    "So hilft dir Hoku" : {
+
+    },
+    "Sonnenaufgang über" : {
+
+    },
+    "Speichern" : {
+
+    },
+    "Später" : {
+
+    },
+    "Später in den Einstellungen" : {
+
+    },
+    "Starte ${scene}" : {
+
+    },
+    "Starten" : {
+
+    },
+    "Startet eine Hue-Szene in ihrem Raum." : {
+
+    },
+    "Statisch starten" : {
+
+    },
+    "Status" : {
+
+    },
+    "Stellt die Helligkeit eines Raums ein und schaltet ihn dabei an." : {
+
+    },
+    "Steuerst du deine Hue-Lichter schon mit der Home-App oder Siri auf dem iPhone?" : {
+
+    },
+    "Suche nach deiner Hue Bridge …" : {
+
+    },
+    "Sync aktiv" : {
+
+    },
+    "Systemeinstellungen öffnen" : {
+
+    },
+    "Szene" : {
+
+    },
+    "Szene %@" : {
+
+    },
+    "Szene %@, aktiv" : {
+
+    },
+    "Szene hinzufügen" : {
+
+    },
+    "Szene im Raum starten" : {
+
+    },
+    "Szene starten" : {
+
+    },
+    "Szenen" : {
+
+    },
+    "Szenen & Stimmungen" : {
+
+    },
+    "Tageslicht" : {
+
+    },
+    "Tastenkürzel" : {
+
+    },
+    "Tempo der dynamischen Szene" : {
+
+    },
+    "Test" : {
+
+    },
+    "Test-Mitteilung" : {
+
+    },
+    "Trennen" : {
+
+    },
+    "Täglich" : {
+
+    },
+    "Unabhängige App" : {
+
+    },
+    "Unbekannter Befehl: %@" : {
+
+    },
+    "Unter deinem Namen → „Remote Hue API appids“ → „Add new Remote Hue API app“." : {
+
+    },
+    "Unterwegs" : {
+
+    },
+    "Unterwegs bliebe Hoku jetzt still." : {
+
+    },
+    "Unterwegs-Hinweis" : {
+
+    },
+    "Unterwegs-Hinweis pausiert" : {
+
+    },
+    "Update" : {
+
+    },
+    "Verbinde mit der Bridge …" : {
+
+    },
+    "Verbinde …" : {
+
+    },
+    "Verbunden" : {
+
+    },
+    "Verbunden!" : {
+
+    },
+    "Verstanden" : {
+
+    },
+    "Verstanden – los geht’s" : {
+
+    },
+    "Vorschau des Systemdialogs: Klick auf Erlauben" : {
+
+    },
+    "Vorschau · %lld Min. in 3 Sek." : {
+
+    },
+    "Vorschau · Klicken zum Aktivieren" : {
+
+    },
+    "Vorschlag für jetzt: %@ im Raum %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Vorschlag für jetzt: %1$@ im Raum %2$@"
+          }
+        }
+      }
+    },
+    "Wach mit einem sanften Sonnenaufgang auf." : {
+
+    },
+    "Warm" : {
+
+    },
+    "Warte auf deine Antwort im Systemdialog …" : {
+
+    },
+    "Warte auf den Browser …" : {
+
+    },
+    "Warte auf macOS …" : {
+
+    },
+    "Was ist dir wichtig?" : {
+
+    },
+    "Wecker & Routinen" : {
+
+    },
+    "Wecker & Schlafen" : {
+
+    },
+    "Wecker & Schlafen gehen" : {
+
+    },
+    "Weiter" : {
+
+    },
+    "Weiß" : {
+
+    },
+    "Weiß · %lld K" : {
+
+    },
+    "Welche Lampe?" : {
+
+    },
+    "Welche Szene?" : {
+
+    },
+    "Welche möchtest du koppeln?" : {
+
+    },
+    "Welchen Raum?" : {
+
+    },
+    "Welches Handy hast du?" : {
+
+    },
+    "Werktags" : {
+
+    },
+    "Wie möchtest du Siri nutzen?" : {
+
+    },
+    "Willkommen bei Hoku" : {
+
+    },
+    "Wird eingerichtet …" : {
+
+    },
+    "Wird übergeben … %lld/%lld" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Wird übergeben … %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "Wochenende" : {
+
+    },
+    "Zeig’s mir" : {
+
+    },
+    "Zeitraffer abspielen" : {
+
+    },
+    "Zone" : {
+
+    },
+    "Zonen" : {
+
+    },
+    "Zu Hause" : {
+
+    },
+    "Zu Hause brennt noch Licht" : {
+
+    },
+    "Zu Hause ist alles aus" : {
+
+    },
+    "Zu Hause ist es jetzt dunkel." : {
+
+    },
+    "Zum Dimmen ziehen" : {
+
+    },
+    "Zurück" : {
+
+    },
+    "Zurück (Esc)" : {
+
+    },
+    "Zurück / schließen" : {
+
+    },
+    "Zwei Hinweise, die zu Hoku gehören." : {
+
+    },
+    "Zwei-Finger-Klick auf eine Raumkarte zeigt ihre Lampen. Wischen dimmt." : {
+
+    },
+    "an / aus" : {
+
+    },
+    "belegt" : {
+
+    },
+    "keine Ausgabe" : {
+
+    },
+    "keine Lichtgruppe für das ganze Zuhause" : {
+
+    },
+    "macOS lässt Hoku gerade nicht ins lokale Netzwerk." : {
+
+    },
+    "macOS möchte das noch bestätigen: Allgemein → Anmeldeobjekte & Erweiterungen → „Hoku“ einschalten." : {
+
+    },
+    "schwach" : {
+
+    },
+    "Öffnen" : {
+
+    },
+    "Überspringen" : {
+
+    },
+    "„%@“ löschen?" : {
+
+    },
+    "„Hey Siri, Zimmer an“ – ohne App-Namen" : {
+
+    },
+    "„Hey Siri, Zimmer an“ – ohne App-Namen und ohne iPhone." : {
+
+    },
+    "„Zimmer an“" : {
+
+    },
+    "…" : {
+
+    },
+    "→ An" : {
+
+    },
+    "→ Aus" : {
+
+    },
+    "⏰ oben im Panel: Lichtwecker mit Sonnenaufgang und Schlafen gehen." : {
+
+    }
   },
   "version" : "1.0"
 }

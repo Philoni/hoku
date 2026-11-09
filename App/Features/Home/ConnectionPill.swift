@@ -34,7 +34,7 @@ struct ConnectionPill: View {
     }
 
     private func pill(
-        _ text: String,
+        _ text: LocalizedStringKey,
         systemImage: String,
         color: Color,
         @ViewBuilder action: () -> some View = { EmptyView() }

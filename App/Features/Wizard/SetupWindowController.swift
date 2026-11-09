@@ -35,7 +35,7 @@ final class SetupWindowController: NSObject, NSWindowDelegate {
             styleMask: [.titled, .closable, .fullSizeContentView],
             backing: .buffered, defer: false
         )
-        window.title = "Hoku einrichten"
+        window.title = String(localized: "Hoku einrichten")
         window.titleVisibility = .hidden
         window.titlebarAppearsTransparent = true
         window.isMovableByWindowBackground = true

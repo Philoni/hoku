@@ -11,7 +11,7 @@ struct SleepTimerButton: View {
     var body: some View {
         if isSnapshot {
             // Menus are AppKit-backed and don't render offscreen; show the look instead.
-            CircleIconButton(title: "Einschlaf-Timer", systemImage: "moon.zzz.fill") {}
+            CircleIconButton(title: String(localized: "Einschlaf-Timer"), systemImage: "moon.zzz.fill") {}
         } else if let fadeOut = store.fadeOuts[group.id] {
             Button {
                 Haptics.tap()

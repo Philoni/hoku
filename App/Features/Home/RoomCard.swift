@@ -122,13 +122,13 @@ struct GroupCard: View {
     /// As little text as possible: the scene, else the brightness; counts only when mixed.
     private func subtitle(isOn: Bool, lights: [Light], brightness: Double?, isDimmable: Bool) -> String {
         if let fadeOut = store.fadeOuts[group.id] {
-            return "Dimmt aus bis \(fadeOut.ends.formatted(date: .omitted, time: .shortened))"
+            return String(localized: "Dimmt aus bis \(fadeOut.ends.formatted(date: .omitted, time: .shortened))")
         }
-        guard isOn else { return lights.isEmpty ? "Keine Lampen" : "Aus" }
+        guard isOn else { return lights.isEmpty ? String(localized: "Keine Lampen") : String(localized: "Aus") }
         if let scene = store.activeScene(in: group) { return scene.name }
         let onCount = lights.filter(\.isOn).count
-        if onCount < lights.count { return "\(onCount) von \(lights.count) an" }
-        guard isDimmable, let brightness else { return "An" }
+        if onCount < lights.count { return String(localized: "\(onCount) von \(lights.count) an") }
+        guard isDimmable, let brightness else { return String(localized: "An") }
         return "\(Int(brightness.rounded())) %"
     }
 }
@@ -184,8 +184,8 @@ private struct InlineLightRow: View {
     }
 
     private var state: String {
-        guard store.isReachable(light) else { return "Nicht erreichbar" }
-        guard light.isOn else { return "Aus" }
-        return light.supportsDimming ? "\(Int(light.brightness.rounded())) %" : "An"
+        guard store.isReachable(light) else { return String(localized: "Nicht erreichbar") }
+        guard light.isOn else { return String(localized: "Aus") }
+        return light.supportsDimming ? "\(Int(light.brightness.rounded())) %" : String(localized: "An")
     }
 }

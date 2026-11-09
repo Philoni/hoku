@@ -155,7 +155,7 @@ private struct LocationStep: View {
     var body: some View {
         VStack(spacing: 0) {
             StepHeader(
-                title: "Hoku in „Programme“ verschieben?",
+                title: String(localized: "Hoku in „Programme“ verschieben?"),
                 subtitle: subtitle
             )
             WizardCard(tint: model.step.accent) {
@@ -188,17 +188,17 @@ private struct LocationStep: View {
 
     private var subtitle: String {
         if case .diskImage = InstallLocation.current {
-            return "Hoku läuft gerade direkt vom Image. Hoku kopiert sich und wirft das Image danach aus."
+            return String(localized: "Hoku läuft gerade direkt vom Image. Hoku kopiert sich und wirft das Image danach aus.")
         }
-        return "Hoku läuft gerade aus einem Ordner wie „Downloads“."
+        return String(localized: "Hoku läuft gerade aus einem Ordner wie „Downloads“.")
     }
 
     private var currentPlace: String {
         switch InstallLocation.current {
         case let .translocated(original): original.deletingLastPathComponent().lastPathComponent
-        case .diskImage: "Image"
+        case .diskImage: String(localized: "Image")
         case let .elsewhere(url): url.deletingLastPathComponent().lastPathComponent
-        case .applications: "Programme"
+        case .applications: String(localized: "Programme")
         }
     }
 }
@@ -214,16 +214,16 @@ private struct WelcomeStep: View {
 
         VStack(spacing: 0) {
             StepHeader(
-                title: onlyNotices ? "Kurz bevor es weitergeht" : "Willkommen bei Hoku",
-                subtitle: onlyNotices ? "Zwei Hinweise, die zu Hoku gehören." : "Deine Hue-Lichter, direkt in der Menüleiste."
+                title: onlyNotices ? String(localized: "Kurz bevor es weitergeht") : String(localized: "Willkommen bei Hoku"),
+                subtitle: onlyNotices ? String(localized: "Zwei Hinweise, die zu Hoku gehören.") : String(localized: "Deine Hue-Lichter, direkt in der Menüleiste.")
             )
             if !onlyNotices {
                 VStack(spacing: 12) {
-                    feature("lightbulb.max.fill", "Jeder Raum, jede Lampe", "Dimmen, schalten, Szenen wählen – mit einem Klick in der Menüleiste.", tint: tint)
+                    feature("lightbulb.max.fill", String(localized: "Jeder Raum, jede Lampe"), String(localized: "Dimmen, schalten, Szenen wählen – mit einem Klick in der Menüleiste."), tint: tint)
                         .wizardAppear(1)
-                    feature("waveform", "Siri ohne Umwege", "„Hey Siri, Zimmer an“ – ohne App-Namen und ohne iPhone.", tint: tint)
+                    feature("waveform", String(localized: "Siri ohne Umwege"), String(localized: "„Hey Siri, Zimmer an“ – ohne App-Namen und ohne iPhone."), tint: tint)
                         .wizardAppear(2)
-                    feature("lock.shield.fill", "Alles bleibt bei dir", Features.awayReminder ? "Direkt mit deiner Bridge. Kein Konto, Cloud nur, wenn du sie einschaltest." : "Direkt mit deiner Bridge. Kein Konto, keine Cloud.", tint: tint)
+                    feature("lock.shield.fill", String(localized: "Alles bleibt bei dir"), Features.awayReminder ? String(localized: "Direkt mit deiner Bridge. Kein Konto, Cloud nur, wenn du sie einschaltest.") : String(localized: "Direkt mit deiner Bridge. Kein Konto, keine Cloud."), tint: tint)
                         .wizardAppear(3)
                 }
                 .padding(.bottom, 18)
@@ -232,14 +232,14 @@ private struct WelcomeStep: View {
                 VStack(alignment: .leading, spacing: 12) {
                     notice(
                         "info.circle.fill",
-                        "Unabhängige App",
-                        "Hoku ist ein Open-Source-Projekt von Philoni und keine App, kein Produkt und kein Dienst von Signify (Philips Hue). Signify unterstützt oder prüft Hoku nicht – verantwortlich ist allein Philoni. Philips und Philips Hue sind Marken ihrer jeweiligen Inhaber."
+                        String(localized: "Unabhängige App"),
+                        String(localized: "Hoku ist ein Open-Source-Projekt von Philoni und keine App, kein Produkt und kein Dienst von Signify (Philips Hue). Signify unterstützt oder prüft Hoku nicht – verantwortlich ist allein Philoni. Philips und Philips Hue sind Marken ihrer jeweiligen Inhaber.")
                     )
                     Divider().overlay(.white.opacity(0.1))
                     notice(
                         "heart.circle.fill",
-                        "Licht und Gesundheit",
-                        "Bestimmte Lichtfarben, schnelle Wechsel oder Blinken können Unwohlsein auslösen – bei lichtempfindlichen Menschen auch Anfälle oder Migräne. Fühlst du dich unwohl, beende Effekt, Szene oder Hoku sofort."
+                        String(localized: "Licht und Gesundheit"),
+                        String(localized: "Bestimmte Lichtfarben, schnelle Wechsel oder Blinken können Unwohlsein auslösen – bei lichtempfindlichen Menschen auch Anfälle oder Migräne. Fühlst du dich unwohl, beende Effekt, Szene oder Hoku sofort.")
                     )
                 }
             }
@@ -291,7 +291,7 @@ private struct HomeSetupStep: View {
         let tint = model.step.accent
 
         VStack(spacing: 0) {
-            StepHeader(title: "Erzähl kurz von dir", subtitle: "Dann richtet Hoku genau das ein, was dir fehlt.")
+            StepHeader(title: String(localized: "Erzähl kurz von dir"), subtitle: String(localized: "Dann richtet Hoku genau das ein, was dir fehlt."))
 
             Text("Welches Handy hast du?")
                 .font(.system(size: 14, weight: .semibold, design: .rounded))
@@ -300,7 +300,7 @@ private struct HomeSetupStep: View {
             HStack(spacing: 8) {
                 phoneTile(.iPhone, "iPhone", "iphone", tint: tint)
                 phoneTile(.android, "Android", "candybarphone", tint: tint)
-                phoneTile(.other, "Keins / anderes", "laptopcomputer", tint: tint)
+                phoneTile(.other, String(localized: "Keins / anderes"), "laptopcomputer", tint: tint)
             }
 
             if let phone = model.phone {
@@ -339,11 +339,11 @@ private struct HomeSetupStep: View {
     static func promise(for phone: SetupState.Phone) -> String {
         switch phone {
         case .android:
-            "Ohne iPhone lässt sich Apple Home nicht einrichten – Siri am Mac kennt deine Lampen dann nicht. Genau diese Lücke schließt Hoku: „Hey Siri, Zimmer an“ direkt am Mac. Dazu Szenen, Wecker und alles Weitere in der Menüleiste."
+            String(localized: "Ohne iPhone lässt sich Apple Home nicht einrichten – Siri am Mac kennt deine Lampen dann nicht. Genau diese Lücke schließt Hoku: „Hey Siri, Zimmer an“ direkt am Mac. Dazu Szenen, Wecker und alles Weitere in der Menüleiste.")
         case .iPhone:
-            "Mit dem iPhone kannst du Apple Home nutzen – Hoku ergänzt, was Home nicht kann: echte Hue-Szenen und dynamische Szenen, Wecker & Schlafen, Geräte-Check, alles blitzschnell in der Menüleiste. Und sind deine Lampen nicht in Home, bringt Hoku Siri am Mac trotzdem zum Leuchten."
+            String(localized: "Mit dem iPhone kannst du Apple Home nutzen – Hoku ergänzt, was Home nicht kann: echte Hue-Szenen und dynamische Szenen, Wecker & Schlafen, Geräte-Check, alles blitzschnell in der Menüleiste. Und sind deine Lampen nicht in Home, bringt Hoku Siri am Mac trotzdem zum Leuchten.")
         case .other:
-            "Hoku ist deine komplette Hue-Steuerung am Mac: Räume, Lampen und Szenen in der Menüleiste, per Tastatur und per Siri – ganz ohne Handy und ohne Cloud."
+            String(localized: "Hoku ist deine komplette Hue-Steuerung am Mac: Räume, Lampen und Szenen in der Menüleiste, per Tastatur und per Siri – ganz ohne Handy und ohne Cloud.")
         }
     }
 
@@ -398,11 +398,11 @@ private struct HomeSetupStep: View {
 extension SetupState.Wish {
     var title: String {
         switch self {
-        case .siri: "Siri am Mac"
-        case .menuBar: "Schnell aus der Menüleiste"
-        case .scenes: "Szenen & Stimmungen"
-        case .routines: "Wecker & Schlafen"
-        case .away: "Licht aus, wenn ich gehe"
+        case .siri: String(localized: "Siri am Mac")
+        case .menuBar: String(localized: "Schnell aus der Menüleiste")
+        case .scenes: String(localized: "Szenen & Stimmungen")
+        case .routines: String(localized: "Wecker & Schlafen")
+        case .away: String(localized: "Licht aus, wenn ich gehe")
         }
     }
 
@@ -419,11 +419,11 @@ extension SetupState.Wish {
     /// Where to find it, for the tips at the end of setup.
     var tip: String {
         switch self {
-        case .siri: "Siri: „Hey Siri, ‹Raum› an“ – weitere Befehle unter Einstellungen → Siri-Befehle."
-        case .menuBar: "Zwei-Finger-Klick auf eine Raumkarte zeigt ihre Lampen. Wischen dimmt."
-        case .scenes: "Klick auf einen Raum: unten wischst du durch seine Szenen."
-        case .routines: "⏰ oben im Panel: Lichtwecker mit Sonnenaufgang und Schlafen gehen."
-        case .away: "Einstellungen → „Licht aus, wenn ich gehe“ – beim Sperren des Macs."
+        case .siri: String(localized: "Siri: „Hey Siri, ‹Raum› an“ – weitere Befehle unter Einstellungen → Siri-Befehle.")
+        case .menuBar: String(localized: "Zwei-Finger-Klick auf eine Raumkarte zeigt ihre Lampen. Wischen dimmt.")
+        case .scenes: String(localized: "Klick auf einen Raum: unten wischst du durch seine Szenen.")
+        case .routines: String(localized: "⏰ oben im Panel: Lichtwecker mit Sonnenaufgang und Schlafen gehen.")
+        case .away: String(localized: "Einstellungen → „Licht aus, wenn ich gehe“ – beim Sperren des Macs.")
         }
     }
 }
@@ -438,8 +438,8 @@ private struct NetworkStep: View {
 
         VStack(spacing: 0) {
             StepHeader(
-                title: "Hoku spricht direkt mit deiner Bridge",
-                subtitle: "Ohne Cloud – nur in deinem Netzwerk zu Hause."
+                title: String(localized: "Hoku spricht direkt mit deiner Bridge"),
+                subtitle: String(localized: "Ohne Cloud – nur in deinem Netzwerk zu Hause.")
             )
             switch model.network {
             case .explaining, .asking:
@@ -457,7 +457,7 @@ private struct NetworkStep: View {
                 }
                 .padding(.top, 18)
             case .allowed:
-                SuccessBadge(text: "Erlaubt – danke!", tint: tint)
+                SuccessBadge(text: String(localized: "Erlaubt – danke!"), tint: tint)
                     .padding(.top, 40)
             case .denied:
                 WizardCard(tint: .orange) {
@@ -468,9 +468,9 @@ private struct NetworkStep: View {
                             .font(.system(size: 13.5, design: .rounded))
                             .foregroundStyle(.white.opacity(0.7))
                         StepList(items: [
-                            "Systemeinstellungen öffnen",
-                            "Datenschutz & Sicherheit → Lokales Netzwerk",
-                            "Bei „Hoku“ einschalten",
+                            String(localized: "Systemeinstellungen öffnen"),
+                            String(localized: "Datenschutz & Sicherheit → Lokales Netzwerk"),
+                            String(localized: "Bei „Hoku“ einschalten"),
                         ], tint: tint)
                         Text("Hoku macht danach von selbst weiter.")
                             .font(.system(size: 13, weight: .medium, design: .rounded))
@@ -550,7 +550,7 @@ private struct BridgeStep: View {
             if model.isPaired {
                 ConnectedBridge(model: model)
             } else if let bridge = app.pairingBridge {
-                StepHeader(title: "Drück jetzt die Link-Taste", subtitle: "Der runde Knopf oben auf deiner Bridge „\(bridge.name)“.")
+                StepHeader(title: String(localized: "Drück jetzt die Link-Taste"), subtitle: String(localized: "Der runde Knopf oben auf deiner Bridge „\(bridge.name)“."))
                 BridgeIllustration(tint: tint, progress: Double(app.pairingSecondsLeft) / 60, isPairing: true)
                 Text("Hoku wartet noch \(app.pairingSecondsLeft) Sekunden")
                     .font(.system(size: 14, weight: .medium, design: .rounded))
@@ -561,12 +561,12 @@ private struct BridgeStep: View {
                 Button("Abbrechen") { app.cancelPairing() }
                     .buttonStyle(WizardQuietButtonStyle())
             } else if app.isSearching {
-                StepHeader(title: "Suche nach deiner Hue Bridge …", subtitle: "Das dauert nur ein paar Sekunden.")
+                StepHeader(title: String(localized: "Suche nach deiner Hue Bridge …"), subtitle: String(localized: "Das dauert nur ein paar Sekunden."))
                 BridgeIllustration(tint: tint, progress: nil, isPairing: false)
             } else if app.discovered.isEmpty {
-                StepHeader(title: "Keine Bridge gefunden", subtitle: app.isLocalNetworkDenied
-                    ? "macOS lässt Hoku gerade nicht ins lokale Netzwerk."
-                    : "Ist dein Mac im selben Netzwerk wie die Bridge, und leuchten ihre Lämpchen?")
+                StepHeader(title: String(localized: "Keine Bridge gefunden"), subtitle: app.isLocalNetworkDenied
+                    ? String(localized: "macOS lässt Hoku gerade nicht ins lokale Netzwerk.")
+                    : String(localized: "Ist dein Mac im selben Netzwerk wie die Bridge, und leuchten ihre Lämpchen?"))
                 if app.isLocalNetworkDenied {
                     Button("Netzwerk-Einstellungen öffnen") { WizardModel.openLocalNetworkSettings() }
                         .buttonStyle(WizardQuietButtonStyle())
@@ -580,8 +580,8 @@ private struct BridgeStep: View {
                 manualEntry(alwaysOpen: true)
             } else {
                 StepHeader(
-                    title: app.discovered.count == 1 ? "Bridge gefunden" : "Mehrere Bridges gefunden",
-                    subtitle: app.discovered.count == 1 ? "Koppeln, und Hoku kennt deine Lichter." : "Welche möchtest du koppeln?"
+                    title: app.discovered.count == 1 ? String(localized: "Bridge gefunden") : String(localized: "Mehrere Bridges gefunden"),
+                    subtitle: app.discovered.count == 1 ? String(localized: "Koppeln, und Hoku kennt deine Lichter.") : String(localized: "Welche möchtest du koppeln?")
                 )
                 VStack(spacing: 8) {
                     ForEach(app.discovered) { bridge in
@@ -729,10 +729,10 @@ private struct ConnectedBridge: View {
 
         VStack(spacing: 0) {
             StepHeader(
-                title: "Verbunden!",
+                title: String(localized: "Verbunden!"),
                 subtitle: rooms.isEmpty
-                    ? "Hoku lädt gerade deine Räume …"
-                    : "\(rooms.count) \(rooms.count == 1 ? "Raum" : "Räume") · \(store.lights.count) \(store.lights.count == 1 ? "Lampe" : "Lampen")"
+                    ? String(localized: "Hoku lädt gerade deine Räume …")
+                    : "\(rooms.count) \(rooms.count == 1 ? String(localized: "Raum") : String(localized: "Räume")) · \(store.lights.count) \(store.lights.count == 1 ? String(localized: "Lampe") : String(localized: "Lampen"))"
             )
             FlowLayout(spacing: 8) {
                 ForEach(Array(rooms.enumerated()), id: \.element.id) { index, room in
@@ -768,8 +768,8 @@ private struct MenuBarStep: View {
 
         VStack(spacing: 0) {
             StepHeader(
-                title: "Hier oben wohnt Hoku",
-                subtitle: "Klick auf das Symbol in der Menüleiste – oder drück diese Tasten, egal wo du gerade bist."
+                title: String(localized: "Hier oben wohnt Hoku"),
+                subtitle: String(localized: "Klick auf das Symbol in der Menüleiste – oder drück diese Tasten, egal wo du gerade bist.")
             )
             // A little menu bar, with Hoku's icon glowing in it.
             HStack(spacing: 16) {
@@ -826,8 +826,8 @@ private struct LoginStep: View {
 
         VStack(spacing: 0) {
             StepHeader(
-                title: "Beim Anmelden starten?",
-                subtitle: "Dann sind deine Lichter immer nur einen Klick entfernt – auch nach einem Neustart."
+                title: String(localized: "Beim Anmelden starten?"),
+                subtitle: String(localized: "Dann sind deine Lichter immer nur einen Klick entfernt – auch nach einem Neustart.")
             )
             WizardCard(tint: tint) {
                 HStack(spacing: 12) {
@@ -877,34 +877,34 @@ private struct VoiceStep: View {
 
         VStack(spacing: 0) {
             StepHeader(
-                title: "Sag einfach: „Hey Siri, Zimmer an“",
-                subtitle: "Hoku richtet Siri-Befehle ganz ohne App-Namen für dich ein."
+                title: String(localized: "Sag einfach: „Hey Siri, Zimmer an“"),
+                subtitle: String(localized: "Hoku richtet Siri-Befehle ganz ohne App-Namen für dich ein.")
             )
             switch model.voiceQuestion {
             case .usesAppleHome:
-                question("Steuerst du deine Hue-Lichter schon mit der Home-App oder Siri auf dem iPhone?")
+                question(String(localized: "Steuerst du deine Hue-Lichter schon mit der Home-App oder Siri auf dem iPhone?"))
                 WizardChoiceButton(
-                    title: "Ja, über Apple Home", subtitle: "Hoku ergänzt, was Home nicht kann: Szenen & mehr",
+                    title: String(localized: "Ja, über Apple Home"), subtitle: String(localized: "Hoku ergänzt, was Home nicht kann: Szenen & mehr"),
                     systemImage: "house.fill", isSuggested: links.hasAppleHome, tint: tint
                 ) { model.answer(usesAppleHome: true) }
                 WizardChoiceButton(
-                    title: "Nein", subtitle: "Hoku übernimmt deine Siri-Befehle",
+                    title: String(localized: "Nein"), subtitle: String(localized: "Hoku übernimmt deine Siri-Befehle"),
                     systemImage: "sparkles", isSuggested: !links.hasAppleHome, tint: tint
                 ) { model.answer(usesAppleHome: false) }
                 .padding(.top, 8)
             case .hasIPhone:
-                question("Hast du ein iPhone oder iPad?")
-                WizardChoiceButton(title: "Ja", systemImage: "iphone", tint: tint) { model.answer(hasIPhone: true) }
-                WizardChoiceButton(title: "Nein", systemImage: "laptopcomputer", tint: tint) { model.answer(hasIPhone: false) }
+                question(String(localized: "Hast du ein iPhone oder iPad?"))
+                WizardChoiceButton(title: String(localized: "Ja"), systemImage: "iphone", tint: tint) { model.answer(hasIPhone: true) }
+                WizardChoiceButton(title: String(localized: "Nein"), systemImage: "laptopcomputer", tint: tint) { model.answer(hasIPhone: false) }
                     .padding(.top, 8)
             case .appleHomeChoice:
-                question("Wie möchtest du Siri nutzen?")
+                question(String(localized: "Wie möchtest du Siri nutzen?"))
                 WizardChoiceButton(
-                    title: "Apple Home einrichten", subtitle: "Am iPhone – Hoku ergänzt dann Szenen & mehr",
+                    title: String(localized: "Apple Home einrichten"), subtitle: String(localized: "Am iPhone – Hoku ergänzt dann Szenen & mehr"),
                     systemImage: "house.fill", tint: tint
                 ) { model.answer(wantsAppleHome: true) }
                 WizardChoiceButton(
-                    title: "Nur Hoku am Mac", subtitle: "Alle Befehle direkt über Hoku",
+                    title: String(localized: "Nur Hoku am Mac"), subtitle: String(localized: "Alle Befehle direkt über Hoku"),
                     systemImage: "desktopcomputer", tint: tint
                 ) { model.answer(wantsAppleHome: false) }
                 .padding(.top, 8)
@@ -987,9 +987,9 @@ private struct VoiceStep: View {
             }
             .padding(.top, 20)
         case let .finished(count):
-            SuccessBadge(text: count == 1 ? "1 Befehl eingerichtet" : "\(count) Befehle eingerichtet", tint: tint)
+            SuccessBadge(text: count == 1 ? String(localized: "1 Befehl eingerichtet") : String(localized: "\(count) Befehle eingerichtet"), tint: tint)
                 .padding(.top, 20)
-            Text("Probier’s aus: „Hey Siri, \(model.voiceCommands.first(where: \.isRecommended)?.name ?? "Alles aus")“")
+            Text("Probier’s aus: „Hey Siri, \(model.voiceCommands.first(where: \.isRecommended)?.name ?? String(localized: "Alles aus"))“")
                 .font(.system(size: 14, design: .rounded))
                 .foregroundStyle(.white.opacity(0.7))
                 .padding(.top, 10)
@@ -1014,20 +1014,20 @@ private struct DoneStep: View {
         let store = model.store
         let siriDone: Bool = if case .finished = model.voiceInstall { true } else { false }
         let siri: String = switch model.voiceInstall {
-        case let .finished(count): count == 1 ? "1 Befehl" : "\(count) Befehle"
-        case .failed: "Nicht eingerichtet"
-        default: "Später in den Einstellungen"
+        case let .finished(count): count == 1 ? String(localized: "1 Befehl") : String(localized: "\(count) Befehle")
+        case .failed: String(localized: "Nicht eingerichtet")
+        default: String(localized: "Später in den Einstellungen")
         }
         let networkDone = model.isPaired || model.network == .allowed
 
         VStack(spacing: 0) {
-            StepHeader(title: "Alles bereit", subtitle: "Hoku wartet oben in der Menüleiste auf dich.")
+            StepHeader(title: String(localized: "Alles bereit"), subtitle: String(localized: "Hoku wartet oben in der Menüleiste auf dich."))
             WizardCard(tint: tint) {
                 VStack(spacing: 12) {
-                    row("Bridge", model.isPaired ? (store.credentials?.name ?? "Verbunden") : "Nicht gekoppelt", done: model.isPaired, index: 0, tint: tint)
-                    row("Lokales Netzwerk", networkDone ? "Erlaubt" : "Offen", done: networkDone, index: 1, tint: tint)
-                    row("Beim Anmelden starten", model.launchesAtLogin ? "An" : "Aus", done: model.launchesAtLogin, index: 2, tint: tint)
-                    row("Siri", siri, done: siriDone, index: 3, tint: tint)
+                    row(String(localized: "Bridge"), model.isPaired ? (store.credentials?.name ?? String(localized: "Verbunden")) : String(localized: "Nicht gekoppelt"), done: model.isPaired, index: 0, tint: tint)
+                    row(String(localized: "Lokales Netzwerk"), networkDone ? String(localized: "Erlaubt") : String(localized: "Offen"), done: networkDone, index: 1, tint: tint)
+                    row(String(localized: "Beim Anmelden starten"), model.launchesAtLogin ? String(localized: "An") : String(localized: "Aus"), done: model.launchesAtLogin, index: 2, tint: tint)
+                    row(String(localized: "Siri"), siri, done: siriDone, index: 3, tint: tint)
                 }
             }
             .frame(maxWidth: 400)

@@ -31,6 +31,25 @@ public struct SiriCommand: Identifiable, Hashable, Sendable {
     public var id: String { name }
 }
 
+extension SiriCommand.Kind {
+    public var title: String {
+        switch self {
+        case .room: String(localized: "Räume", bundle: .module)
+        case .light: String(localized: "Lampen", bundle: .module)
+        case .scene: String(localized: "Szenen", bundle: .module)
+        case .home: String(localized: "Zuhause", bundle: .module)
+        }
+    }
+}
+
+/// The words commands are built from, in the app's language: "Wohnzimmer an", "Living room on".
+enum SiriWords {
+    static var on: String { String(localized: "an", bundle: .module, comment: "Siri command ending that switches on: 'Wohnzimmer an'") }
+    static var off: String { String(localized: "aus", bundle: .module, comment: "Siri command ending that switches off: 'Wohnzimmer aus'") }
+    /// German plural rules for names only apply to German commands.
+    static var isGerman: Bool { on == "an" }
+}
+
 extension SiriCommand {
     /// Commands for this home: rooms and zones on/off (recommended), lamps, scenes as
     /// "<Room> <Scene>", "Alles aus" — plus the ways Siri writes names. Names are unique.
@@ -42,7 +61,7 @@ extension SiriCommand {
             let name = group.name
             for on in [true, false] {
                 commands.append(SiriCommand(
-                    name: "\(name) \(on ? "an" : "aus")",
+                    name: "\(name) \(on ? SiriWords.on : SiriWords.off)",
                     url: "hoku://raum/\(encode(name))/\(on ? "an" : "aus")",
                     action: .roomPower(id: group.id, name: name, isZone: group.isZone, on: on),
                     kind: .room, isRecommended: true
@@ -58,7 +77,7 @@ extension SiriCommand {
             let name = store.name(of: light)
             for on in [true, false] {
                 commands.append(SiriCommand(
-                    name: "\(name) \(on ? "an" : "aus")",
+                    name: "\(name) \(on ? SiriWords.on : SiriWords.off)",
                     url: "hoku://lampe/\(encode(name))/\(on ? "an" : "aus")",
                     action: .lightPower(id: light.id, name: name, roomName: roomNames[light.id], on: on),
                     kind: .light, isRecommended: false
@@ -67,7 +86,7 @@ extension SiriCommand {
         }
 
         for group in store.sortedRooms + store.sortedZones {
-            for scene in store.scenes(in: group) where !scene.name.hasPrefix("Neue Szene") {
+            for scene in store.scenes(in: group) where !scene.name.hasPrefix("Neue Szene") && !scene.name.hasPrefix("New scene") {
                 commands.append(SiriCommand(
                     name: "\(group.name) \(scene.name)",
                     url: "hoku://szene/\(encode(scene.name))?raum=\(encode(group.name))",
@@ -77,8 +96,8 @@ extension SiriCommand {
             }
         }
 
-        commands.append(SiriCommand(name: "Alles aus", url: "hoku://alle/aus", action: .allOff, kind: .home, isRecommended: true))
-        commands.append(SiriCommand(name: "Gute Nacht", url: "hoku://alle/aus", action: .allOff, kind: .home, isRecommended: false))
+        commands.append(SiriCommand(name: String(localized: "Alles aus", bundle: .module), url: "hoku://alle/aus", action: .allOff, kind: .home, isRecommended: true))
+        commands.append(SiriCommand(name: String(localized: "Gute Nacht", bundle: .module), url: "hoku://alle/aus", action: .allOff, kind: .home, isRecommended: false))
 
         commands = withSpokenVariants(commands, store: store)
 
@@ -95,7 +114,7 @@ extension SiriCommand {
         for command in commands {
             result.append(command)
             guard command.kind == .room || command.kind == .light else { continue }
-            for verb in [" an", " aus"] where command.name.hasSuffix(verb) {
+            for verb in [" " + SiriWords.on, " " + SiriWords.off] where command.name.hasSuffix(verb) {
                 let subject = String(command.name.dropLast(verb.count))
                 for variant in SpokenNames.variants(of: subject, avoiding: taken) {
                     var alias = command

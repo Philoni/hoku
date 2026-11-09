@@ -227,7 +227,7 @@ final class AppModel {
                     try SMAppService.mainApp.unregister()
                 }
             } catch {
-                store.reportError("Autostart: \(error.localizedDescription)")
+                store.reportError(String(localized: "Autostart: \(error.localizedDescription)"))
             }
         }
     }

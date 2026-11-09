@@ -18,7 +18,7 @@ struct SiriCommandsView: View {
         let pending = commands.filter { selected.contains($0.id) && !existing.contains($0.name.lowercased()) }
 
         VStack(spacing: 10) {
-            PageHeader(title: "Siri-Befehle", subtitle: "„Hey Siri, Zimmer an“ – ohne App-Namen", onBack: pop) {
+            PageHeader(title: String(localized: "Siri-Befehle"), subtitle: String(localized: "„Hey Siri, Zimmer an“ – ohne App-Namen"), onBack: pop) {
                 EmptyView()
             }
 
@@ -32,7 +32,7 @@ struct SiriCommandsView: View {
                         ForEach(SiriCommand.Kind.allCases, id: \.self) { kind in
                             let group = commands.filter { $0.kind == kind }
                             if !group.isEmpty {
-                                SectionTitle(text: kind.rawValue)
+                                SectionTitle(text: kind.title)
                                 FlowChips(
                                     options: group.map { ($0.id, chipTitle($0)) },
                                     isSelected: { id in selected.contains(id) || existing.contains(id.lowercased()) },
@@ -110,11 +110,11 @@ struct SiriCommandsView: View {
     private func install(_ commands: [SiriCommand]) {
         isInstalling = true
         handedOver = 0
-        message = "Die Kurzbefehle-App öffnet sich gleich – bitte bei jedem Befehl „Kurzbefehl hinzufügen“ klicken."
+        message = String(localized: "Die Kurzbefehle-App öffnet sich gleich – bitte bei jedem Befehl „Kurzbefehl hinzufügen“ klicken.")
         Task {
             do {
                 try await SiriCommands.install(commands) { count in handedOver = count }
-                message = "Fertig übergeben. Sag zum Beispiel „Hey Siri, \(commands.first?.name ?? "Zimmer an")“."
+                message = String(localized: "Fertig übergeben. Sag zum Beispiel „Hey Siri, \(commands.first?.name ?? "Zimmer an")“.")
             } catch {
                 message = error.localizedDescription
             }

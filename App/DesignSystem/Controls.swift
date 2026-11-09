@@ -25,8 +25,8 @@ struct GlowSwitch: View {
             .contentShape(Capsule())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(isOn ? "Ausschalten" : "Einschalten")
-        .accessibilityValue(isOn ? "An" : "Aus")
+        .accessibilityLabel(isOn ? String(localized: "Ausschalten") : String(localized: "Einschalten"))
+        .accessibilityValue(isOn ? String(localized: "An") : String(localized: "Aus"))
     }
 }
 

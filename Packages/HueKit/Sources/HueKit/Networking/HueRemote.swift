@@ -12,7 +12,7 @@ public actor HueRemote {
 
     private func credentials() throws -> BridgeCredentials {
         guard let credentials = CredentialStore.load() else {
-            throw HueError.bridge("Hoku ist noch mit keiner Hue Bridge gekoppelt. Öffne Hoku und koppel deine Bridge.")
+            throw HueError.bridge(String(localized: "Hoku ist noch mit keiner Hue Bridge gekoppelt. Öffne Hoku und koppel deine Bridge.", bundle: .module))
         }
         return credentials
     }
@@ -59,7 +59,7 @@ public actor HueRemote {
         if homeID == nil {
             homeID = try await snapshot().homeGroupedLightID
         }
-        guard let homeID else { throw HueError.bridge("Die Bridge meldet keine Lichtgruppe für das ganze Zuhause.") }
+        guard let homeID else { throw HueError.bridge(String(localized: "Die Bridge meldet keine Lichtgruppe für das ganze Zuhause.", bundle: .module)) }
         try await client.update(credentials, type: "grouped_light", id: homeID, body: ["on": ["on": false]])
     }
 

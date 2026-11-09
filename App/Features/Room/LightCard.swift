@@ -27,7 +27,7 @@ struct LightCard: View {
             CardLabel(
                 systemImage: Icons.light(store.archetype(of: light), dimmable: light.supportsDimming),
                 title: store.name(of: light),
-                subtitle: preview.map { $0.isOn ? (light.supportsDimming ? "→ \(Int($0.brightness.rounded())) %" : "→ An") : "→ Aus" } ?? subtitle,
+                subtitle: preview.map { $0.isOn ? (light.supportsDimming ? "→ \(Int($0.brightness.rounded())) %" : String(localized: "→ An")) : String(localized: "→ Aus") } ?? subtitle,
                 isOn: preview?.isOn ?? light.isOn,
                 glow: preview?.color ?? light.displayColor,
                 liveValue: liveValue
@@ -36,10 +36,10 @@ struct LightCard: View {
     }
 
     private var subtitle: String {
-        if !store.isReachable(light) { return "Nicht erreichbar" }
-        if light.isStreaming { return "Sync aktiv" }
-        guard light.isOn else { return "Aus" }
-        guard light.supportsDimming else { return "An" }
+        if !store.isReachable(light) { return String(localized: "Nicht erreichbar") }
+        if light.isStreaming { return String(localized: "Sync aktiv") }
+        guard light.isOn else { return String(localized: "Aus") }
+        guard light.supportsDimming else { return String(localized: "An") }
         return "\(Int(light.brightness.rounded())) %"
     }
 }

@@ -69,7 +69,7 @@ public enum SecretStoreError: Error, LocalizedError, Sendable {
         switch self {
         case let .keychain(status):
             let message = SecCopyErrorMessageString(status, nil) as String? ?? "Code \(status)"
-            return "Schlüsselbund: \(message)"
+            return String(localized: "Schlüsselbund: \(message)", bundle: .module)
         }
     }
 }
@@ -154,7 +154,7 @@ public struct CloudAccountStore: Sendable {
         guard let data = try secrets.load() else { return nil }
         // A damaged item is an error to show, not \"never set up\" to overwrite silently.
         do { return try JSONDecoder().decode(CloudAccount.self, from: data) }
-        catch { throw CloudError.unexpected("Gespeicherte Hue-Anmeldung ist beschädigt. Bitte neu einrichten.") }
+        catch { throw CloudError.unexpected(String(localized: "Gespeicherte Hue-Anmeldung ist beschädigt. Bitte neu einrichten.", bundle: .module)) }
     }
 
     public func save(_ account: CloudAccount) throws {

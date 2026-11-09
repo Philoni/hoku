@@ -80,7 +80,7 @@ extension HueClient {
 
                         let (bytes, response) = try await streamSession.bytes(for: request)
                         guard let http = response as? HTTPURLResponse else {
-                            throw HueError.bridgeUnreachable("keine HTTP-Antwort")
+                            throw HueError.bridgeUnreachable(String(localized: "keine HTTP-Antwort", bundle: .module))
                         }
                         if http.statusCode == 401 || http.statusCode == 403 { throw HueError.unauthorized }
                         guard http.statusCode == 200 else { throw HueError.http(http.statusCode, nil) }
@@ -99,7 +99,7 @@ extension HueClient {
                             line.removeAll(keepingCapacity: true)
                             if !events.isEmpty { continuation.yield(.events(events)) }
                         }
-                        continuation.yield(.disconnected("Stream beendet"))
+                        continuation.yield(.disconnected(String(localized: "Stream beendet", bundle: .module)))
                     } catch is CancellationError {
                         break
                     } catch HueError.unauthorized {

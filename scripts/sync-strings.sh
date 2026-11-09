@@ -15,14 +15,16 @@ xcodebuild -project Hoku.xcodeproj -scheme Hoku -configuration Debug -derivedDat
 # Only the installed copy may be registered (see scripts/build-app.sh).
 "$LSREGISTER" -u "$DERIVED/Build/Products/Debug/Hoku.app" 2>/dev/null || true
 
+# sync <target> <catalog>…: each catalog receives the strings of its own table.
 sync() {
-    local catalog=$1 target=$2 args=()
+    local target=$1 args=()
+    shift
     for file in "$DERIVED"/Build/Intermediates.noindex/$target.build/**/*.stringsdata(N); do
         args+=(--stringsdata "$file")
     done
     (( ${#args} )) || { echo "Keine Texte für $target gefunden." >&2; exit 1; }
-    xcrun xcstringstool sync "$catalog" "${args[@]}"
-    echo "✓ $catalog"
+    xcrun xcstringstool sync "$@" "${args[@]}"
+    print -l "✓ "${^@}
 }
-sync App/Localizable.xcstrings Hoku
-sync Packages/HueKit/Sources/HueKit/Resources/Localizable.xcstrings HueKit
+sync Hoku App/Localizable.xcstrings App/AppShortcuts.xcstrings
+sync HueKit Packages/HueKit/Sources/HueKit/Resources/Localizable.xcstrings

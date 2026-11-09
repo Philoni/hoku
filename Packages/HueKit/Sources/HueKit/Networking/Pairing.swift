@@ -32,6 +32,6 @@ extension HueClient {
                 try await Task.sleep(for: .seconds(1))
             }
         }
-        throw HueError.bridge("Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal.")
+        throw HueError.bridge(String(localized: "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal.", bundle: .module))
     }
 }

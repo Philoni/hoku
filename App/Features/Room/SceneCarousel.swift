@@ -233,7 +233,7 @@ struct SceneTile: View {
             }
         }
         .buttonStyle(PressableStyle())
-        .help((scene.supportsDynamic ? "Klicken startet die Szene · Rechtsklick: dynamisch oder statisch" : "Szene starten") + (shortcut.map { " · Taste \($0)" } ?? ""))
+        .help((scene.supportsDynamic ? String(localized: "Klicken startet die Szene · Rechtsklick: dynamisch oder statisch") : String(localized: "Szene starten")) + (shortcut.map { String(localized: " · Taste \($0)") } ?? ""))
         .contextMenu {
             Button("Starten", systemImage: "play.fill") { store.recall(scene) }
             if scene.supportsDynamic {
@@ -242,7 +242,7 @@ struct SceneTile: View {
             }
         }
         .onHover { onPreview($0 ? scene : nil) }
-        .accessibilityLabel("Szene \(scene.name)\(isActive ? ", aktiv" : "")")
+        .accessibilityLabel(isActive ? "Szene \(scene.name), aktiv" : "Szene \(scene.name)")
         .animation(Theme.spring, value: isActive)
     }
 }

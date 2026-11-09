@@ -357,7 +357,7 @@ public final class HueStore {
 
     /// Device names are the user-facing ones; `light.metadata` is deprecated.
     public func name(of light: Light) -> String {
-        light.owner.flatMap { devices[$0.rid]?.metadata?.name } ?? light.metadata?.name ?? "Lampe"
+        light.owner.flatMap { devices[$0.rid]?.metadata?.name } ?? light.metadata?.name ?? String(localized: "Lampe", bundle: .module)
     }
 
     public func archetype(of light: Light) -> String? {
@@ -446,7 +446,7 @@ public final class HueStore {
     /// result to the user (the away reminder's notification).
     public func switchEverythingOff() async throws {
         guard let credentials, let id = bridgeHome?.groupedLightID else {
-            throw HueError.bridge("Keine Lichtgruppe für das ganze Zuhause gefunden.")
+            throw HueError.bridge(String(localized: "Keine Lichtgruppe für das ganze Zuhause gefunden.", bundle: .module))
         }
         try await client.update(credentials, type: "grouped_light", id: id, body: ["on": ["on": false]])
         for light in lights.values where light.isOn {

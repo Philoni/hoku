@@ -40,7 +40,7 @@ final class HotKey {
 
         private static func keyName(_ keyCode: UInt32) -> String {
             switch Int(keyCode) {
-            case kVK_Space: return "Leertaste"
+            case kVK_Space: return String(localized: "Leertaste")
             case kVK_Return: return "↩"
             case kVK_Escape: return "⎋"
             default: break

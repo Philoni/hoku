@@ -1,0 +1,23 @@
+{
+  "sourceLanguage": "de",
+  "strings": {
+    "NSLocalNetworkUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku steuert deine Hue Bridge direkt im lokalen Netzwerk."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku controls your Hue Bridge directly on your local network."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

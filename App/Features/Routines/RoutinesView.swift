@@ -37,14 +37,14 @@ struct RoutinesView: View {
 
     private var list: some View {
         VStack(spacing: 10) {
-            PageHeader(title: "Wecker & Schlafen", subtitle: "Läuft auf der Bridge, auch wenn der Mac schläft", onBack: pop) {
+            PageHeader(title: String(localized: "Wecker & Schlafen"), subtitle: String(localized: "Läuft auf der Bridge, auch wenn der Mac schläft"), onBack: pop) {
                 EmptyView()
             }
 
             PageScroll(maxHeight: 420) {
                 VStack(spacing: 7) {
-                    section(.wakeUp, title: "Lichtwecker", icon: "sunrise.fill", empty: "Wach mit einem sanften Sonnenaufgang auf.")
-                    section(.goToSleep, title: "Schlafen gehen", icon: "moon.stars.fill", empty: "Licht dimmt abends langsam herunter.")
+                    section(.wakeUp, title: String(localized: "Lichtwecker"), icon: "sunrise.fill", empty: String(localized: "Wach mit einem sanften Sonnenaufgang auf."))
+                    section(.goToSleep, title: String(localized: "Schlafen gehen"), icon: "moon.stars.fill", empty: String(localized: "Licht dimmt abends langsam herunter."))
                 }
             }
         }
@@ -138,16 +138,16 @@ private struct RoutineCard: View {
 
 enum Weekdays {
     static let short: [String: String] = [
-        "monday": "Mo", "tuesday": "Di", "wednesday": "Mi", "thursday": "Do",
-        "friday": "Fr", "saturday": "Sa", "sunday": "So",
+        "monday": String(localized: "Mo"), "tuesday": String(localized: "Di"), "wednesday": String(localized: "Mi"), "thursday": String(localized: "Do"),
+        "friday": String(localized: "Fr"), "saturday": String(localized: "Sa"), "sunday": String(localized: "So"),
     ]
 
     static func summary(_ days: [String]) -> String {
         let set = Set(days)
-        if set.count == 7 { return "Täglich" }
-        if set == Set(RoutineDraft.weekdayOrder.prefix(5)) { return "Werktags" }
-        if set == ["saturday", "sunday"] { return "Wochenende" }
-        if set.isEmpty { return "Einmalig" }
+        if set.count == 7 { return String(localized: "Täglich") }
+        if set == Set(RoutineDraft.weekdayOrder.prefix(5)) { return String(localized: "Werktags") }
+        if set == ["saturday", "sunday"] { return String(localized: "Wochenende") }
+        if set.isEmpty { return String(localized: "Einmalig") }
         return RoutineDraft.weekdayOrder.filter(set.contains).compactMap { short[$0] }.joined(separator: ", ")
     }
 }

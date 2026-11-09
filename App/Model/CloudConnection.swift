@@ -66,7 +66,7 @@ final class CloudConnection {
     func saveApp(clientID: String, clientSecret: String) async {
         let app = CloudAppCredentials(clientID: clientID, clientSecret: clientSecret)
         guard app.isComplete else {
-            error = "Bitte Client-ID und Client-Secret eintragen."
+            error = String(localized: "Bitte Client-ID und Client-Secret eintragen.")
             return
         }
         do {
@@ -101,7 +101,7 @@ final class CloudConnection {
         self.session = session
         if !session.start() {
             status = .signedOut
-            error = "Das Anmeldefenster ließ sich nicht öffnen."
+            error = String(localized: "Das Anmeldefenster ließ sich nicht öffnen.")
         }
     }
 

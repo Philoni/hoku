@@ -56,6 +56,7 @@ public enum SpokenNames {
     /// German singular for a plural last word: "Vitrinen" → "Vitrine". (The other way
     /// round rarely helps — nobody calls one ceiling lamp "Deckenlampen".)
     static func numberVariants(of name: String) -> [String] {
+        guard SiriWords.isGerman else { return [] }
         var words = name.split(separator: " ").map(String.init)
         guard let last = words.last, last.count >= 5, last.lowercased().hasSuffix("en") else { return [] }
         words[words.count - 1] = String(last.dropLast())

@@ -11,6 +11,13 @@ struct LightDetailView: View {
         case color = "Farbe"
         case white = "Weiß"
         var id: Self { self }
+
+        var title: String {
+            switch self {
+            case .color: String(localized: "Farbe")
+            case .white: String(localized: "Weiß")
+            }
+        }
     }
 
     @State private var mode: Mode = .color
@@ -36,8 +43,8 @@ struct LightDetailView: View {
             ) { liveValue in
                 CardLabel(
                     systemImage: Icons.light(store.archetype(of: light), dimmable: light.supportsDimming),
-                    title: "Helligkeit",
-                    subtitle: light.isOn ? "\(Int(light.brightness.rounded())) %" : "Aus",
+                    title: String(localized: "Helligkeit"),
+                    subtitle: light.isOn ? "\(Int(light.brightness.rounded())) %" : String(localized: "Aus"),
                     isOn: light.isOn,
                     glow: light.displayColor,
                     liveValue: liveValue
@@ -79,11 +86,11 @@ struct LightDetailView: View {
         let room = light.owner.flatMap { store.devices[$0.rid] }.flatMap { store.room(of: $0) }?.name
         let state: String
         if !light.isOn {
-            state = "Aus"
+            state = String(localized: "Aus")
         } else if light.isInColorTemperatureMode, let mirek = light.colorTemperature?.mirek {
-            state = "Weiß · \(Int(ColorMath.kelvin(fromMirek: mirek).rounded())) K"
+            state = String(localized: "Weiß · \(Int(ColorMath.kelvin(fromMirek: mirek).rounded())) K")
         } else {
-            state = light.supportsColor ? "Farbe" : "An"
+            state = light.supportsColor ? String(localized: "Farbe") : String(localized: "An")
         }
         return [room, state].compactMap { $0 }.joined(separator: " · ")
     }
@@ -101,7 +108,7 @@ private struct ModePicker: View {
                     Haptics.tap()
                     withAnimation(Theme.spring) { mode = option }
                 } label: {
-                    Text(option.rawValue)
+                    Text(option.title)
                         .font(.system(size: 12.5, weight: .semibold, design: .rounded))
                         .foregroundStyle(mode == option ? AnyShapeStyle(Theme.selectedChipText) : AnyShapeStyle(.secondary))
                         .frame(maxWidth: .infinity)
@@ -337,10 +344,10 @@ private struct WhitePresetRow: View {
     let light: Light
 
     private let presets: [(name: String, kelvin: Int, icon: String)] = [
-        ("Kerze", 2200, "flame.fill"),
-        ("Warm", 2700, "sun.horizon.fill"),
-        ("Neutral", 4000, "sun.min.fill"),
-        ("Tageslicht", 6500, "sun.max.fill"),
+        (String(localized: "Kerze"), 2200, "flame.fill"),
+        (String(localized: "Warm"), 2700, "sun.horizon.fill"),
+        (String(localized: "Neutral"), 4000, "sun.min.fill"),
+        (String(localized: "Tageslicht"), 6500, "sun.max.fill"),
     ]
 
     var body: some View {

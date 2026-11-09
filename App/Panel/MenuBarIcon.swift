@@ -53,7 +53,7 @@ enum MenuBarIcon {
             return true
         }
         image.isTemplate = false
-        image.accessibilityDescription = "Hoku – Lichter an"
+        image.accessibilityDescription = String(localized: "Hoku – Lichter an")
         return image
     }
 }

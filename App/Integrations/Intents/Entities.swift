@@ -111,7 +111,7 @@ struct SceneEntity: AppEntity {
             title: "\(name)",
             subtitle: "\(roomName)",
             image: .init(systemName: "sparkles"),
-            synonyms: ["\(roomName) \(name)", "\(name) im \(roomName)", "\(name) in \(roomName)"]
+            synonyms: ["\(roomName) \(name)", "\(name) im \(roomName)", "\(name) in \(roomName)", "\(name) in the \(roomName)"]
         )
     }
 }

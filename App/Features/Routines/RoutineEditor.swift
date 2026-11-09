@@ -14,7 +14,7 @@ struct RoutineEditor: View {
 
     var body: some View {
         VStack(spacing: 10) {
-            PageHeader(title: routine == nil ? (kind == .wakeUp ? "Neuer Wecker" : "Neue Routine") : draft.name, onBack: done) {
+            PageHeader(title: routine == nil ? (kind == .wakeUp ? String(localized: "Neuer Wecker") : String(localized: "Neue Routine")) : draft.name, onBack: done) {
                 Button(isSaving ? "…" : "Sichern") { save() }
                     .buttonStyle(.glassProminent)
                     .controlSize(.small)
@@ -36,7 +36,7 @@ struct RoutineEditor: View {
 
                     LightCurvePreview(
                         isSunrise: kind == .wakeUp,
-                        roomName: store.group(draft.groupID)?.name ?? "Raum",
+                        roomName: store.group(draft.groupID)?.name ?? String(localized: "Raum"),
                         roomIcon: Icons.room(store.group(draft.groupID)?.metadata?.archetype),
                         fadeMinutes: draft.fadeMinutes,
                         endBrightness: kind == .wakeUp ? draft.endBrightness : 0
@@ -59,7 +59,7 @@ struct RoutineEditor: View {
                                 }
                             }
                         )
-                        Text(draft.weekdays.isEmpty ? "Ohne Wochentag: einmalig" : Weekdays.summary(draft.weekdays))
+                        Text(draft.weekdays.isEmpty ? String(localized: "Ohne Wochentag: einmalig") : Weekdays.summary(draft.weekdays))
                             .font(.system(size: 10.5, design: .rounded))
                             .foregroundStyle(.secondary)
                     }
@@ -78,7 +78,7 @@ struct RoutineEditor: View {
                             .font(.system(size: 11, weight: .semibold, design: .rounded))
                             .foregroundStyle(.secondary)
                         FlowChips(
-                            options: [5, 10, 15, 20, 30, 45, 60].map { ("\($0)", "\($0) Min.") },
+                            options: [5, 10, 15, 20, 30, 45, 60].map { ("\($0)", String(localized: "\($0) Min.")) },
                             isSelected: { $0 == "\(draft.fadeMinutes)" },
                             toggle: { draft.fadeMinutes = Int($0) ?? 15 }
                         )
@@ -122,7 +122,7 @@ struct RoutineEditor: View {
         if let routine {
             draft = store.draft(from: routine)
         } else {
-            draft.name = kind == .wakeUp ? "Aufwachen" : "Schlafen gehen"
+            draft.name = kind == .wakeUp ? String(localized: "Aufwachen") : String(localized: "Schlafen gehen")
             draft.hour = kind == .wakeUp ? 7 : 23
             draft.weekdays = Array(RoutineDraft.weekdayOrder.prefix(5))
             draft.groupID = store.sortedRooms.first?.id ?? ""

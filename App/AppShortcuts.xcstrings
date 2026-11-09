@@ -1,0 +1,150 @@
+{
+  "sourceLanguage" : "de",
+  "strings" : {
+    "${applicationName} ${light}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} ${light}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${light} an" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} ${light} an",
+              "Schalte ${light} mit ${applicationName} ein"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${light} aus" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} ${light} aus",
+              "Schalte ${light} mit ${applicationName} aus"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${room}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} ${room}",
+              "${applicationName} schalte ${room}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${room} an" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} ${room} an",
+              "Schalte ${room} mit ${applicationName} ein",
+              "Mach ${room} mit ${applicationName} an"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${room} aus" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} ${room} aus",
+              "Schalte ${room} mit ${applicationName} aus",
+              "Mach ${room} mit ${applicationName} aus"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${scene}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} ${scene}",
+              "Starte ${scene} mit ${applicationName}",
+              "${applicationName} Szene ${scene}",
+              "Aktiviere ${scene} mit ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} Einschlaftimer ${room}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} Einschlaftimer ${room}",
+              "Starte den Einschlaftimer mit ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} alles aus" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} alles aus",
+              "Alle Lichter aus mit ${applicationName}",
+              "Gute Nacht mit ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "Dimme ${room} mit ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Dimme ${room} mit ${applicationName}",
+              "${applicationName} ${room} dimmen"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

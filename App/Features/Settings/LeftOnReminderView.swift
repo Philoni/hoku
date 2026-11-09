@@ -15,7 +15,7 @@ struct LeftOnReminderView: View {
         let watcher = model.leftOn
 
         VStack(spacing: 10) {
-            PageHeader(title: "Unterwegs-Hinweis", subtitle: "Licht vergessen? Hoku sagt Bescheid.", onBack: pop) {
+            PageHeader(title: String(localized: "Unterwegs-Hinweis"), subtitle: String(localized: "Licht vergessen? Hoku sagt Bescheid."), onBack: pop) {
                 EmptyView()
             }
 
@@ -23,7 +23,7 @@ struct LeftOnReminderView: View {
                 VStack(spacing: 7) {
                     ReminderSwitchCard(watcher: watcher, canEnable: cloud.isConnected)
 
-                    SectionTitle(text: "Hue-Fernzugriff")
+                    SectionTitle(text: String(localized: "Hue-Fernzugriff"))
                     switch cloud.status {
                     case .notConfigured:
                         AppCredentialsCard(cloud: cloud)
@@ -41,7 +41,7 @@ struct LeftOnReminderView: View {
                             .padding(.horizontal, 4)
                     }
 
-                    SectionTitle(text: "Beim Gehen")
+                    SectionTitle(text: String(localized: "Beim Gehen"))
                     Text("Automatisch ausschalten, wenn du gehst, macht dein Handy am besten: In der Hue-App unter Automationen „Wenn ich gehe“ → alles aus. Hoku schaltet aus der Ferne nur, wenn du in der Mitteilung auf „Alles ausschalten“ klickst.")
                         .font(.system(size: 11, design: .rounded))
                         .foregroundStyle(.secondary)
@@ -75,8 +75,8 @@ private struct ReminderSwitchCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             SettingSwitch(
-                title: "Unterwegs-Hinweis",
-                subtitle: canEnable ? "Mitteilung, wenn zu Hause noch Licht brennt" : "Erst den Hue-Fernzugriff unten einrichten",
+                title: String(localized: "Unterwegs-Hinweis"),
+                subtitle: canEnable ? String(localized: "Mitteilung, wenn zu Hause noch Licht brennt") : String(localized: "Erst den Hue-Fernzugriff unten einrichten"),
                 systemImage: "house.and.flag.fill",
                 isOn: Binding(
                     get: { watcher.isEnabled },
@@ -120,9 +120,9 @@ private struct ReminderSwitchCard: View {
 
     private var locationText: String {
         switch watcher.location {
-        case .home: "Zu Hause"
-        case .away: "Unterwegs"
-        case .unknown: "Noch unbekannt"
+        case .home: String(localized: "Zu Hause")
+        case .away: String(localized: "Unterwegs")
+        case .unknown: String(localized: "Noch unbekannt")
         }
     }
 
@@ -158,7 +158,7 @@ private struct AppCredentialsCard: View {
                     NSPasteboard.general.setString(CloudAuthorization.callbackURL, forType: .string)
                     copied = true
                 } label: {
-                    Label(copied ? "Kopiert" : CloudAuthorization.callbackURL, systemImage: copied ? "checkmark" : "doc.on.doc")
+                    Label(copied ? String(localized: "Kopiert") : CloudAuthorization.callbackURL, systemImage: copied ? "checkmark" : "doc.on.doc")
                         .font(.system(size: 11, weight: .semibold, design: .monospaced))
                 }
                 .buttonStyle(.glass)
@@ -199,7 +199,7 @@ private struct AppCredentialsCard: View {
         .background(CardBackground())
     }
 
-    private func step(_ number: Int, _ text: String) -> some View {
+    private func step(_ number: Int, _ text: LocalizedStringKey) -> some View {
         HStack(alignment: .firstTextBaseline, spacing: 6) {
             Text("\(number)")
                 .font(.system(size: 10, weight: .bold, design: .rounded))

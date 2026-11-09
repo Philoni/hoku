@@ -1,7 +1,254 @@
 {
   "sourceLanguage" : "de",
   "strings" : {
+    "%@ und %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ und %2$@"
+          }
+        }
+      }
+    },
+    "%@, %@ und %lld weitere Räume" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@ und %3$lld weitere Räume"
+          }
+        }
+      }
+    },
+    "%lld Lampen an" : {
 
+    },
+    "1 Lampe an" : {
+
+    },
+    "Alles aus" : {
+
+    },
+    "Antwort der Bridge nicht lesbar: %@" : {
+
+    },
+    "Arbeitsplatte" : {
+
+    },
+    "Arktische Aurora" : {
+
+    },
+    "Automation" : {
+
+    },
+    "Bitte einen Raum wählen." : {
+
+    },
+    "Bitte melde dich erneut bei Hue an." : {
+
+    },
+    "Bridge nicht erreichbar (%@)." : {
+
+    },
+    "Bridge-Fehler %lld" : {
+
+    },
+    "Büro" : {
+
+    },
+    "Das Zertifikat unter %@ passt nicht zur Bridge-ID." : {
+
+    },
+    "Deckenlampe" : {
+
+    },
+    "Deckenspots" : {
+
+    },
+    "Der Hue-Fernzugriff ist noch nicht eingerichtet." : {
+
+    },
+    "Die Antwort passt nicht zu dieser Anmeldung. Bitte noch einmal versuchen." : {
+
+    },
+    "Die Bridge bietet diese Automation nicht an." : {
+
+    },
+    "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln." : {
+
+    },
+    "Die Bridge meldet keine Lichtgruppe für das ganze Zuhause." : {
+
+    },
+    "Die Firmware der Bridge ist zu alt. Bitte in der Hue-App aktualisieren." : {
+
+    },
+    "Die Hue-Cloud bremst gerade. Später noch einmal versuchen." : {
+
+    },
+    "Die Link-Taste wurde noch nicht gedrückt." : {
+
+    },
+    "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal." : {
+
+    },
+    "Energie tanken" : {
+
+    },
+    "Entspannen" : {
+
+    },
+    "Flur" : {
+
+    },
+    "Flurlicht" : {
+
+    },
+    "Gaming" : {
+
+    },
+    "Gemütlich" : {
+
+    },
+    "Gespeicherte Hue-Anmeldung ist beschädigt. Bitte neu einrichten." : {
+
+    },
+    "Gute Nacht" : {
+
+    },
+    "Hell" : {
+
+    },
+    "Hoku ist noch mit keiner Hue Bridge gekoppelt. Öffne Hoku und koppel deine Bridge." : {
+
+    },
+    "Hue hat die Anmeldung abgelehnt (%@)." : {
+
+    },
+    "Hue hat keinen Anmeldecode geschickt." : {
+
+    },
+    "Hue-Cloud nicht erreichbar (%@)." : {
+
+    },
+    "Hue-Cloud-Fehler %lld" : {
+
+    },
+    "Keine Lichtgruppe für das ganze Zuhause gefunden." : {
+
+    },
+    "Konzentrieren" : {
+
+    },
+    "Küche" : {
+
+    },
+    "Lampe" : {
+
+    },
+    "Lampe „%@“ nicht gefunden." : {
+
+    },
+    "Lampen" : {
+
+    },
+    "Leselampe" : {
+
+    },
+    "Lesen" : {
+
+    },
+    "Nachtlicht" : {
+
+    },
+    "Nachttisch links" : {
+
+    },
+    "Nachttisch rechts" : {
+
+    },
+    "Play-Bars" : {
+
+    },
+    "Raum „%@“ nicht gefunden." : {
+
+    },
+    "Regal" : {
+
+    },
+    "Ressourcen nicht lesbar" : {
+
+    },
+    "Räume" : {
+
+    },
+    "Schlafzimmer" : {
+
+    },
+    "Schlüsselbund: %@" : {
+
+    },
+    "Schreibtisch" : {
+
+    },
+    "Smarte Szene" : {
+
+    },
+    "Sofa-Lightstrip" : {
+
+    },
+    "Sonnenuntergang" : {
+
+    },
+    "Stehlampe" : {
+
+    },
+    "Stream beendet" : {
+
+    },
+    "Szene" : {
+
+    },
+    "Szene „%@“ nicht gefunden." : {
+
+    },
+    "Szenen" : {
+
+    },
+    "Tropendämmerung" : {
+
+    },
+    "Unbenannt" : {
+
+    },
+    "Unerwartete Antwort der Hue-Cloud: %@" : {
+
+    },
+    "Wohnzimmer" : {
+
+    },
+    "Zuhause" : {
+
+    },
+    "an" : {
+      "comment" : "Siri command ending that switches on: 'Wohnzimmer an'"
+    },
+    "aus" : {
+      "comment" : "Siri command ending that switches off: 'Wohnzimmer aus'"
+    },
+    "keine Bridge im Hue-Konto" : {
+
+    },
+    "keine HTTP-Antwort" : {
+
+    },
+    "keine Tokens in der Antwort" : {
+
+    },
+    "ungültige Adresse %@" : {
+
+    }
   },
   "version" : "1.0"
 }
