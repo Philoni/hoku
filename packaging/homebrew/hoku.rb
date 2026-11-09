@@ -1,8 +1,8 @@
 # Homebrew cask for a tap ("brew install --cask philoni/hoku/hoku").
 # On each release: set version and sha256 (dist/Hoku-<version>.dmg.sha256).
 cask "hoku" do
-  version "0.9.0"
-  sha256 "23527d82d89cb9b60833721568ad7664e4ec55f27714d13baefa09e7edf6707b"
+  version "0.9.1"
+  sha256 "3ade8fc182d7f899f07dedd6d32751f4641515db761771dcbbd57c90bd837034"
 
   url "https://github.com/Philoni/hoku/releases/download/v#{version}/Hoku-#{version}.dmg"
   name "Hoku"
