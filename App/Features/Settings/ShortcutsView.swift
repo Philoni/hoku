@@ -31,7 +31,7 @@ struct ShortcutsView: View {
                             HotKeyRecorder(combination: Binding(
                                 get: { model.hotKeyCombination },
                                 set: { if let new = $0 { model.hotKeyCombination = new } }
-                            ), isRequired: true)
+                            ), isRequired: true, name: String(localized: "Hoku öffnen"))
                         }
                         Divider().opacity(0.4)
                         row(String(localized: "Alles aus"), systemImage: "power", target: .allOff)
@@ -88,7 +88,7 @@ struct ShortcutsView: View {
                         assign($0, to: .scene(pendingScene))
                         self.pendingScene = nil
                     }
-                ), startsRecording: true, onCancel: { self.pendingScene = nil })
+                ), startsRecording: true, onCancel: { self.pendingScene = nil }, name: sceneTitle(pendingScene))
             }
         } else {
             Menu {
@@ -128,7 +128,7 @@ struct ShortcutsView: View {
             HotKeyRecorder(combination: Binding(
                 get: { model.combination(for: target) },
                 set: { assign($0, to: target) }
-            ))
+            ), name: title)
         }
     }
 
@@ -179,6 +179,7 @@ struct HotKeyRecorder: View {
     var isRequired = false
     var startsRecording = false
     var onCancel: () -> Void = {}
+    var name: String = ""
 
     @State private var id = UUID()
     @State private var monitor: Any?
@@ -198,6 +199,8 @@ struct HotKeyRecorder: View {
         .buttonStyle(.glass)
         .controlSize(.small)
         .help(isRequired ? "Klicken und neue Tastenkombination drücken" : "Klicken und Tastenkombination drücken · ⌫ entfernt sie")
+        .accessibilityLabel(name.isEmpty ? Text("Tastenkürzel") : Text("Tastenkürzel für \(name)"))
+        .accessibilityValue(isRecording ? String(localized: "Warte auf Eingabe") : combination?.displayString ?? String(localized: "Nicht festgelegt"))
         .animation(Theme.spring, value: isRecording)
         .onAppear { if startsRecording { start() } }
         .onDisappear(perform: stop)

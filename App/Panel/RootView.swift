@@ -143,6 +143,7 @@ private struct Toast: View {
         .padding(12)
         .glassEffect(.regular, in: .rect(cornerRadius: 16))
         .task {
+            AccessibilityNotification.Announcement(message).post()
             try? await Task.sleep(for: .seconds(5))
             onDismiss()
         }

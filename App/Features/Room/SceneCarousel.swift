@@ -243,6 +243,7 @@ struct SceneTile: View {
         }
         .onHover { onPreview($0 ? scene : nil) }
         .accessibilityLabel(isActive ? "Szene \(scene.name), aktiv" : "Szene \(scene.name)")
+        .accessibilityAddTraits(isActive ? .isSelected : [])
         .animation(Theme.spring, value: isActive)
     }
 }
@@ -273,5 +274,6 @@ struct SmartSceneTile: View {
         }
         .buttonStyle(PressableStyle())
         .help("Smarte Szene – wechselt im Tagesverlauf")
+        .accessibilityLabel(smartScene.isActive ? "Smarte Szene \(smartScene.name), aktiv" : "Smarte Szene \(smartScene.name)")
     }
 }

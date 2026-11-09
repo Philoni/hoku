@@ -28,7 +28,7 @@ struct SettingsView: View {
                                 Label("Tastenkürzel", systemImage: "keyboard")
                                 Spacer()
                                 Text(shortcutSummary).foregroundStyle(.secondary)
-                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                             }
                             .contentShape(Rectangle())
                         }
@@ -41,7 +41,7 @@ struct SettingsView: View {
                                 Label("Räume ordnen", systemImage: "arrow.up.arrow.down")
                                 Spacer()
                                 Text(store.groupOrder.isCustom ? String(localized: "Eigene Reihenfolge") : String(localized: "Nach Name")).foregroundStyle(.secondary)
-                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                             }
                             .contentShape(Rectangle())
                         }
@@ -77,7 +77,7 @@ struct SettingsView: View {
                                 Label("Unterwegs-Hinweis", systemImage: "house.and.flag.fill")
                                 Spacer()
                                 Text(leftOnStatus).foregroundStyle(.secondary)
-                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                             }
                             .font(.system(size: 12.5, weight: .medium, design: .rounded))
                             .padding(12)
@@ -95,7 +95,7 @@ struct SettingsView: View {
                             Spacer()
                             Text("\(store.routines(.wakeUp).count + store.routines(.goToSleep).count)")
                                 .foregroundStyle(.secondary)
-                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                         }
                         .font(.system(size: 12.5, weight: .medium, design: .rounded))
                         .padding(12)
@@ -113,7 +113,7 @@ struct SettingsView: View {
                             Spacer()
                             Text(issues == 0 ? "Alles in Ordnung" : "\(issues) Hinweise")
                                 .foregroundStyle(issues == 0 ? AnyShapeStyle(.secondary) : AnyShapeStyle(Color.orange))
-                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                         }
                         .font(.system(size: 12.5, weight: .medium, design: .rounded))
                         .padding(12)
@@ -130,7 +130,7 @@ struct SettingsView: View {
                             Label("Siri-Befehle einrichten", systemImage: "waveform.badge.mic")
                             Spacer()
                             Text("„Zimmer an“").foregroundStyle(.secondary)
-                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                         }
                         .font(.system(size: 12.5, weight: .medium, design: .rounded))
                         .padding(12)
@@ -145,7 +145,7 @@ struct SettingsView: View {
                         HStack {
                             Label("Einrichtung erneut starten", systemImage: "sparkles")
                             Spacer()
-                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                         }
                         .font(.system(size: 12.5, weight: .medium, design: .rounded))
                         .padding(12)
@@ -184,7 +184,7 @@ struct SettingsView: View {
                             HStack {
                                 Text("Verbindungsdetails")
                                 Spacer()
-                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                             }
                             .font(.system(size: 12.5, weight: .medium, design: .rounded))
                             .contentShape(Rectangle())

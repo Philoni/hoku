@@ -818,6 +818,7 @@ private struct MenuBarStep: View {
             .frame(height: 34)
             .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(.white.opacity(0.08)))
             .padding(.bottom, 44)
+            .accessibilityHidden(true)
 
             Keycaps(keys: model.app.hotKeyCombination.displayString.map(String.init))
 

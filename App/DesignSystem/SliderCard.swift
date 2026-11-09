@@ -22,6 +22,8 @@ struct SliderCard<Label: View>: View {
     /// While "all off" runs: switching off lets the fill fade out in ember tones,
     /// like a filament cooling down, instead of sliding away.
     var afterglow = false
+    var accessibilityName: String = ""
+    var accessibilityState: String = ""
     @ViewBuilder let label: (_ liveValue: Double?) -> Label
 
     @State private var dragValue: Double?
@@ -96,6 +98,7 @@ struct SliderCard<Label: View>: View {
                             .font(.system(size: 10, weight: .bold))
                             .foregroundStyle(Theme.faint)
                             .opacity(isHovering ? 1 : 0)
+                            .accessibilityHidden(true)
                     }
 
                     GlowSwitch(isOn: isOn, tint: stops[0], isCompact: isCompact, action: onToggle)
@@ -127,6 +130,22 @@ struct SliderCard<Label: View>: View {
             }
         }
         .onDisappear { HoverDimming.shared.leave(hoverID) }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(accessibilityName)
+        .accessibilityValue(accessibilityState)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityAdjustableAction { direction in
+            guard isDimmable, let onAdjust else { return }
+            switch direction {
+            case .increment: onAdjust(10)
+            case .decrement: onAdjust(-10)
+            @unknown default: break
+            }
+        }
+        .accessibilityAction {
+            if let onOpen { onOpen() } else { onToggle() }
+        }
+        .accessibilityAction(named: Text("Ein-/Ausschalten")) { onToggle() }
     }
 
     private func dragGesture(width: CGFloat) -> some Gesture {
@@ -179,6 +198,7 @@ struct CardLabel: View {
                 .opacity(isOn ? 1 : 0.55)
                 .shadow(color: isOn ? glow.opacity(0.9) : .clear, radius: 6)
                 .symbolEffect(.bounce, value: isOn)
+                .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 0) {
                 Text(title)

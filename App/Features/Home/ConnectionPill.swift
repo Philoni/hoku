@@ -43,6 +43,7 @@ struct ConnectionPill: View {
             Image(systemName: systemImage)
                 .foregroundStyle(color)
                 .symbolEffect(.pulse)
+                .accessibilityHidden(true)
             Text(text)
                 .font(.system(size: 12, weight: .medium, design: .rounded))
                 .lineLimit(1)

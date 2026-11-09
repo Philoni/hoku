@@ -51,7 +51,10 @@ struct GroupDetailView: View {
                 isDimmable: isDimmable,
                 onToggle: { store.setOn(!isOn, group: group) },
                 onBrightness: { store.setBrightness($0, group: group) },
-                onAdjust: { store.adjustBrightness(by: $0, group: group) }
+                onAdjust: { store.adjustBrightness(by: $0, group: group) },
+                accessibilityName: group.name,
+                accessibilityState: preview.map { String(localized: "Vorschau: \($0.name)") }
+                    ?? (isOn ? (isDimmable ? "\(Int((groupedLight?.dimming?.brightness ?? 0).rounded())) %" : String(localized: "An")) : String(localized: "Aus"))
             ) { liveValue in
                 if let preview {
                     CardLabel(

@@ -42,7 +42,9 @@ struct GroupCard: View {
                 onOpen: open,
                 onAdjust: { store.adjustBrightness(by: $0, group: group) },
                 animationDelay: animationDelay,
-                afterglow: coolingIDs.contains(group.id)
+                afterglow: coolingIDs.contains(group.id),
+                accessibilityName: group.name,
+                accessibilityState: subtitle(isOn: isOn, lights: lights, brightness: groupedLight?.dimming?.brightness, isDimmable: isDimmable)
             ) { liveValue in
                 HStack(spacing: 8) {
                     CardLabel(
@@ -58,6 +60,11 @@ struct GroupCard: View {
                     LightOrbs(lights: lights)
                         .opacity(expanded ? 0 : 1)
                         .scaleEffect(expanded ? 0.6 : 1)
+                }
+            }
+            .accessibilityActions {
+                if lights.count > 1, let onExpand {
+                    Button { onExpand() } label: { Text(isExpanded ? "Lampen einklappen" : "Lampen ausklappen") }
                 }
             }
 
@@ -156,7 +163,9 @@ private struct InlineLightRow: View {
                 if let light = store.lights[id] { store.adjustBrightness(by: delta, light: light) }
             },
             animationDelay: animationDelay,
-            afterglow: afterglow
+            afterglow: afterglow,
+            accessibilityName: store.name(of: light),
+            accessibilityState: state
         ) { liveValue in
             HStack(spacing: 8) {
                 Circle()

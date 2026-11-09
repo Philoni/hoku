@@ -64,6 +64,7 @@ struct RoutinesView: View {
             .buttonBorderShape(.circle)
             .controlSize(.small)
             .help("\(title) hinzufügen")
+            .accessibilityLabel("\(title) hinzufügen")
         }
         if routines.isEmpty {
             Label(empty, systemImage: icon)
@@ -108,7 +109,7 @@ private struct RoutineCard: View {
             }
             .buttonStyle(.plain)
 
-            GlowSwitch(isOn: routine.enabled, tint: colors[0]) {
+            GlowSwitch(isOn: routine.enabled, tint: colors[0], label: routine.name) {
                 store.setEnabled(!routine.enabled, routine: routine)
             }
         }

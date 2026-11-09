@@ -27,6 +27,7 @@ struct SleepTimerButton: View {
             }
             .buttonStyle(.glass)
             .help("Einschlaf-Timer abbrechen")
+            .accessibilityLabel("Einschlaf-Timer abbrechen")
             .transition(.blurReplace)
         } else {
             Menu {
@@ -46,6 +47,7 @@ struct SleepTimerButton: View {
             .fixedSize()
             .disabled(!isOn)
             .help("Einschlaf-Timer")
+            .accessibilityLabel("Einschlaf-Timer")
         }
     }
 }

@@ -293,6 +293,22 @@
         }
       }
     },
+    "%@, %lld Kelvin": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@, %2$lld Kelvin"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$lld Kelvin"
+          }
+        }
+      }
+    },
     "%@: Batterie %@": {
       "localizations": {
         "de": {
@@ -1295,6 +1311,16 @@
         }
       }
     },
+    "Blau": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blue"
+          }
+        }
+      }
+    },
     "Bridge": {
       "localizations": {
         "en": {
@@ -1801,6 +1827,16 @@
         }
       }
     },
+    "Ein-/Ausschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn On or Off"
+          }
+        }
+      }
+    },
     "Eine Sync-App (z. B. Hue Sync) steuert gerade die Lampen in „%@“. Solange reagieren sie nicht auf Hoku.": {
       "localizations": {
         "en": {
@@ -2141,6 +2177,16 @@
         }
       }
     },
+    "Gelb": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yellow"
+          }
+        }
+      }
+    },
     "Gelöschte Szene": {
       "localizations": {
         "en": {
@@ -2211,6 +2257,16 @@
         }
       }
     },
+    "Grün": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Green"
+          }
+        }
+      }
+    },
     "Gute Nacht": {
       "localizations": {
         "en": {
@@ -2267,6 +2323,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Light"
+          }
+        }
+      }
+    },
+    "Hellblau": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light blue"
           }
         }
       }
@@ -3023,6 +3089,26 @@
         }
       }
     },
+    "Lampen ausklappen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show lights"
+          }
+        }
+      }
+    },
+    "Lampen einklappen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide lights"
+          }
+        }
+      }
+    },
     "Langsam ausdimmen in …": {
       "localizations": {
         "en": {
@@ -3169,6 +3255,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Wed"
+          }
+        }
+      }
+    },
+    "Minute": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minute"
           }
         }
       }
@@ -3373,6 +3469,16 @@
         }
       }
     },
+    "Nicht festgelegt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not set"
+          }
+        }
+      }
+    },
     "Nicht gekoppelt": {
       "localizations": {
         "en": {
@@ -3533,6 +3639,16 @@
         }
       }
     },
+    "Orange": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orange"
+          }
+        }
+      }
+    },
     "Ort": {
       "localizations": {
         "en": {
@@ -3549,6 +3665,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Perfect – that’s exactly where you’ll find Hoku."
+          }
+        }
+      }
+    },
+    "Pink": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pink"
           }
         }
       }
@@ -3659,6 +3785,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Toggle room"
+          }
+        }
+      }
+    },
+    "Rot": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red"
           }
         }
       }
@@ -3939,6 +4075,26 @@
         }
       }
     },
+    "Smarte Szene %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart scene %@"
+          }
+        }
+      }
+    },
+    "Smarte Szene %@, aktiv": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart scene %@, active"
+          }
+        }
+      }
+    },
     "Smarte Szene – wechselt im Tagesverlauf": {
       "localizations": {
         "en": {
@@ -4099,6 +4255,16 @@
         }
       }
     },
+    "Stunde": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hour"
+          }
+        }
+      }
+    },
     "Suche nach deiner Hue Bridge …": {
       "localizations": {
         "en": {
@@ -4245,6 +4411,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Keyboard Shortcuts"
+          }
+        }
+      }
+    },
+    "Tastenkürzel für %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keyboard shortcut for %@"
+          }
+        }
+      }
+    },
+    "Tempo": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speed"
           }
         }
       }
@@ -4469,6 +4655,16 @@
         }
       }
     },
+    "Violett": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purple"
+          }
+        }
+      }
+    },
     "Von Signify ausgestellt und an diese Bridge gebunden": {
       "localizations": {
         "en": {
@@ -4519,6 +4715,16 @@
         }
       }
     },
+    "Vorschau: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview: %@"
+          }
+        }
+      }
+    },
     "Vorschlag für jetzt: %@ im Raum %@": {
       "localizations": {
         "de": {
@@ -4551,6 +4757,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Warm"
+          }
+        }
+      }
+    },
+    "Warte auf Eingabe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for keys"
           }
         }
       }

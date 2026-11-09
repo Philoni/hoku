@@ -45,6 +45,7 @@ private struct HealthSummary: View {
                 .font(.system(size: 26))
                 .foregroundStyle(isHealthy ? AnyShapeStyle(Color.green.gradient) : AnyShapeStyle(Color.orange.gradient))
                 .symbolEffect(.bounce, value: issueCount)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 1) {
                 Text(isHealthy ? "Alles in Ordnung" : "\(issueCount) \(issueCount == 1 ? String(localized: "Hinweis") : String(localized: "Hinweise"))")
                     .font(.system(size: 14, weight: .semibold, design: .rounded))
@@ -98,11 +99,13 @@ private struct DeviceRow: View {
                     .frame(width: 6, height: 6)
                     .shadow(color: .green.opacity(0.8), radius: 3)
                     .help("Erreichbar")
+                    .accessibilityLabel("Erreichbar")
             }
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 9)
         .background(CardBackground())
+        .accessibilityElement(children: .combine)
     }
 
     private func batterySymbol(_ level: Int) -> String {
@@ -143,11 +146,13 @@ struct DeviceIssueChip: View {
                 Image(systemName: "exclamationmark.triangle.fill")
                     .foregroundStyle(.orange)
                     .symbolEffect(.pulse)
+                    .accessibilityHidden(true)
                 Text(summary)
                     .font(.system(size: 12, weight: .medium, design: .rounded))
                     .lineLimit(1)
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(Theme.faint)
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 8)

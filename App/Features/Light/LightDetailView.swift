@@ -39,7 +39,9 @@ struct LightDetailView: View {
                 onBrightness: { store.setBrightness($0, light: light) },
                 onAdjust: { [id = light.id] delta in
                     if let light = store.lights[id] { store.adjustBrightness(by: delta, light: light) }
-                }
+                },
+                accessibilityName: String(localized: "Helligkeit"),
+                accessibilityState: light.isOn ? "\(Int(light.brightness.rounded())) %" : String(localized: "Aus")
             ) { liveValue in
                 CardLabel(
                     systemImage: Icons.light(store.archetype(of: light), dimmable: light.supportsDimming),
@@ -124,6 +126,7 @@ private struct ModePicker: View {
                         .contentShape(Capsule())
                 }
                 .buttonStyle(.plain)
+                .accessibilityAddTraits(mode == option ? .isSelected : [])
             }
         }
         .padding(3)
@@ -187,7 +190,19 @@ struct ColorWheel: View {
                     .onEnded { _ in dragPoint = nil }
             )
         }
+        .accessibilityElement()
         .accessibilityLabel("Farbrad")
+        .accessibilityAdjustableAction { direction in
+            shiftHue(by: direction == .increment ? 15 : -15)
+        }
+    }
+
+    private func shiftHue(by degrees: Double) {
+        guard let current = NSColor(light.displayColor).usingColorSpace(.sRGB) else { return }
+        var hue = current.hueComponent + degrees / 360
+        hue -= hue.rounded(.down)
+        let color = NSColor(hue: hue, saturation: max(current.saturationComponent, 0.6), brightness: 1, alpha: 1)
+        store.setColor(RGB(red: color.redComponent, green: color.greenComponent, blue: color.blueComponent), light: light)
     }
 
     private func clamp(_ point: CGPoint, center: CGPoint, radius: CGFloat) -> CGPoint {
@@ -280,6 +295,13 @@ struct TemperatureSlider: View {
         .accessibilityElement()
         .accessibilityLabel("Farbtemperatur")
         .accessibilityValue("\(Int(ColorMath.kelvin(fromMirek: current))) Kelvin")
+        .accessibilityAdjustableAction { direction in
+            // Right is cooler, i.e. fewer mirek.
+            let step = direction == .increment ? -20 : 20
+            let mirek = min(max(current + step, minimum), maximum)
+            guard mirek != current else { return }
+            store.setColorTemperature(mirek: mirek, light: light)
+        }
     }
 }
 
@@ -298,10 +320,15 @@ private struct SwatchRow: View {
         RGB(red: 1, green: 0.2, blue: 0.6),
     ]
 
+    private let swatchNames: [String] = [
+        String(localized: "Rot"), String(localized: "Orange"), String(localized: "Gelb"), String(localized: "Grün"),
+        String(localized: "Hellblau"), String(localized: "Blau"), String(localized: "Violett"), String(localized: "Pink"),
+    ]
+
     var body: some View {
         let active = activeSwatch
         HStack(spacing: 8) {
-            ForEach(swatches, id: \.self) { rgb in
+            ForEach(Array(swatches.enumerated()), id: \.element) { index, rgb in
                 Button {
                     Haptics.tap()
                     store.setColor(rgb, light: light)
@@ -319,6 +346,8 @@ private struct SwatchRow: View {
                 }
                 .buttonStyle(PressableStyle())
                 .animation(Theme.spring, value: active)
+                .accessibilityLabel(swatchNames[index])
+                .accessibilityAddTraits(rgb == active ? .isSelected : [])
             }
         }
     }
@@ -373,6 +402,7 @@ private struct WhitePresetRow: View {
                     .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(PressableStyle())
+                .accessibilityLabel("\(preset.name), \(preset.kelvin) Kelvin")
             }
         }
     }

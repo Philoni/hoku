@@ -22,17 +22,23 @@ struct LightCard: View {
             onOpen: hasDetail ? open : nil,
             onAdjust: { [id = light.id] delta in
                 if let light = store.lights[id] { store.adjustBrightness(by: delta, light: light) }
-            }
+            },
+            accessibilityName: store.name(of: light),
+            accessibilityState: stateText
         ) { liveValue in
             CardLabel(
                 systemImage: Icons.light(store.archetype(of: light), dimmable: light.supportsDimming),
                 title: store.name(of: light),
-                subtitle: preview.map { $0.isOn ? (light.supportsDimming ? "→ \(Int($0.brightness.rounded())) %" : String(localized: "→ An")) : String(localized: "→ Aus") } ?? subtitle,
+                subtitle: stateText,
                 isOn: preview?.isOn ?? light.isOn,
                 glow: preview?.color ?? light.displayColor,
                 liveValue: liveValue
             )
         }
+    }
+
+    private var stateText: String {
+        preview.map { $0.isOn ? (light.supportsDimming ? "→ \(Int($0.brightness.rounded())) %" : String(localized: "→ An")) : String(localized: "→ Aus") } ?? subtitle
     }
 
     private var subtitle: String {

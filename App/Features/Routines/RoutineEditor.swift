@@ -92,6 +92,7 @@ struct RoutineEditor: View {
                             Slider(value: $draft.endBrightness, in: 10...100, step: 5)
                                 .controlSize(.small)
                                 .tint(.orange)
+                                .accessibilityLabel("Endhelligkeit")
                         }
                     }
                     .padding(12)
@@ -195,6 +196,12 @@ private struct TimeWheel: View {
                 }
                 .onEnded { _ in lastSteps = 0 }
         )
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(range.upperBound == 23 ? Text("Stunde") : Text("Minute"))
+        .accessibilityValue(String(format: "%02d", value))
+        .accessibilityAdjustableAction { direction in
+            change(direction == .increment ? step : -step)
+        }
     }
 
     @State private var lastSteps = 0
