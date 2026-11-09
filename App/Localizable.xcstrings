@@ -57,6 +57,16 @@
         }
       }
     },
+    "%@ anheften": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pin %@"
+          }
+        }
+      }
+    },
     "%@ dimmt in %lld Minuten aus. Schlaf gut!": {
       "localizations": {
         "de": {
@@ -213,6 +223,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ is running in %@."
+          }
+        }
+      }
+    },
+    "%@ lösen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unpin %@"
+          }
+        }
+      }
+    },
+    "%@ nach oben": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move %@ up"
+          }
+        }
+      }
+    },
+    "%@ nach unten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move %@ down"
           }
         }
       }
@@ -985,6 +1025,16 @@
         }
       }
     },
+    "Angeheftete stehen oben. Die Reihenfolge gilt überall in Hoku.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinned ones stay on top. The order applies everywhere in Hoku."
+          }
+        }
+      }
+    },
     "Anhalten": {
       "localizations": {
         "en": {
@@ -1707,6 +1757,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Start Dynamic"
+          }
+        }
+      }
+    },
+    "Eigene Reihenfolge": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom order"
           }
         }
       }
@@ -3173,6 +3233,26 @@
         }
       }
     },
+    "Nach Name": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By name"
+          }
+        }
+      }
+    },
+    "Nach Name sortieren": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sort by Name"
+          }
+        }
+      }
+    },
     "Name": {
       "localizations": {
         "en": {
@@ -3569,6 +3649,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rooms"
+          }
+        }
+      }
+    },
+    "Räume ordnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrange Rooms"
           }
         }
       }

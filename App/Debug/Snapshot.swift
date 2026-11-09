@@ -60,6 +60,7 @@ enum Snapshot {
             if Features.awayReminder {
                 pages.append(("unterwegs", AnyView(LeftOnReminderView(pop: {}))))
             }
+            pages.append(("raeume-ordnen", AnyView(RoomOrderView(pop: {}))))
             pages.append(("verbindung", AnyView(ConnectionDetailsView(pop: {}))))
             pages.append(("tastenkuerzel", AnyView(ShortcutsView(pop: {}))))
             pages.append(("kuerzel-antwort", AnyView(ShortcutFeedbackView(feedback: ShortcutFeedback(title: "Wohnzimmer", detail: "An", systemImage: "lightbulb.fill")))))

@@ -34,6 +34,19 @@ struct SettingsView: View {
                         }
                         .buttonStyle(PressableStyle())
                         Divider().opacity(0.4)
+                        Button {
+                            push(.roomOrder)
+                        } label: {
+                            HStack {
+                                Label("Räume ordnen", systemImage: "arrow.up.arrow.down")
+                                Spacer()
+                                Text(store.groupOrder.isCustom ? String(localized: "Eigene Reihenfolge") : String(localized: "Nach Name")).foregroundStyle(.secondary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            }
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(PressableStyle())
+                        Divider().opacity(0.4)
                         SettingSwitch(title: String(localized: "Beim Anmelden starten"), systemImage: "power.circle", isOn: $model.launchesAtLogin)
                         Divider().opacity(0.4)
                         HStack {

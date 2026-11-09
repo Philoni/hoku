@@ -71,6 +71,14 @@ final class AppModel {
         didSet { Preferences.save(awayAutomation, as: "awayAutomation") }
     }
 
+    /// The single place that changes the order of rooms and zones, so it is always saved.
+    func updateGroupOrder(_ change: (inout GroupOrder) -> Void) {
+        var order = store.groupOrder
+        change(&order)
+        store.groupOrder = order
+        Preferences.save(order, as: "groupOrder")
+    }
+
     /// What the user turns on when; makes suggestions personal.
     private(set) var usage = UsageFile.load()
 
@@ -88,6 +96,8 @@ final class AppModel {
     init() {
         leftOn = LeftOnWatcher(store: store, connection: cloud)
         store.nameHistory = NameHistory.load()
+        // The demo home has its own rooms; a saved order belongs to the real ones.
+        if !Snapshot.isDemo { store.groupOrder = Preferences.load("groupOrder") ?? GroupOrder() }
         store.onSceneActivated = { [weak self] scene in
             self?.usage.record(sceneID: scene.id)
             if let usage = self?.usage { UsageFile.save(usage) }

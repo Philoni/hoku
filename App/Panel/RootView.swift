@@ -10,6 +10,7 @@ enum Route: Hashable {
     case siriCommands
     case shortcuts
     case connection
+    case roomOrder
     case leftOnReminder
 }
 
@@ -113,6 +114,8 @@ struct RootView: View {
             ShortcutsView(pop: pop)
         case .connection:
             ConnectionDetailsView(pop: pop)
+        case .roomOrder:
+            RoomOrderView(pop: pop)
         case .leftOnReminder:
             LeftOnReminderView(pop: pop)
         }

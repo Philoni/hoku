@@ -11,9 +11,13 @@ Versions `0.9.x` are public betas.
 ### Added
 - Keyboard shortcuts for the lights: toggle any room or zone, start a scene or switch everything off from
   anywhere on the Mac. A small capsule under the menu bar icon confirms what happened.
+- English: the app, its notifications, the setup assistant and the Siri commands follow the system language
+  (German or English).
+- Connect with an existing application key instead of the link button, see the connection details and set
+  the bridge address by hand (Settings → Bridge → Connection Details).
+- Pin rooms and zones to the top and arrange them in your own order (Settings → Arrange Rooms).
 
 ### Planned
-- English localization of the app and of the generated Siri commands.
 - In-app updates via Sparkle (EdDSA-signed).
 
 ## [0.9.0] - 2026-11-09

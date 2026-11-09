@@ -293,12 +293,15 @@ public final class HueStore {
 
     // MARK: Derived data
 
+    /// Pinned and hand-sorted rooms and zones; by name unless the user changed it.
+    public var groupOrder = GroupOrder()
+
     public var sortedRooms: [HueGroup] {
-        rooms.values.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+        groupOrder.sorted(Array(rooms.values))
     }
 
     public var sortedZones: [HueGroup] {
-        zones.values.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+        groupOrder.sorted(Array(zones.values))
     }
 
     public func group(_ id: String) -> HueGroup? {
