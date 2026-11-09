@@ -49,4 +49,29 @@ import Testing
             #expect(HomeLocation.decide(observation, knownHomeRouters: ["some-other-router"]).0 == (observation.routers.isEmpty ? .unknown : .away))
         }
     }
+
+    /// The manual path: verify the address, then connect with a key and without the
+    /// link button. A wrong key must be refused. Prints only counts.
+    @Test func connectsWithAnExistingKeyAndRefusesAWrongOne() async throws {
+        let credentials = try #require(CredentialStore.load(), "No paired bridge on this Mac")
+        let client = HueClient()
+        let bridge = try await BridgeDiscovery.bridge(at: credentials.host, using: client)
+        #expect(bridge.id == credentials.bridgeID.lowercased())
+
+        let key = try #require(ApplicationKey.normalized(credentials.applicationKey))
+        let connected = try await client.connect(to: bridge, applicationKey: key)
+        #expect(connected.bridgeID == bridge.id)
+
+        await #expect(throws: HueError.self) {
+            _ = try await client.connect(to: bridge, applicationKey: String(repeating: "x", count: 40))
+        }
+    }
+
+    @Test func readsEntertainmentAreas() async throws {
+        let credentials = try #require(CredentialStore.load(), "No paired bridge on this Mac")
+        let store = HueStore()
+        store.load(try await HueClient().allResources(credentials))
+        print("🎬 entertainment areas: \(store.entertainmentAreas.count), streaming: \(store.streamingAreas.count)")
+        #expect(store.entertainmentAreas.values.allSatisfy { $0.status != nil })
+    }
 }
