@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "HueKit", targets: ["HueKit"]),
     ],
     targets: [
-        .target(name: "HueKit"),
+        .target(name: "HueKit", resources: [.process("Resources")]),
         .testTarget(
             name: "HueKitTests",
             dependencies: ["HueKit"],
