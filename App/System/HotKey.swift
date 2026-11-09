@@ -106,7 +106,7 @@ final class HotKey {
                 event, EventParamName(kEventParamDirectObject), EventParamType(typeEventHotKeyID),
                 nil, MemoryLayout<EventHotKeyID>.size, nil, &pressed
             )
-            guard status == noErr else { return status }
+            guard status == noErr else { return OSStatus(eventNotHandledErr) }
             let hotKey = Unmanaged<HotKey>.fromOpaque(context).takeUnretainedValue()
             let id = pressed.id
             MainActor.assumeIsolated { hotKey.fire(id) }

@@ -35,7 +35,9 @@ final class AppModel {
     var hotKeyCombination: HotKey.Combination = Preferences.load("hotKey") ?? .default {
         didSet {
             Preferences.save(hotKeyCombination, as: "hotKey")
-            shortcuts.removeAll { $0.combination == hotKeyCombination }
+            if shortcuts.contains(where: { $0.combination == hotKeyCombination }) {
+                shortcuts.removeAll { $0.combination == hotKeyCombination }
+            }
             onHotKeyChange(hotKeyCombination)
         }
     }
@@ -49,6 +51,15 @@ final class AppModel {
 
     /// Shortcuts macOS refused to register, usually because another app holds them.
     var unavailableShortcuts: Set<LightShortcut.Target> = []
+    var isPanelHotKeyUnavailable = false
+
+    /// The recorder waiting for a key press, if any. While one waits, no shortcut is
+    /// registered: Carbon would swallow a known combination before the recorder sees it.
+    var activeRecorder: UUID? {
+        didSet {
+            if (activeRecorder == nil) != (oldValue == nil) { onShortcutsChange() }
+        }
+    }
 
     var appearance: AppearanceMode = Preferences.load("appearance") ?? .automatic {
         didSet { Preferences.save(appearance, as: "appearance") }

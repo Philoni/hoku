@@ -143,6 +143,7 @@ final class StatusBarController: NSObject, NSWindowDelegate {
 
     func hide() {
         guard panel.isVisible else { return }
+        model.activeRecorder = nil
         if let outsideClickMonitor { NSEvent.removeMonitor(outsideClickMonitor) }
         outsideClickMonitor = nil
         statusItem.button?.highlight(false)
@@ -170,9 +171,10 @@ final class StatusBarController: NSObject, NSWindowDelegate {
     private func registerShortcuts() {
         registeredShortcuts.forEach { hotKey.unregister($0) }
         registeredShortcuts = []
-        if let id = hotKey.register(model.hotKeyCombination, action: { [weak self] in self?.toggle() }) {
-            registeredShortcuts.append(id)
-        }
+        guard model.activeRecorder == nil else { return }
+        let panelID = hotKey.register(model.hotKeyCombination, action: { [weak self] in self?.toggle() })
+        if let panelID { registeredShortcuts.append(panelID) }
+        model.isPanelHotKeyUnavailable = panelID == nil
         var unavailable: Set<LightShortcut.Target> = []
         for shortcut in model.shortcuts {
             let target = shortcut.target

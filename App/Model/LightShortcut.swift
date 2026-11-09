@@ -30,14 +30,17 @@ extension AppModel {
     }
 
     /// `nil` removes the shortcut. A combination moves to its new target; the one
-    /// that opens Hoku is never taken away.
-    func setCombination(_ combination: HotKey.Combination?, for target: LightShortcut.Target) {
+    /// that opens Hoku is never taken away, so that returns `false`.
+    @discardableResult
+    func setCombination(_ combination: HotKey.Combination?, for target: LightShortcut.Target) -> Bool {
+        if let combination, combination == hotKeyCombination { return false }
         var updated = shortcuts.filter { $0.target != target }
-        if let combination, combination != hotKeyCombination {
+        if let combination {
             updated.removeAll { $0.combination == combination }
             updated.append(LightShortcut(target: target, combination: combination))
         }
         shortcuts = updated
+        return true
     }
 
     func perform(_ target: LightShortcut.Target) -> ShortcutFeedback {

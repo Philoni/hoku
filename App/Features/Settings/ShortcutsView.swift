@@ -15,9 +15,11 @@ struct ShortcutsView: View {
 
             PageScroll(maxHeight: 440) {
                 VStack(spacing: 7) {
-                    Text("Funktionieren überall am Mac, auch wenn Hoku geschlossen ist.")
+                    Text(notice ?? "Funktionieren überall am Mac, auch wenn Hoku geschlossen ist.")
                         .font(.system(size: 11, design: .rounded))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(notice == nil ? AnyShapeStyle(.secondary) : AnyShapeStyle(Color.orange))
+                        .contentTransition(.opacity)
+                        .animation(Theme.spring, value: notice)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 4)
 
@@ -25,6 +27,7 @@ struct ShortcutsView: View {
                         HStack {
                             RowLabel(title: "Hoku öffnen", systemImage: "menubar.arrow.up.rectangle")
                             Spacer()
+                            if model.isPanelHotKeyUnavailable { TakenBadge() }
                             HotKeyRecorder(combination: Binding(
                                 get: { model.hotKeyCombination },
                                 set: { if let new = $0 { model.hotKeyCombination = new } }
@@ -68,6 +71,8 @@ struct ShortcutsView: View {
         return room.map { "\(scene.name) · \($0)" } ?? scene.name
     }
 
+    @State private var notice: String?
+
     /// A scene gets its row once a combination is recorded for it.
     @State private var pendingScene: String?
 
@@ -80,7 +85,7 @@ struct ShortcutsView: View {
                 HotKeyRecorder(combination: Binding(
                     get: { nil },
                     set: {
-                        model.setCombination($0, for: .scene(pendingScene))
+                        assign($0, to: .scene(pendingScene))
                         self.pendingScene = nil
                     }
                 ), startsRecording: true, onCancel: { self.pendingScene = nil })
@@ -119,16 +124,20 @@ struct ShortcutsView: View {
         HStack {
             RowLabel(title: title, systemImage: systemImage)
             Spacer()
-            if model.unavailableShortcuts.contains(target) {
-                Text("belegt")
-                    .font(.system(size: 10.5, weight: .semibold, design: .rounded))
-                    .foregroundStyle(.orange)
-                    .help("Eine andere App nutzt diese Tastenkombination bereits.")
-            }
+            if model.unavailableShortcuts.contains(target) { TakenBadge() }
             HotKeyRecorder(combination: Binding(
                 get: { model.combination(for: target) },
-                set: { model.setCombination($0, for: target) }
+                set: { assign($0, to: target) }
             ))
+        }
+    }
+
+    private func assign(_ combination: HotKey.Combination?, to target: LightShortcut.Target) {
+        guard !model.setCombination(combination, for: target) else { return }
+        notice = "\(model.hotKeyCombination.displayString) öffnet schon Hoku."
+        Task {
+            try? await Task.sleep(for: .seconds(3))
+            notice = nil
         }
     }
 
@@ -153,16 +162,28 @@ private struct RowLabel: View {
     }
 }
 
+private struct TakenBadge: View {
+    var body: some View {
+        Text("belegt")
+            .font(.system(size: 10.5, weight: .semibold, design: .rounded))
+            .foregroundStyle(.orange)
+            .help("Eine andere App nutzt diese Tastenkombination bereits.")
+    }
+}
+
 /// Click, then press the new shortcut. Esc cancels, ⌫ removes it.
 struct HotKeyRecorder: View {
+    @Environment(AppModel.self) private var model
     @Binding var combination: HotKey.Combination?
     /// The shortcut can be changed but not removed.
     var isRequired = false
     var startsRecording = false
     var onCancel: () -> Void = {}
 
-    @State private var isRecording = false
+    @State private var id = UUID()
     @State private var monitor: Any?
+
+    private var isRecording: Bool { model.activeRecorder == id }
 
     var body: some View {
         Button {
@@ -180,20 +201,23 @@ struct HotKeyRecorder: View {
         .animation(Theme.spring, value: isRecording)
         .onAppear { if startsRecording { start() } }
         .onDisappear(perform: stop)
+        // Another recorder took over, or the panel closed.
+        .onChange(of: isRecording) { if !isRecording { removeMonitor() } }
     }
 
     private func start() {
-        isRecording = true
+        removeMonitor()
+        model.activeRecorder = id
         monitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
             MainActor.assumeIsolated {
                 if event.keyCode == 53 { // Esc
                     cancel()
                 } else if event.keyCode == 51, !isRequired { // ⌫
+                    stop()
                     combination = nil
-                    stop()
                 } else if let new = HotKey.Combination(event: event) {
-                    combination = new
                     stop()
+                    combination = new
                 }
             }
             return nil
@@ -206,7 +230,11 @@ struct HotKeyRecorder: View {
     }
 
     private func stop() {
-        isRecording = false
+        if isRecording { model.activeRecorder = nil }
+        removeMonitor()
+    }
+
+    private func removeMonitor() {
         if let monitor { NSEvent.removeMonitor(monitor) }
         monitor = nil
     }
