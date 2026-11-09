@@ -1,7 +1,7 @@
 import AppKit
 import Carbon.HIToolbox
 
-/// A system-wide keyboard shortcut via Carbon's `RegisterEventHotKey`, which, unlike
+/// System-wide keyboard shortcuts via Carbon's `RegisterEventHotKey`, which, unlike
 /// event monitors, needs no Accessibility permission.
 @MainActor
 final class HotKey {
@@ -64,33 +64,52 @@ final class HotKey {
         }
     }
 
-    private var reference: EventHotKeyRef?
+    private var references: [UInt32: EventHotKeyRef] = [:]
+    private var actions: [UInt32: @MainActor () -> Void] = [:]
     private var handler: EventHandlerRef?
-    private let action: @MainActor () -> Void
+    private var nextID: UInt32 = 1
 
-    init(action: @escaping @MainActor () -> Void) {
-        self.action = action
+    init() {
         installHandler()
     }
 
-    func register(_ combination: Combination) {
-        unregister()
-        let id = EventHotKeyID(signature: OSType(0x484F_4B55), id: 1) // "HOKU"
-        RegisterEventHotKey(combination.keyCode, combination.modifiers, id, GetApplicationEventTarget(), 0, &reference)
+    /// `nil` when the system refuses the combination, e.g. because another app holds it.
+    func register(_ combination: Combination, action: @escaping @MainActor () -> Void) -> UInt32? {
+        let id = nextID
+        nextID += 1
+        var reference: EventHotKeyRef?
+        let hotKeyID = EventHotKeyID(signature: OSType(0x484F_4B55), id: id) // "HOKU"
+        let status = RegisterEventHotKey(combination.keyCode, combination.modifiers, hotKeyID, GetApplicationEventTarget(), 0, &reference)
+        guard status == noErr, let reference else { return nil }
+        references[id] = reference
+        actions[id] = action
+        return id
     }
 
-    func unregister() {
-        if let reference { UnregisterEventHotKey(reference) }
-        reference = nil
+    func unregister(_ id: UInt32?) {
+        guard let id, let reference = references.removeValue(forKey: id) else { return }
+        UnregisterEventHotKey(reference)
+        actions[id] = nil
+    }
+
+    private func fire(_ id: UInt32) {
+        actions[id]?()
     }
 
     private func installHandler() {
         var eventType = EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyPressed))
         let context = Unmanaged.passUnretained(self).toOpaque()
-        InstallEventHandler(GetApplicationEventTarget(), { _, _, context in
-            guard let context else { return noErr }
+        InstallEventHandler(GetApplicationEventTarget(), { _, event, context in
+            guard let context, let event else { return noErr }
+            var pressed = EventHotKeyID()
+            let status = GetEventParameter(
+                event, EventParamName(kEventParamDirectObject), EventParamType(typeEventHotKeyID),
+                nil, MemoryLayout<EventHotKeyID>.size, nil, &pressed
+            )
+            guard status == noErr else { return status }
             let hotKey = Unmanaged<HotKey>.fromOpaque(context).takeUnretainedValue()
-            MainActor.assumeIsolated { hotKey.action() }
+            let id = pressed.id
+            MainActor.assumeIsolated { hotKey.fire(id) }
             return noErr
         }, 1, &eventType, context, &handler)
     }

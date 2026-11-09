@@ -35,9 +35,20 @@ final class AppModel {
     var hotKeyCombination: HotKey.Combination = Preferences.load("hotKey") ?? .default {
         didSet {
             Preferences.save(hotKeyCombination, as: "hotKey")
+            shortcuts.removeAll { $0.combination == hotKeyCombination }
             onHotKeyChange(hotKeyCombination)
         }
     }
+
+    var shortcuts: [LightShortcut] = Preferences.load("shortcuts") ?? [] {
+        didSet {
+            Preferences.save(shortcuts, as: "shortcuts")
+            onShortcutsChange()
+        }
+    }
+
+    /// Shortcuts macOS refused to register, usually because another app holds them.
+    var unavailableShortcuts: Set<LightShortcut.Target> = []
 
     var appearance: AppearanceMode = Preferences.load("appearance") ?? .automatic {
         didSet { Preferences.save(appearance, as: "appearance") }
@@ -51,6 +62,7 @@ final class AppModel {
     private(set) var usage = UsageFile.load()
 
     @ObservationIgnored var onHotKeyChange: (HotKey.Combination) -> Void = { _ in }
+    @ObservationIgnored var onShortcutsChange: () -> Void = {}
     @ObservationIgnored private var isAway = false
     @ObservationIgnored private var lightsOnBeforeAway: [String] = []
 

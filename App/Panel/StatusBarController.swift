@@ -55,9 +55,10 @@ final class StatusBarController: NSObject, NSWindowDelegate {
             return handled ? nil : event
         }
 
-        hotKey = HotKey { [weak self] in self?.toggle() }
-        hotKey.register(model.hotKeyCombination)
-        model.onHotKeyChange = { [weak self] combination in self?.hotKey.register(combination) }
+        hotKey = HotKey()
+        registerShortcuts()
+        model.onHotKeyChange = { [weak self] _ in self?.registerShortcuts() }
+        model.onShortcutsChange = { [weak self] in self?.registerShortcuts() }
     }
 
     // MARK: Icon
@@ -161,6 +162,77 @@ final class StatusBarController: NSObject, NSWindowDelegate {
     }
 
     private var anchorTop: CGFloat = 0
+
+    // MARK: Shortcuts
+
+    private var registeredShortcuts: [UInt32] = []
+
+    private func registerShortcuts() {
+        registeredShortcuts.forEach { hotKey.unregister($0) }
+        registeredShortcuts = []
+        if let id = hotKey.register(model.hotKeyCombination, action: { [weak self] in self?.toggle() }) {
+            registeredShortcuts.append(id)
+        }
+        var unavailable: Set<LightShortcut.Target> = []
+        for shortcut in model.shortcuts {
+            let target = shortcut.target
+            if let id = hotKey.register(shortcut.combination, action: { [weak self] in self?.run(target) }) {
+                registeredShortcuts.append(id)
+            } else {
+                unavailable.insert(target)
+            }
+        }
+        model.unavailableShortcuts = unavailable
+    }
+
+    private func run(_ target: LightShortcut.Target) {
+        let feedback = model.perform(target)
+        // With the panel open the cards themselves show what happened.
+        if !panel.isVisible || feedback.isProblem { show(feedback) }
+    }
+
+    private var feedbackPanel: NSPanel?
+    private var feedbackTask: Task<Void, Never>?
+
+    private func show(_ feedback: ShortcutFeedback) {
+        guard let button = statusItem.button, let buttonWindow = button.window else { return }
+        let anchor = buttonWindow.convertToScreen(button.convert(button.bounds, to: nil))
+        let host = NSHostingView(rootView: ShortcutFeedbackView(feedback: feedback))
+        let size = host.fittingSize
+        let frame = NSRect(x: anchor.midX - size.width / 2, y: anchor.minY - size.height - 4, width: size.width, height: size.height)
+
+        let hud = feedbackPanel ?? {
+            let hud = NSPanel(contentRect: frame, styleMask: [.borderless, .nonactivatingPanel], backing: .buffered, defer: false)
+            hud.isOpaque = false
+            hud.backgroundColor = .clear
+            hud.hasShadow = false
+            hud.level = .statusBar
+            hud.ignoresMouseEvents = true
+            hud.collectionBehavior = [.canJoinAllSpaces, .transient, .ignoresCycle]
+            hud.alphaValue = 0
+            feedbackPanel = hud
+            return hud
+        }()
+        hud.appearance = model.appearance.nsAppearance
+        hud.contentView = host
+        hud.setFrame(frame, display: true)
+        hud.orderFrontRegardless()
+        NSAnimationContext.runAnimationGroup { context in
+            context.duration = 0.16
+            hud.animator().alphaValue = 1
+        }
+
+        feedbackTask?.cancel()
+        feedbackTask = Task { [weak self] in
+            try? await Task.sleep(for: .seconds(feedback.isProblem ? 2.6 : 1.4))
+            guard !Task.isCancelled, let self, let hud = self.feedbackPanel else { return }
+            await NSAnimationContext.runAnimationGroup { context in
+                context.duration = 0.3
+                hud.animator().alphaValue = 0
+            }
+            if !Task.isCancelled { hud.orderOut(nil) }
+        }
+    }
 
     // MARK: Coach mark
 
@@ -284,5 +356,30 @@ private struct CoachMarkView: View {
         .onAppear {
             withAnimation(.easeInOut(duration: 0.6).repeatForever(autoreverses: true)) { bounce = true }
         }
+    }
+}
+
+/// The answer to a keyboard shortcut: a small glass capsule under the menu bar icon.
+struct ShortcutFeedbackView: View {
+    let feedback: ShortcutFeedback
+
+    var body: some View {
+        HStack(spacing: 9) {
+            Image(systemName: feedback.systemImage)
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(feedback.isProblem ? AnyShapeStyle(Color.orange) : AnyShapeStyle(.primary))
+                .frame(width: 20)
+            VStack(alignment: .leading, spacing: 0) {
+                Text(feedback.title).font(.system(size: 13, weight: .semibold, design: .rounded))
+                Text(feedback.detail).font(.system(size: 11, design: .rounded)).foregroundStyle(.secondary)
+            }
+        }
+        .lineLimit(1)
+        .padding(.leading, 13)
+        .padding(.trailing, 17)
+        .padding(.vertical, 8)
+        .glassEffect(.regular, in: .capsule)
+        .padding(6)
+        .fixedSize()
     }
 }

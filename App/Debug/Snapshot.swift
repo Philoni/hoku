@@ -60,6 +60,8 @@ enum Snapshot {
             if Features.awayReminder {
                 pages.append(("unterwegs", AnyView(LeftOnReminderView(pop: {}))))
             }
+            pages.append(("tastenkuerzel", AnyView(ShortcutsView(pop: {}))))
+            pages.append(("kuerzel-antwort", AnyView(ShortcutFeedbackView(feedback: ShortcutFeedback(title: "Wohnzimmer", detail: "An", systemImage: "lightbulb.fill")))))
             pages.append(("mitteilung-bild", AnyView(NotificationArt(colors: store.colorsOfLightsOn))))
 
             let scheme: ColorScheme = ProcessInfo.processInfo.environment["HOKU_SNAPSHOT_SCHEME"] == "light" ? .light : .dark

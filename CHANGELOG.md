@@ -8,6 +8,10 @@ Versions `0.9.x` are public betas.
 
 ## [Unreleased]
 
+### Added
+- Keyboard shortcuts for the lights: toggle any room or zone, start a scene or switch everything off from
+  anywhere on the Mac. A small capsule under the menu bar icon confirms what happened.
+
 ### Planned
 - English localization of the app and of the generated Siri commands.
 - In-app updates via Sparkle (EdDSA-signed).
