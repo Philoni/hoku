@@ -60,7 +60,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         // browser hand it to the app instead, it is not a command.
         for url in urls where url.host() != "oauth" {
             guard let command = URLCommand(url: url) else {
-                model.store.reportError("Unbekannter Befehl: \(url.absoluteString)")
+                model.store.reportError(String(localized: "Unbekannter Befehl: \(url.absoluteString)"))
                 continue
             }
             if case .openPanel = command {

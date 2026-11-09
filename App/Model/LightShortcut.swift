@@ -45,21 +45,21 @@ extension AppModel {
 
     func perform(_ target: LightShortcut.Target) -> ShortcutFeedback {
         guard store.connection == .live else {
-            return ShortcutFeedback(title: "Keine Verbindung", detail: "Die Bridge ist gerade nicht erreichbar", systemImage: "wifi.slash", isProblem: true)
+            return ShortcutFeedback(title: String(localized: "Keine Verbindung"), detail: String(localized: "Die Bridge ist gerade nicht erreichbar"), systemImage: "wifi.slash", isProblem: true)
         }
         switch target {
         case .allOff:
             store.setAllOff()
-            return ShortcutFeedback(title: "Alles aus", detail: "Alle Räume", systemImage: "power")
+            return ShortcutFeedback(title: String(localized: "Alles aus"), detail: String(localized: "Alle Räume"), systemImage: "power")
         case let .group(id):
             guard let group = store.group(id) else { return .missing }
             let turnsOn = store.groupedLight(for: group)?.isOn != true
             store.setOn(turnsOn, group: group)
-            return ShortcutFeedback(title: group.name, detail: turnsOn ? "An" : "Aus", systemImage: turnsOn ? "lightbulb.fill" : "lightbulb")
+            return ShortcutFeedback(title: group.name, detail: turnsOn ? String(localized: "An") : String(localized: "Aus"), systemImage: turnsOn ? "lightbulb.fill" : "lightbulb")
         case let .scene(id):
             guard let scene = store.scenes[id] else { return .missing }
             store.recall(scene)
-            let room = scene.group.flatMap { store.group($0.rid) }?.name ?? "Szene"
+            let room = scene.group.flatMap { store.group($0.rid) }?.name ?? String(localized: "Szene")
             return ShortcutFeedback(title: scene.name, detail: room, systemImage: "sparkles")
         }
     }
@@ -68,7 +68,7 @@ extension AppModel {
 private extension ShortcutFeedback {
     /// The room or scene was deleted in the Hue app after the shortcut was set.
     static let missing = ShortcutFeedback(
-        title: "Nicht mehr vorhanden", detail: "Kürzel in den Einstellungen neu zuweisen",
+        title: String(localized: "Nicht mehr vorhanden"), detail: String(localized: "Kürzel in den Einstellungen neu zuweisen"),
         systemImage: "questionmark.circle", isProblem: true
     )
 }

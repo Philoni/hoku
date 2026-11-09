@@ -32,6 +32,10 @@ struct HomeView: View {
                 DeviceIssueChip(issues: issues) { push(.devices) }
                     .transition(.blurReplace)
             }
+            ForEach(store.streamingAreas) { area in
+                SyncChip(area: area)
+                    .transition(.blurReplace)
+            }
             // Only a habit Hoku has actually learned, and only while the light differs.
             if let suggestion, suggestion.isLearned {
                 SuggestionChip(scene: suggestion.scene, group: suggestion.group, isLearned: true)
@@ -43,7 +47,7 @@ struct HomeView: View {
                 PageScroll {
                     VStack(spacing: 7) {
                         if !rooms.isEmpty {
-                            SectionTitle(text: "Räume")
+                            SectionTitle(text: String(localized: "Räume"))
                             ForEach(Array(rooms.enumerated()), id: \.element.id) { index, group in
                                 card(for: group, index: index)
                                     .selectionRing(selection == index)
@@ -52,7 +56,7 @@ struct HomeView: View {
                             }
                         }
                         if !zones.isEmpty {
-                            SectionTitle(text: "Zonen").padding(.top, 8)
+                            SectionTitle(text: String(localized: "Zonen")).padding(.top, 8)
                             ForEach(Array(zones.enumerated()), id: \.element.id) { index, group in
                                 card(for: group, index: rooms.count + index)
                                     .selectionRing(selection == rooms.count + index)
@@ -82,6 +86,7 @@ struct HomeView: View {
                 }
             }
         }
+        .animation(Theme.spring, value: store.streamingAreas)
         .keyboardNavigation(
             count: items.count,
             selection: $selection,
@@ -125,9 +130,9 @@ struct HomeView: View {
                 .contentTransition(.opacity)
                 .lineLimit(1)
             Spacer(minLength: 4)
-            CircleIconButton(title: "Wecker & Routinen", systemImage: "alarm.fill", diameter: 22) { push(.routines) }
+            CircleIconButton(title: String(localized: "Wecker & Routinen"), systemImage: "alarm.fill", diameter: 22) { push(.routines) }
 
-            CircleIconButton(title: "Alle Lichter ausschalten", systemImage: "power", diameter: 22) {
+            CircleIconButton(title: String(localized: "Alle Lichter ausschalten"), systemImage: "power", diameter: 22) {
                 Haptics.tap()
                 let groups = store.sortedRooms + store.topLevelZones
                 let duration = 1.6 + Double(groups.count) * 0.09
@@ -144,7 +149,7 @@ struct HomeView: View {
             .disabled(!store.anyLightOn)
             .opacity(store.anyLightOn ? 1 : 0.5)
 
-            CircleIconButton(title: "Einstellungen", systemImage: "gearshape.fill", diameter: 22) { push(.settings) }
+            CircleIconButton(title: String(localized: "Einstellungen"), systemImage: "gearshape.fill", diameter: 22) { push(.settings) }
                 .keyboardShortcut(",", modifiers: .command)
         }
         .animation(Theme.spring, value: store.lightsOnCount)

@@ -15,11 +15,11 @@ struct SettingsView: View {
         @Bindable var model = model
 
         VStack(spacing: 10) {
-            PageHeader(title: "Einstellungen", onBack: pop) { EmptyView() }
+            PageHeader(title: String(localized: "Einstellungen"), onBack: pop) { EmptyView() }
 
             PageScroll(maxHeight: 440) {
                 VStack(spacing: 7) {
-                    SectionTitle(text: "Bedienung")
+                    SectionTitle(text: String(localized: "Bedienung"))
                     VStack(spacing: 10) {
                         Button {
                             push(.shortcuts)
@@ -28,13 +28,26 @@ struct SettingsView: View {
                                 Label("Tastenkürzel", systemImage: "keyboard")
                                 Spacer()
                                 Text(shortcutSummary).foregroundStyle(.secondary)
-                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                             }
                             .contentShape(Rectangle())
                         }
                         .buttonStyle(PressableStyle())
                         Divider().opacity(0.4)
-                        SettingSwitch(title: "Beim Anmelden starten", systemImage: "power.circle", isOn: $model.launchesAtLogin)
+                        Button {
+                            push(.roomOrder)
+                        } label: {
+                            HStack {
+                                Label("Räume ordnen", systemImage: "arrow.up.arrow.down")
+                                Spacer()
+                                Text(store.groupOrder.isCustom ? String(localized: "Eigene Reihenfolge") : String(localized: "Nach Name")).foregroundStyle(.secondary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
+                            }
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(PressableStyle())
+                        Divider().opacity(0.4)
+                        SettingSwitch(title: String(localized: "Beim Anmelden starten"), systemImage: "power.circle", isOn: $model.launchesAtLogin)
                         Divider().opacity(0.4)
                         HStack {
                             Label("Erscheinungsbild", systemImage: "circle.lefthalf.filled")
@@ -53,7 +66,7 @@ struct SettingsView: View {
 
                     KeyboardHelp()
 
-                    SectionTitle(text: "Automationen")
+                    SectionTitle(text: String(localized: "Automationen"))
                     AwayAutomationCard(automation: $model.awayAutomation)
 
                     if Features.awayReminder {
@@ -64,7 +77,7 @@ struct SettingsView: View {
                                 Label("Unterwegs-Hinweis", systemImage: "house.and.flag.fill")
                                 Spacer()
                                 Text(leftOnStatus).foregroundStyle(.secondary)
-                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                             }
                             .font(.system(size: 12.5, weight: .medium, design: .rounded))
                             .padding(12)
@@ -82,7 +95,7 @@ struct SettingsView: View {
                             Spacer()
                             Text("\(store.routines(.wakeUp).count + store.routines(.goToSleep).count)")
                                 .foregroundStyle(.secondary)
-                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                         }
                         .font(.system(size: 12.5, weight: .medium, design: .rounded))
                         .padding(12)
@@ -100,7 +113,7 @@ struct SettingsView: View {
                             Spacer()
                             Text(issues == 0 ? "Alles in Ordnung" : "\(issues) Hinweise")
                                 .foregroundStyle(issues == 0 ? AnyShapeStyle(.secondary) : AnyShapeStyle(Color.orange))
-                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                         }
                         .font(.system(size: 12.5, weight: .medium, design: .rounded))
                         .padding(12)
@@ -109,7 +122,7 @@ struct SettingsView: View {
                     }
                     .buttonStyle(PressableStyle())
 
-                    SectionTitle(text: "Siri")
+                    SectionTitle(text: String(localized: "Siri"))
                     Button {
                         push(.siriCommands)
                     } label: {
@@ -117,7 +130,7 @@ struct SettingsView: View {
                             Label("Siri-Befehle einrichten", systemImage: "waveform.badge.mic")
                             Spacer()
                             Text("„Zimmer an“").foregroundStyle(.secondary)
-                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                         }
                         .font(.system(size: 12.5, weight: .medium, design: .rounded))
                         .padding(12)
@@ -132,7 +145,7 @@ struct SettingsView: View {
                         HStack {
                             Label("Einrichtung erneut starten", systemImage: "sparkles")
                             Spacer()
-                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
                         }
                         .font(.system(size: 12.5, weight: .medium, design: .rounded))
                         .padding(12)
@@ -141,7 +154,7 @@ struct SettingsView: View {
                     }
                     .buttonStyle(PressableStyle())
 
-                    SectionTitle(text: "Für Fortgeschrittene")
+                    SectionTitle(text: String(localized: "Für Fortgeschrittene"))
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Für eigene Kurzbefehle, Raycast oder Skripte – per „URLs öffnen“:")
                             .font(.system(size: 11, design: .rounded))
@@ -158,12 +171,25 @@ struct SettingsView: View {
                     .padding(12)
                     .background(CardBackground())
 
-                    SectionTitle(text: "Bridge")
+                    SectionTitle(text: String(localized: "Bridge"))
                     VStack(alignment: .leading, spacing: 5) {
-                        row("Name", store.credentials?.name ?? "Hue Bridge")
+                        row("Name", store.credentials?.name ?? String(localized: "Hue Bridge"))
                         row("Adresse", store.credentials?.host ?? "–")
-                        row("Status", statusText)
-                        row("Inhalt", "\(store.lights.count) Lampen · \(store.rooms.count) Räume · \(store.scenes.count) Szenen")
+                        row("Status", store.connection.title)
+                        row("Inhalt", String(localized: "\(store.lights.count) Lampen · \(store.rooms.count) Räume · \(store.scenes.count) Szenen"))
+                        Divider().opacity(0.4).padding(.vertical, 3)
+                        Button {
+                            push(.connection)
+                        } label: {
+                            HStack {
+                                Text("Verbindungsdetails")
+                                Spacer()
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary).accessibilityHidden(true)
+                            }
+                            .font(.system(size: 12.5, weight: .medium, design: .rounded))
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(PressableStyle())
                     }
                     .padding(12)
                     .background(CardBackground())
@@ -189,15 +215,15 @@ struct SettingsView: View {
     }
 
     private var examples: [String] {
-        let room = store.sortedRooms.first?.name ?? "Wohnzimmer"
-        let scene = store.sortedRooms.first.flatMap { store.scenes(in: $0).first?.name } ?? "Entspannen"
+        let room = store.sortedRooms.first?.name ?? String(localized: "Wohnzimmer")
+        let scene = store.sortedRooms.first.flatMap { store.scenes(in: $0).first?.name } ?? String(localized: "Entspannen")
         func encode(_ text: String) -> String {
             text.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? text
         }
         return [
-            "hoku://szene/\(encode(scene))?raum=\(encode(room))",
-            "hoku://raum/\(encode(room))/umschalten",
-            "hoku://alle/aus",
+            String(localized: "hoku://szene/\(encode(scene))?raum=\(encode(room))"),
+            String(localized: "hoku://raum/\(encode(room))/umschalten"),
+            String(localized: "hoku://alle/aus"),
         ]
     }
 
@@ -207,21 +233,11 @@ struct SettingsView: View {
     }
 
     private var leftOnStatus: String {
-        if model.leftOn.isEnabled { return "An" }
-        return model.cloud.isConnected ? "Aus" : "Einrichten"
+        if model.leftOn.isEnabled { return String(localized: "An") }
+        return model.cloud.isConnected ? String(localized: "Aus") : String(localized: "Einrichten")
     }
 
-    private var statusText: String {
-        switch store.connection {
-        case .live: "Live verbunden"
-        case .connecting: "Verbinde …"
-        case .disconnected: "Getrennt"
-        case let .offline(reason): "Offline (\(reason))"
-        case .unauthorized: "Nicht autorisiert"
-        }
-    }
-
-    private func row(_ label: String, _ value: String) -> some View {
+    private func row(_ label: LocalizedStringKey, _ value: String) -> some View {
         HStack(alignment: .firstTextBaseline) {
             Text(label).foregroundStyle(.secondary).frame(width: 62, alignment: .leading)
             Text(value).textSelection(.enabled).lineLimit(2)
@@ -233,12 +249,12 @@ struct SettingsView: View {
 
 private struct KeyboardHelp: View {
     private let rows: [(String, String)] = [
-        ("↑ ↓", "Raum oder Lampe wählen"),
-        ("← →", "Dimmen (mit ⌥ feiner)"),
-        ("Leertaste", "An / aus"),
-        ("↩", "Öffnen"),
-        ("1 – 9", "Szene im Raum starten"),
-        ("esc", "Zurück / schließen"),
+        ("↑ ↓", String(localized: "Raum oder Lampe wählen")),
+        ("← →", String(localized: "Dimmen (mit ⌥ feiner)")),
+        (String(localized: "Leertaste"), String(localized: "An / aus")),
+        ("↩", String(localized: "Öffnen")),
+        ("1 – 9", String(localized: "Szene im Raum starten")),
+        ("esc", String(localized: "Zurück / schließen")),
     ]
 
     var body: some View {
@@ -268,15 +284,15 @@ private struct AwayAutomationCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             SettingSwitch(
-                title: "Licht aus, wenn ich gehe",
-                subtitle: "Beim Sperren, Zuklappen oder Ruhezustand",
+                title: String(localized: "Licht aus, wenn ich gehe"),
+                subtitle: String(localized: "Beim Sperren, Zuklappen oder Ruhezustand"),
                 systemImage: "lock.fill",
                 isOn: $automation.isEnabled
             )
 
             if automation.isEnabled {
                 FlowChips(
-                    options: [("", "Alle Räume")] + (store.sortedRooms + store.sortedZones).map { ($0.id, $0.name) },
+                    options: [("", String(localized: "Alle Räume"))] + (store.sortedRooms + store.sortedZones).map { ($0.id, $0.name) },
                     isSelected: { id in id.isEmpty ? automation.groupIDs.isEmpty : automation.groupIDs.contains(id) },
                     toggle: { id in
                         if id.isEmpty {
@@ -288,7 +304,7 @@ private struct AwayAutomationCard: View {
                         }
                     }
                 )
-                SettingSwitch(title: "Beim Entsperren wieder an", systemImage: "lock.open.fill", isOn: $automation.restoresOnReturn)
+                SettingSwitch(title: String(localized: "Beim Entsperren wieder an"), systemImage: "lock.open.fill", isOn: $automation.restoresOnReturn)
             }
         }
         .font(.system(size: 12.5, weight: .medium, design: .rounded))

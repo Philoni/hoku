@@ -8,13 +8,22 @@ Versions `0.9.x` are public betas.
 
 ## [Unreleased]
 
+### Planned
+- In-app updates via Sparkle (EdDSA-signed).
+
+## [0.9.1] - 2026-11-10
+
 ### Added
 - Keyboard shortcuts for the lights: toggle any room or zone, start a scene or switch everything off from
   anywhere on the Mac. A small capsule under the menu bar icon confirms what happened.
-
-### Planned
-- English localization of the app and of the generated Siri commands.
-- In-app updates via Sparkle (EdDSA-signed).
+- English: the app, its notifications, the setup assistant and the Siri commands follow the system language
+  (German or English).
+- Connect with an existing application key instead of the link button, see the connection details and set
+  the bridge address by hand (Settings → Bridge → Connection Details).
+- Pin rooms and zones to the top and arrange them in your own order (Settings → Arrange Rooms).
+- VoiceOver: cards, switches, sliders, the color wheel, scenes and shortcuts are labelled and adjustable.
+- Sync detection: while Hue Sync or another sync app controls an entertainment area, Hoku says so on the
+  home page and offers to stop it.
 
 ## [0.9.0] - 2026-11-09
 
@@ -61,5 +70,6 @@ First public beta.
 - A room no longer blinks after switching one of its lamps off; rooms follow their lamps at once.
 - The greeting follows the time of day again after the panel was closed for a while.
 
-[Unreleased]: https://github.com/Philoni/hoku/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/Philoni/hoku/compare/v0.9.1...HEAD
+[0.9.1]: https://github.com/Philoni/hoku/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/Philoni/hoku/releases/tag/v0.9.0

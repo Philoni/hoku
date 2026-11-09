@@ -42,7 +42,9 @@ struct GroupCard: View {
                 onOpen: open,
                 onAdjust: { store.adjustBrightness(by: $0, group: group) },
                 animationDelay: animationDelay,
-                afterglow: coolingIDs.contains(group.id)
+                afterglow: coolingIDs.contains(group.id),
+                accessibilityName: group.name,
+                accessibilityState: subtitle(isOn: isOn, lights: lights, brightness: groupedLight?.dimming?.brightness, isDimmable: isDimmable)
             ) { liveValue in
                 HStack(spacing: 8) {
                     CardLabel(
@@ -58,6 +60,11 @@ struct GroupCard: View {
                     LightOrbs(lights: lights)
                         .opacity(expanded ? 0 : 1)
                         .scaleEffect(expanded ? 0.6 : 1)
+                }
+            }
+            .accessibilityActions {
+                if lights.count > 1, let onExpand {
+                    Button { onExpand() } label: { Text(isExpanded ? "Lampen einklappen" : "Lampen ausklappen") }
                 }
             }
 
@@ -122,13 +129,13 @@ struct GroupCard: View {
     /// As little text as possible: the scene, else the brightness; counts only when mixed.
     private func subtitle(isOn: Bool, lights: [Light], brightness: Double?, isDimmable: Bool) -> String {
         if let fadeOut = store.fadeOuts[group.id] {
-            return "Dimmt aus bis \(fadeOut.ends.formatted(date: .omitted, time: .shortened))"
+            return String(localized: "Dimmt aus bis \(fadeOut.ends.formatted(date: .omitted, time: .shortened))")
         }
-        guard isOn else { return lights.isEmpty ? "Keine Lampen" : "Aus" }
+        guard isOn else { return lights.isEmpty ? String(localized: "Keine Lampen") : String(localized: "Aus") }
         if let scene = store.activeScene(in: group) { return scene.name }
         let onCount = lights.filter(\.isOn).count
-        if onCount < lights.count { return "\(onCount) von \(lights.count) an" }
-        guard isDimmable, let brightness else { return "An" }
+        if onCount < lights.count { return String(localized: "\(onCount) von \(lights.count) an") }
+        guard isDimmable, let brightness else { return String(localized: "An") }
         return "\(Int(brightness.rounded())) %"
     }
 }
@@ -156,7 +163,9 @@ private struct InlineLightRow: View {
                 if let light = store.lights[id] { store.adjustBrightness(by: delta, light: light) }
             },
             animationDelay: animationDelay,
-            afterglow: afterglow
+            afterglow: afterglow,
+            accessibilityName: store.name(of: light),
+            accessibilityState: state
         ) { liveValue in
             HStack(spacing: 8) {
                 Circle()
@@ -184,8 +193,8 @@ private struct InlineLightRow: View {
     }
 
     private var state: String {
-        guard store.isReachable(light) else { return "Nicht erreichbar" }
-        guard light.isOn else { return "Aus" }
-        return light.supportsDimming ? "\(Int(light.brightness.rounded())) %" : "An"
+        guard store.isReachable(light) else { return String(localized: "Nicht erreichbar") }
+        guard light.isOn else { return String(localized: "Aus") }
+        return light.supportsDimming ? "\(Int(light.brightness.rounded())) %" : String(localized: "An")
     }
 }

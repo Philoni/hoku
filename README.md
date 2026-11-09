@@ -36,6 +36,8 @@ Hoku fragt bei der Einrichtung nach deiner Ausstattung und richtet genau das ein
 - **Wecker & Schlafen:** Lichtwecker mit Sonnenaufgang (inkl. Vorschau im Zeitraffer), „Schlafen gehen“ und Einschlaf-Timer – läuft auf der Bridge, auch wenn der Mac schläft.
 - **Licht aus, wenn du gehst:** beim Sperren oder Zuklappen des Macs – und wieder an, wenn du zurückkommst.
 - **Tastatur & Gesten:** ⌃⌥L öffnet Hoku von überall, Pfeiltasten steuern, Wischen dimmt.
+- **Tastenkürzel fürs Licht:** Räume, Zonen, „Alles aus“ und Szenen lassen sich per eigener Tastenkombination schalten, überall am Mac.
+- **Deutsch und Englisch:** App, Hinweise, Einrichtung und Siri-Befehle folgen der Systemsprache.
 - **Geräte-Check:** leere Batterien, nicht erreichbare Lampen, anstehende Updates.
 - **Lernt mit:** schlägt zur passenden Tageszeit die Szene vor, die du dann oft nutzt.
 - **Leicht für deinen Mac:** bei geschlossenem Fenster 0 % CPU.
@@ -96,7 +98,7 @@ Ins Internet geht nur: die Bridge-Suche bei Signify (`discovery.meethue.com`), f
 
 ## Status
 
-Hoku ist eine **Beta**. Die App ist derzeit auf Deutsch; Englisch und automatische Updates folgen. Was als Nächstes kommt, steht im [CHANGELOG](CHANGELOG.md).
+Hoku ist eine **Beta**. Die App gibt es auf Deutsch und Englisch, je nach Systemsprache (ab 0.9.1); automatische Updates folgen. Was als Nächstes kommt, steht im [CHANGELOG](CHANGELOG.md).
 
 ## Mitmachen & Lizenz
 
@@ -115,14 +117,14 @@ Beiträge sind willkommen – siehe [CONTRIBUTING.md](CONTRIBUTING.md). Hoku ste
 - **Households:** every Mac pairs on its own, with its own Siri commands and favourites.
 - **Tried Hue Sync?** It makes your lights dance to films, games and music on your computer, but doesn’t control rooms, single lamps or everyday scenes. Hoku does – and you can keep Hue Sync for the effects.
 
-**Highlights:** two-finger click unfolds a room's lamps · Siri without the app name (personal shortcuts Hoku creates for you) · scene preview on hover · wake-up light and go-to-sleep routines that run on the bridge · lights off when you lock your Mac · ⌃⌥L from anywhere · 0 % CPU when closed.
+**Highlights:** two-finger click unfolds a room's lamps · Siri without the app name (personal shortcuts Hoku creates for you) · scene preview on hover · wake-up light and go-to-sleep routines that run on the bridge · lights off when you lock your Mac · ⌃⌥L from anywhere · your own keyboard shortcuts for rooms, “All off” and scenes · German and English, following the system language · 0 % CPU when closed.
 
 **Requirements:** macOS 26 or later, a Hue Bridge (v2/Pro) on the same network.
 
 **Install:** download `Hoku-X.Y.Z.zip` from [Releases](https://github.com/Philoni/hoku/releases/latest), drag `Hoku.app` to Applications, open it, then **System Settings → Privacy & Security → Open Anyway** (once). Hoku is signed with its own long-lived certificate but not notarized (Apple's program costs $99/year).
 **Build from source:** Xcode 27 + a free Apple ID, then `brew install xcodegen && make install`.
 
-**Status:** beta, currently in German; English and automatic updates are coming.
+**Status:** beta. Hoku is available in German and English (from 0.9.1, following the system language); automatic updates are coming.
 
 > Hoku is provided by Philoni. It is not a Signify app, product or service, is not endorsed by Signify, and Philoni alone is responsible for it. Philips and Philips Hue are trademarks of their respective owners.
 > **Health notice:** certain light colours, fast changes or flashing can cause discomfort and, for people with photosensitive epilepsy, seizures or migraines. Stop the effect, scene or app if you feel unwell.

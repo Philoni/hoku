@@ -314,12 +314,12 @@ final class StatusBarController: NSObject, NSWindowDelegate {
     private func showContextMenu() {
         hide()
         let menu = NSMenu()
-        let allOff = NSMenuItem(title: "Alle Lichter aus", action: #selector(allOff), keyEquivalent: "")
+        let allOff = NSMenuItem(title: String(localized: "Alle Lichter aus"), action: #selector(allOff), keyEquivalent: "")
         allOff.target = self
         allOff.isEnabled = model.store.anyLightOn
         menu.addItem(allOff)
         menu.addItem(.separator())
-        let quit = NSMenuItem(title: "Hoku beenden", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        let quit = NSMenuItem(title: String(localized: "Hoku beenden"), action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         menu.addItem(quit)
         statusItem.menu = menu
         statusItem.button?.performClick(nil)

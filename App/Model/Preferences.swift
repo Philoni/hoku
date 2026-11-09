@@ -6,9 +6,9 @@ enum AppearanceMode: String, Codable, CaseIterable {
 
     var title: String {
         switch self {
-        case .automatic: "Automatisch"
-        case .dark: "Dunkel"
-        case .light: "Hell"
+        case .automatic: String(localized: "Automatisch")
+        case .dark: String(localized: "Dunkel")
+        case .light: String(localized: "Hell")
         }
     }
 

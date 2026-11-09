@@ -385,3 +385,20 @@ import Testing
         #expect(try FileManager.default.contentsOfDirectory(atPath: folder.path) == ["bridge.json"])
     }
 }
+
+@Suite struct ApplicationKeyTests {
+    @Test func acceptsABridgeKeyAndTrimsIt() {
+        let key = String(repeating: "aB3-", count: 10)
+        #expect(ApplicationKey.normalized("  \(key)\n") == key)
+    }
+
+    @Test func rejectsWhatCannotBeAKey() {
+        #expect(ApplicationKey.normalized("") == nil)
+        #expect(ApplicationKey.normalized("zu kurz") == nil)
+        #expect(ApplicationKey.normalized(String(repeating: "a", count: 65)) == nil)
+        #expect(ApplicationKey.normalized(String(repeating: "ä", count: 30)) == nil)
+        #expect(ApplicationKey.normalized(String(repeating: "a", count: 20) + "\tb") == nil)
+        #expect(ApplicationKey.normalized(String(repeating: "a_", count: 12)) != nil)
+        #expect(ApplicationKey.normalized(String(repeating: "a", count: 20) + " b") == nil)
+    }
+}

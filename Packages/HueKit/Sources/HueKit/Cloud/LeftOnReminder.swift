@@ -46,12 +46,12 @@ public struct LeftOnReport: Equatable, Sendable {
     /// "Wohnzimmer · 2 Lampen an" / "Küche und Bad · 3 Lampen an" /
     /// "Wohnzimmer, Küche und 2 weitere Räume · 9 Lampen an"
     public var message: String {
-        let lamps = lightIDs.count == 1 ? "1 Lampe an" : "\(lightIDs.count) Lampen an"
+        let lamps = lightIDs.count == 1 ? String(localized: "1 Lampe an", bundle: .hueKit) : String(localized: "\(lightIDs.count) Lampen an", bundle: .hueKit)
         let places: String? = switch rooms.count {
         case 0: nil
         case 1: rooms[0]
-        case 2, 3: rooms.dropLast().joined(separator: ", ") + " und " + rooms.last!
-        default: "\(rooms[0]), \(rooms[1]) und \(rooms.count - 2) weitere Räume"
+        case 2, 3: String(localized: "\(rooms.dropLast().joined(separator: ", ")) und \(rooms.last!)", bundle: .hueKit)
+        default: String(localized: "\(rooms[0]), \(rooms[1]) und \(rooms.count - 2) weitere Räume", bundle: .hueKit)
         }
         return places.map { "\($0) · \(lamps)" } ?? lamps
     }

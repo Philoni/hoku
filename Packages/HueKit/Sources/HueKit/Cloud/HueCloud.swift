@@ -10,12 +10,12 @@ public enum CloudError: Error, LocalizedError, Equatable, Sendable {
 
     public var errorDescription: String? {
         switch self {
-        case .notConfigured: "Der Hue-Fernzugriff ist noch nicht eingerichtet."
-        case .signInRequired: "Bitte melde dich erneut bei Hue an."
-        case .rateLimited: "Die Hue-Cloud bremst gerade. Später noch einmal versuchen."
-        case let .http(code, message): "Hue-Cloud-Fehler \(code)" + (message.map { ": \($0)" } ?? "")
-        case let .unreachable(detail): "Hue-Cloud nicht erreichbar (\(detail))."
-        case let .unexpected(detail): "Unerwartete Antwort der Hue-Cloud: \(detail)"
+        case .notConfigured: String(localized: "Der Hue-Fernzugriff ist noch nicht eingerichtet.", bundle: .hueKit)
+        case .signInRequired: String(localized: "Bitte melde dich erneut bei Hue an.", bundle: .hueKit)
+        case .rateLimited: String(localized: "Die Hue-Cloud bremst gerade. Später noch einmal versuchen.", bundle: .hueKit)
+        case let .http(code, message): String(localized: "Hue-Cloud-Fehler \(code)", bundle: .hueKit) + (message.map { ": \($0)" } ?? "")
+        case let .unreachable(detail): String(localized: "Hue-Cloud nicht erreichbar (\(detail)).", bundle: .hueKit)
+        case let .unexpected(detail): String(localized: "Unerwartete Antwort der Hue-Cloud: \(detail)", bundle: .hueKit)
         }
     }
 }
@@ -40,7 +40,7 @@ public struct URLSessionTransport: HTTPTransport {
     public func send(_ request: URLRequest) async throws -> (Data, HTTPURLResponse) {
         do {
             let (data, response) = try await session.data(for: request)
-            guard let http = response as? HTTPURLResponse else { throw CloudError.unreachable("keine HTTP-Antwort") }
+            guard let http = response as? HTTPURLResponse else { throw CloudError.unreachable(String(localized: "keine HTTP-Antwort", bundle: .hueKit)) }
             return (data, http)
         } catch let error as URLError {
             throw CloudError.unreachable(error.localizedDescription)
@@ -134,7 +134,7 @@ public actor HueCloud {
     public func resources() async throws -> [JSONValue] {
         let (data, _) = try await authorized(path: "/route/clip/v2/resource")
         guard let envelope = try? JSONDecoder().decode(Envelope.self, from: data) else {
-            throw CloudError.unexpected("Ressourcen nicht lesbar")
+            throw CloudError.unexpected(String(localized: "Ressourcen nicht lesbar", bundle: .hueKit))
         }
         if let message = envelope.errors.first?.description, envelope.data.isEmpty {
             throw CloudError.unexpected(message)
@@ -156,7 +156,7 @@ public actor HueCloud {
         let (data, _) = try await authorized(path: "/route/clip/v2/resource/bridge")
         guard let envelope = try? JSONDecoder().decode(Envelope.self, from: data),
               let id = envelope.data.first?["bridge_id"]?.stringValue
-        else { throw CloudError.unexpected("keine Bridge im Hue-Konto") }
+        else { throw CloudError.unexpected(String(localized: "keine Bridge im Hue-Konto", bundle: .hueKit)) }
         return id.lowercased()
     }
 
@@ -289,7 +289,7 @@ public actor HueCloud {
         guard let json = try? JSONDecoder().decode(JSONValue.self, from: data),
               let access = json["access_token"]?.stringValue,
               let refresh = json["refresh_token"]?.stringValue
-        else { throw CloudError.unexpected("keine Tokens in der Antwort") }
+        else { throw CloudError.unexpected(String(localized: "keine Tokens in der Antwort", bundle: .hueKit)) }
         // Signify's docs show `expires_in` both as a number and as a string.
         let seconds: Double = switch json["expires_in"] {
         case let .number(value): value

@@ -9,6 +9,8 @@ enum Route: Hashable {
     case devices
     case siriCommands
     case shortcuts
+    case connection
+    case roomOrder
     case leftOnReminder
 }
 
@@ -110,6 +112,10 @@ struct RootView: View {
             SiriCommandsView(pop: pop)
         case .shortcuts:
             ShortcutsView(pop: pop)
+        case .connection:
+            ConnectionDetailsView(pop: pop)
+        case .roomOrder:
+            RoomOrderView(pop: pop)
         case .leftOnReminder:
             LeftOnReminderView(pop: pop)
         }
@@ -137,6 +143,7 @@ private struct Toast: View {
         .padding(12)
         .glassEffect(.regular, in: .rect(cornerRadius: 16))
         .task {
+            AccessibilityNotification.Announcement(message).post()
             try? await Task.sleep(for: .seconds(5))
             onDismiss()
         }

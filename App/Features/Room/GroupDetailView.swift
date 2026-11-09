@@ -37,7 +37,7 @@ struct GroupDetailView: View {
         VStack(spacing: 10) {
             PageHeader(
                 title: group.name,
-                subtitle: "\(group.isZone ? "Zone" : "Raum") · \(lights.count) \(lights.count == 1 ? "Lampe" : "Lampen")",
+                subtitle: "\(group.isZone ? String(localized: "Zone") : String(localized: "Raum")) · \(lights.count) \(lights.count == 1 ? String(localized: "Lampe") : String(localized: "Lampen"))",
                 onBack: pop
             ) {
                 SleepTimerButton(group: group, isOn: isOn)
@@ -51,21 +51,24 @@ struct GroupDetailView: View {
                 isDimmable: isDimmable,
                 onToggle: { store.setOn(!isOn, group: group) },
                 onBrightness: { store.setBrightness($0, group: group) },
-                onAdjust: { store.adjustBrightness(by: $0, group: group) }
+                onAdjust: { store.adjustBrightness(by: $0, group: group) },
+                accessibilityName: group.name,
+                accessibilityState: preview.map { String(localized: "Vorschau: \($0.name)") }
+                    ?? (isOn ? (isDimmable ? "\(Int((groupedLight?.dimming?.brightness ?? 0).rounded())) %" : String(localized: "An")) : String(localized: "Aus"))
             ) { liveValue in
                 if let preview {
                     CardLabel(
                         systemImage: "eye.fill",
                         title: preview.name,
-                        subtitle: "Vorschau · Klicken zum Aktivieren",
+                        subtitle: String(localized: "Vorschau · Klicken zum Aktivieren"),
                         isOn: true,
                         glow: heroColors.first ?? .yellow
                     )
                 } else {
                     CardLabel(
                         systemImage: Icons.room(group.metadata?.archetype),
-                        title: activeScene?.name ?? (isOn ? "Alle Lampen" : "Aus"),
-                        subtitle: isOn && isDimmable ? "\(Int((groupedLight?.dimming?.brightness ?? 0).rounded())) % Helligkeit" : "Zum Dimmen ziehen",
+                        title: activeScene?.name ?? (isOn ? String(localized: "Alle Lampen") : String(localized: "Aus")),
+                        subtitle: isOn && isDimmable ? String(localized: "\(Int((groupedLight?.dimming?.brightness ?? 0).rounded())) % Helligkeit") : String(localized: "Zum Dimmen ziehen"),
                         isOn: isOn,
                         glow: colors.first ?? .yellow,
                         liveValue: liveValue
@@ -79,7 +82,7 @@ struct GroupDetailView: View {
                 VStack(spacing: 7) {
                     // Lights first: that's what you came for. Scenes follow, compact.
                     if !lights.isEmpty {
-                        SectionTitle(text: "Lampen")
+                        SectionTitle(text: String(localized: "Lampen"))
                         ForEach(Array(lights.enumerated()), id: \.element.id) { index, light in
                             LightCard(light: light, preview: previews?[light.id]) { push(.light(light.id)) }
                                 .selectionRing(selection == index + 1)
@@ -89,7 +92,7 @@ struct GroupDetailView: View {
                     }
 
                     if !zones.isEmpty {
-                        SectionTitle(text: "Zonen")
+                        SectionTitle(text: String(localized: "Zonen"))
                         ForEach(Array(zones.enumerated()), id: \.element.id) { index, zone in
                             GroupCard(group: zone) { push(.group(zone.id)) }
                                 .selectionRing(selection == lights.count + 1 + index)
@@ -104,7 +107,7 @@ struct GroupDetailView: View {
                     }
 
                     if !scenes.isEmpty || !smartScenes.isEmpty {
-                        SectionTitle(text: "Szenen", trailing: "\(scenes.count + smartScenes.count)")
+                        SectionTitle(text: String(localized: "Szenen"), trailing: "\(scenes.count + smartScenes.count)")
                         SceneCarousel(scenes: orderedScenes, smartScenes: smartScenes, activeSceneID: activeScene?.id, favorites: Set(popularity.filter { $0.value >= 1 }.keys)) { scene in
                             setPreview(scene)
                         }

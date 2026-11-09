@@ -11,20 +11,20 @@ struct DevicesView: View {
         let devices = store.sortedDevices
 
         VStack(spacing: 10) {
-            PageHeader(title: "Geräte", subtitle: "\(devices.count) Geräte an deiner Bridge", onBack: pop) { EmptyView() }
+            PageHeader(title: String(localized: "Geräte"), subtitle: String(localized: "\(devices.count) Geräte an deiner Bridge"), onBack: pop) { EmptyView() }
 
             PageScroll(maxHeight: 440) {
                 VStack(spacing: 7) {
                     HealthSummary(issueCount: issues.count)
 
-                    SectionTitle(text: "Lampen & Steckdosen")
+                    SectionTitle(text: String(localized: "Lampen & Steckdosen"))
                     ForEach(Array(devices.filter { !$0.lightIDs.isEmpty }.enumerated()), id: \.element.id) { index, device in
                         DeviceRow(device: device).staggered(index)
                     }
 
                     let others = devices.filter(\.lightIDs.isEmpty)
                     if !others.isEmpty {
-                        SectionTitle(text: "Schalter & Sensoren")
+                        SectionTitle(text: String(localized: "Schalter & Sensoren"))
                         ForEach(others) { device in
                             DeviceRow(device: device)
                         }
@@ -45,8 +45,9 @@ private struct HealthSummary: View {
                 .font(.system(size: 26))
                 .foregroundStyle(isHealthy ? AnyShapeStyle(Color.green.gradient) : AnyShapeStyle(Color.orange.gradient))
                 .symbolEffect(.bounce, value: issueCount)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 1) {
-                Text(isHealthy ? "Alles in Ordnung" : "\(issueCount) \(issueCount == 1 ? "Hinweis" : "Hinweise")")
+                Text(isHealthy ? "Alles in Ordnung" : "\(issueCount) \(issueCount == 1 ? String(localized: "Hinweis") : String(localized: "Hinweise"))")
                     .font(.system(size: 14, weight: .semibold, design: .rounded))
                 Text(isHealthy ? "Alle Geräte erreichbar, Batterien voll, Firmware aktuell." : "Details stehen bei den Geräten unten.")
                     .font(.system(size: 11, design: .rounded))
@@ -74,7 +75,7 @@ private struct DeviceRow: View {
                 .frame(width: 22)
                 .foregroundStyle(health.isConnected ? AnyShapeStyle(Theme.text) : AnyShapeStyle(Color.red))
             VStack(alignment: .leading, spacing: 1) {
-                Text(device.metadata?.name ?? "Gerät")
+                Text(device.metadata?.name ?? String(localized: "Gerät"))
                     .font(.system(size: 12.5, weight: .semibold, design: .rounded))
                     .lineLimit(1)
                 Text([store.room(of: device)?.name, device.productData?.productName].compactMap { $0 }.joined(separator: " · "))
@@ -85,24 +86,26 @@ private struct DeviceRow: View {
             Spacer(minLength: 6)
 
             if health.hasUpdate {
-                Badge(text: "Update", systemImage: "arrow.down.circle.fill", color: .blue)
+                Badge(text: String(localized: "Update"), systemImage: "arrow.down.circle.fill", color: .blue)
             }
             if let level = health.batteryLevel {
                 Badge(text: "\(level) %", systemImage: batterySymbol(level), color: level <= 20 ? .orange : .green)
             }
             if !health.isConnected {
-                Badge(text: "Nicht erreichbar", systemImage: "wifi.slash", color: .red)
+                Badge(text: String(localized: "Nicht erreichbar"), systemImage: "wifi.slash", color: .red)
             } else {
                 Circle()
                     .fill(Color.green)
                     .frame(width: 6, height: 6)
                     .shadow(color: .green.opacity(0.8), radius: 3)
                     .help("Erreichbar")
+                    .accessibilityLabel("Erreichbar")
             }
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 9)
         .background(CardBackground())
+        .accessibilityElement(children: .combine)
     }
 
     private func batterySymbol(_ level: Int) -> String {
@@ -143,11 +146,13 @@ struct DeviceIssueChip: View {
                 Image(systemName: "exclamationmark.triangle.fill")
                     .foregroundStyle(.orange)
                     .symbolEffect(.pulse)
+                    .accessibilityHidden(true)
                 Text(summary)
                     .font(.system(size: 12, weight: .medium, design: .rounded))
                     .lineLimit(1)
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(Theme.faint)
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
@@ -159,12 +164,12 @@ struct DeviceIssueChip: View {
     }
 
     private var summary: String {
-        guard issues.count == 1, let issue = issues.first else { return "\(issues.count) Geräte brauchen Aufmerksamkeit" }
-        let name = store.devices[issue.deviceID]?.metadata?.name ?? "Gerät"
+        guard issues.count == 1, let issue = issues.first else { return String(localized: "\(issues.count) Geräte brauchen Aufmerksamkeit") }
+        let name = store.devices[issue.deviceID]?.metadata?.name ?? String(localized: "Gerät")
         switch issue.kind {
-        case let .battery(level, _): return "\(name): Batterie \(level.map { "\($0) %" } ?? "schwach")"
-        case .unreachable: return "\(name) ist nicht erreichbar"
-        case .update: return "\(name): Firmware-Update verfügbar"
+        case let .battery(level, _): return String(localized: "\(name): Batterie \(level.map { "\($0) %" } ?? String(localized: "schwach"))")
+        case .unreachable: return String(localized: "\(name) ist nicht erreichbar")
+        case .update: return String(localized: "\(name): Firmware-Update verfügbar")
         }
     }
 }

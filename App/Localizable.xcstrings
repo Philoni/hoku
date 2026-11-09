@@ -1,0 +1,5378 @@
+{
+  "sourceLanguage": "de",
+  "strings": {
+    " · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " · %@"
+          }
+        }
+      }
+    },
+    " · Taste %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " · Key %lld"
+          }
+        }
+      }
+    },
+    "%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
+          }
+        }
+      }
+    },
+    "%@ %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@"
+          }
+        }
+      }
+    },
+    "%@ Die Hue-App auf dem Handy schaltet auch von unterwegs.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ The Hue app on your phone also works when you’re away."
+          }
+        }
+      }
+    },
+    "%@ anheften": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pin %@"
+          }
+        }
+      }
+    },
+    "%@ dimmt in %lld Minuten aus. Schlaf gut!": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ dimmt in %2$lld Minuten aus. Schlaf gut!"
+          }
+        },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%@ will fade out in %lld minute. Sleep well!"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%@ will fade out in %lld minutes. Sleep well!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ hinzufügen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add %@"
+          }
+        }
+      }
+    },
+    "%@ im %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ im %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ in the %@"
+          }
+        }
+      }
+    },
+    "%@ in %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ in %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ in %@"
+          }
+        }
+      }
+    },
+    "%@ in the %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ in the %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ in the %@"
+          }
+        }
+      }
+    },
+    "%@ ist %@.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ ist %2$@."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ is %@."
+          }
+        }
+      }
+    },
+    "%@ ist jetzt %@.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ ist jetzt %2$@."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ is now %@."
+          }
+        }
+      }
+    },
+    "%@ ist nicht erreichbar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ is unreachable"
+          }
+        }
+      }
+    },
+    "%@ leuchtet mit %lld %%.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ leuchtet mit %2$lld %%."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ is at %lld%%."
+          }
+        }
+      }
+    },
+    "%@ läuft im Raum %@.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ läuft im Raum %2$@."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ is running in %@."
+          }
+        }
+      }
+    },
+    "%@ lösen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unpin %@"
+          }
+        }
+      }
+    },
+    "%@ nach oben": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move %@ up"
+          }
+        }
+      }
+    },
+    "%@ nach unten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move %@ down"
+          }
+        }
+      }
+    },
+    "%@ · dynamisch": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · dynamic"
+          }
+        }
+      }
+    },
+    "%@ öffnet schon Hoku.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ already opens Hoku."
+          }
+        }
+      }
+    },
+    "%@%@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@%2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@"
+          }
+        }
+      }
+    },
+    "%@, %lld Kelvin": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@, %2$lld Kelvin"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$lld Kelvin"
+          }
+        }
+      }
+    },
+    "%@: Batterie %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@: Batterie %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: Battery %@"
+          }
+        }
+      }
+    },
+    "%@: Firmware-Update verfügbar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: Firmware update available"
+          }
+        }
+      }
+    },
+    "%lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld"
+          }
+        }
+      }
+    },
+    "%lld %%": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld%%"
+          }
+        }
+      }
+    },
+    "%lld %% Helligkeit": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld%% brightness"
+          }
+        }
+      }
+    },
+    "%lld %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld %@"
+          }
+        }
+      }
+    },
+    "%lld Befehle": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld command"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld commands"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Befehle eingerichtet": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld command set up"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld commands set up"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Befehle einrichten": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Set up %lld command"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Set up %lld commands"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Geräte an deiner Bridge": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld device on your bridge"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld devices on your bridge"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Geräte brauchen Aufmerksamkeit": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld device needs attention"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld devices need attention"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Hinweise": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld notice"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld notices"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld K": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld K"
+          }
+        }
+      }
+    },
+    "%lld Kelvin": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Kelvin"
+          }
+        }
+      }
+    },
+    "%lld Lampen": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld light"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld lights"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Lampen sind ausgeschaltet. Zu Hause ist es jetzt dunkel.": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld light is off. It’s dark at home now."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld lights are off. It’s dark at home now."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Lampen · %lld Räume · %lld Szenen": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld Lampen · %2$lld Räume · %3$lld Szenen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld lights · %lld rooms · %lld scenes"
+          }
+        }
+      }
+    },
+    "%lld Min.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        }
+      }
+    },
+    "%lld Minuten": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld minute"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld minutes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Räume": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld room"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld rooms"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld Szenen": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld scene"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld scenes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld an": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld on"
+          }
+        }
+      }
+    },
+    "%lld von %lld an": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld von %2$lld an"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld of %lld on"
+          }
+        }
+      }
+    },
+    "%lld von %lld an die Kurzbefehle-App übergeben …": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld von %2$lld an die Kurzbefehle-App übergeben …"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld of %lld handed over to the Shortcuts app…"
+          }
+        }
+      }
+    },
+    "+%lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%lld"
+          }
+        }
+      }
+    },
+    "+%lld weitere": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%lld more"
+          }
+        }
+      }
+    },
+    "1 Befehl": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 command"
+          }
+        }
+      }
+    },
+    "1 Befehl eingerichtet": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 command set up"
+          }
+        }
+      }
+    },
+    "1 Befehl einrichten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up 1 command"
+          }
+        }
+      }
+    },
+    ":": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ":"
+          }
+        }
+      }
+    },
+    "API": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API"
+          }
+        }
+      }
+    },
+    "Abbrechen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "Abgemeldet": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signed out"
+          }
+        }
+      }
+    },
+    "Abgleich": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last sync"
+          }
+        }
+      }
+    },
+    "Abmelden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign Out"
+          }
+        }
+      }
+    },
+    "Adresse": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Address"
+          }
+        }
+      }
+    },
+    "Adresse von Hand": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manual Address"
+          }
+        }
+      }
+    },
+    "Adresse übernommen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Address saved."
+          }
+        }
+      }
+    },
+    "Alle Befehle direkt über Hoku": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All commands directly via Hoku"
+          }
+        }
+      }
+    },
+    "Alle Geräte erreichbar, Batterien voll, Firmware aktuell.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All devices reachable, batteries full, firmware up to date."
+          }
+        }
+      }
+    },
+    "Alle Lampen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All Lights"
+          }
+        }
+      }
+    },
+    "Alle Lichter aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All Lights Off"
+          }
+        }
+      }
+    },
+    "Alle Lichter ausschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn Off All Lights"
+          }
+        }
+      }
+    },
+    "Alle Lichter sind aus. Gute Nacht!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All lights are off. Good night!"
+          }
+        }
+      }
+    },
+    "Alle Räume": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All Rooms"
+          }
+        }
+      }
+    },
+    "Alles aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All off"
+          }
+        }
+      }
+    },
+    "Alles ausschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn Everything Off"
+          }
+        }
+      }
+    },
+    "Alles bereit": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All ready"
+          }
+        }
+      }
+    },
+    "Alles bleibt bei dir": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Everything stays with you"
+          }
+        }
+      }
+    },
+    "Alles eingerichtet": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All set up"
+          }
+        }
+      }
+    },
+    "Alles in Ordnung": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All good"
+          }
+        }
+      }
+    },
+    "Als Callback-URL eintragen:": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter as the callback URL:"
+          }
+        }
+      }
+    },
+    "Am iPhone – Hoku ergänzt dann Szenen & mehr": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On your iPhone – Hoku then adds scenes & more"
+          }
+        }
+      }
+    },
+    "Am iPhone: Home-App → + → Gerät hinzufügen → Code unten auf der Bridge scannen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On your iPhone: Home app → + → Add Accessory → scan the code on the bottom of the bridge."
+          }
+        }
+      }
+    },
+    "An": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On"
+          }
+        }
+      }
+    },
+    "An / aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On / Off"
+          }
+        }
+      }
+    },
+    "Andere App-Daten …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other App Data…"
+          }
+        }
+      }
+    },
+    "Angeheftete stehen oben. Die Reihenfolge gilt überall in Hoku.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinned ones stay on top. The order applies everywhere in Hoku."
+          }
+        }
+      }
+    },
+    "Anhalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        }
+      }
+    },
+    "Anmeldung und Fernzugriff sind von diesem Mac gelöscht. Ganz beenden: Auf developers.meethue.com unter „Remote Hue API appids“ deine Hoku-App löschen – dann gilt bei Signify keine Anmeldung mehr.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign-in and remote access have been deleted from this Mac. To end it completely: on developers.meethue.com, delete your Hoku app under “Remote Hue API appids” – then no sign-in is valid with Signify anymore."
+          }
+        }
+      }
+    },
+    "Apple Account öffnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Apple Account"
+          }
+        }
+      }
+    },
+    "Apple Home einrichten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set Up Apple Home"
+          }
+        }
+      }
+    },
+    "Auf developers.meethue.com ein Konto anlegen und anmelden.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create an account on developers.meethue.com and sign in."
+          }
+        }
+      }
+    },
+    "Aufwachen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wake up"
+          }
+        }
+      }
+    },
+    "Aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Off"
+          }
+        }
+      }
+    },
+    "Ausdimmen über": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fade out over"
+          }
+        }
+      }
+    },
+    "Ausschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn Off"
+          }
+        }
+      }
+    },
+    "Ausschalten hat nicht geklappt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turning off didn’t work"
+          }
+        }
+      }
+    },
+    "Automationen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automations"
+          }
+        }
+      }
+    },
+    "Automatisch": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatic"
+          }
+        }
+      }
+    },
+    "Automatisch ausschalten, wenn du gehst, macht dein Handy am besten: In der Hue-App unter Automationen „Wenn ich gehe“ → alles aus. Hoku schaltet aus der Ferne nur, wenn du in der Mitteilung auf „Alles ausschalten“ klickst.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The best way to turn lights off automatically when you leave is your phone: in the Hue app, under Automations, set “When I leave” → everything off. Hoku only turns lights off remotely if you click “Turn Everything Off” in the notification."
+          }
+        }
+      }
+    },
+    "Autostart: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch at login: %@"
+          }
+        }
+      }
+    },
+    "Bedienung": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Controls"
+          }
+        }
+      }
+    },
+    "Beenden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit"
+          }
+        }
+      }
+    },
+    "Beendet die Synchronisierung. Danach steuerst du die Lampen wieder wie gewohnt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ends the sync. After that you control the lights as usual."
+          }
+        }
+      }
+    },
+    "Bei Hue anmelden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in to Hue"
+          }
+        }
+      }
+    },
+    "Bei „Hoku“ einschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn on for “Hoku”"
+          }
+        }
+      }
+    },
+    "Beim Anmelden starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch at login"
+          }
+        }
+      }
+    },
+    "Beim Anmelden starten?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch at login?"
+          }
+        }
+      }
+    },
+    "Beim Entsperren wieder an": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On again when unlocked"
+          }
+        }
+      }
+    },
+    "Beim Gehen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When leaving"
+          }
+        }
+      }
+    },
+    "Beim Sperren, Zuklappen oder Ruhezustand": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When locking, closing the lid, or sleeping"
+          }
+        }
+      }
+    },
+    "Bestimmte Lichtfarben, schnelle Wechsel oder Blinken können Unwohlsein auslösen – bei lichtempfindlichen Menschen auch Anfälle oder Migräne. Fühlst du dich unwohl, beende Effekt, Szene oder Hoku sofort.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Certain light colors, rapid changes, or flashing can cause discomfort – and in people sensitive to light, even seizures or migraines. If you feel unwell, stop the effect or scene, or quit Hoku, immediately."
+          }
+        }
+      }
+    },
+    "Bitte Client-ID und Client-Secret eintragen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please enter the Client ID and Client Secret."
+          }
+        }
+      }
+    },
+    "Blau": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blue"
+          }
+        }
+      }
+    },
+    "Bridge": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge"
+          }
+        }
+      }
+    },
+    "Bridge gefunden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge found"
+          }
+        }
+      }
+    },
+    "Bridge gerade nicht erreichbar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge currently unreachable"
+          }
+        }
+      }
+    },
+    "Bridge nicht dabei? IP-Adresse eingeben": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Don’t see your bridge? Enter its IP address"
+          }
+        }
+      }
+    },
+    "Bridge trennen …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disconnect Bridge…"
+          }
+        }
+      }
+    },
+    "Bridge trennen?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disconnect bridge?"
+          }
+        }
+      }
+    },
+    "Bridge-ID": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge ID"
+          }
+        }
+      }
+    },
+    "Client-ID": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Client ID"
+          }
+        }
+      }
+    },
+    "Client-ID und Client-Secret hier eintragen:": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter the Client ID and Client Secret here:"
+          }
+        }
+      }
+    },
+    "Client-Secret": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Client Secret"
+          }
+        }
+      }
+    },
+    "Dann richtet Hoku genau das ein, was dir fehlt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Then Hoku sets up exactly what you’re missing."
+          }
+        }
+      }
+    },
+    "Dann sind deine Lichter immer nur einen Klick entfernt – auch nach einem Neustart.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Then your lights are always just one click away – even after a restart."
+          }
+        }
+      }
+    },
+    "Darf „Hoku“ nach Geräten in lokalen Netzwerken suchen?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow “Hoku” to find devices on local networks?"
+          }
+        }
+      }
+    },
+    "Das Anmeldefenster ließ sich nicht öffnen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The sign-in window couldn’t be opened."
+          }
+        }
+      }
+    },
+    "Das dauert nur ein paar Sekunden.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This only takes a few seconds."
+          }
+        }
+      }
+    },
+    "Das machst du um diese Zeit oft: %@ im Raum %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Das machst du um diese Zeit oft: %1$@ im Raum %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You often do this at this time: %@ in %@"
+          }
+        }
+      }
+    },
+    "Das sieht nicht nach einem Hue-Schlüssel aus.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "That doesn’t look like a Hue key."
+          }
+        }
+      }
+    },
+    "Datenschutz & Sicherheit → Lokales Netzwerk": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy & Security → Local Network"
+          }
+        }
+      }
+    },
+    "Dein Hue-Konto gibt Hoku eine andere Bridge frei als die gekoppelte. Abmelden und beim Anmelden die richtige wählen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your Hue account grants Hoku access to a different bridge than the paired one. Sign out and choose the right one when signing in."
+          }
+        }
+      }
+    },
+    "Dein Hue-Konto gibt eine andere Bridge frei als die gekoppelte.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your Hue account grants access to a different bridge than the paired one."
+          }
+        }
+      }
+    },
+    "Dein Mac ist nicht mit einem Apple Account angemeldet": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your Mac isn’t signed in to an Apple Account"
+          }
+        }
+      }
+    },
+    "Deine Hue-Lichter, direkt in der Menüleiste.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your Hue lights, right in the menu bar."
+          }
+        }
+      }
+    },
+    "Den Raum %@ gibt es nicht mehr.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The room %@ no longer exists."
+          }
+        }
+      }
+    },
+    "Der Zugriff aufs lokale Netzwerk ist aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local network access is off"
+          }
+        }
+      }
+    },
+    "Der runde Knopf oben auf deiner Bridge „%@“.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The round button on top of your bridge “%@”."
+          }
+        }
+      }
+    },
+    "Details stehen bei den Geräten unten.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Details are listed with the devices below."
+          }
+        }
+      }
+    },
+    "Di": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tue"
+          }
+        }
+      }
+    },
+    "Die Automation wird auch aus der Hue-App entfernt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The automation is also removed from the Hue app."
+          }
+        }
+      }
+    },
+    "Die Bridge ist gerade nicht erreichbar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The bridge is currently unreachable"
+          }
+        }
+      }
+    },
+    "Die IP findest du in der Hue-App unter Einstellungen → Hue Bridges → ⓘ.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can find the IP address in the Hue app under Settings → Hue Bridges → ⓘ."
+          }
+        }
+      }
+    },
+    "Die Kurzbefehle-App fragt bei jedem Befehl einmal nach – klick jeweils auf „Kurzbefehl hinzufügen“. Beim ersten Benutzen fragt macOS je Befehl noch einmal, ob er Hoku öffnen darf: dauerhaft erlauben, dann nie wieder.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Shortcuts app asks once for each command – click “Add Shortcut” each time. The first time you use one, macOS asks once per command whether it may open Hoku: allow it permanently, and it never asks again."
+          }
+        }
+      }
+    },
+    "Die Kurzbefehle-App öffnet sich gleich – bitte bei jedem Befehl „Kurzbefehl hinzufügen“ klicken.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Shortcuts app is about to open – please click “Add Shortcut” for each command."
+          }
+        }
+      }
+    },
+    "Dimme ${room} auf ${brightness} %": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dim ${room} to ${brightness}%"
+          }
+        }
+      }
+    },
+    "Dimme ${room} in ${minutes} Minuten aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fade out ${room} in ${minutes} minutes"
+          }
+        }
+      }
+    },
+    "Dimmen (mit ⌥ feiner)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dim (finer with ⌥)"
+          }
+        }
+      }
+    },
+    "Dimmen, schalten, Szenen wählen – mit einem Klick in der Menüleiste.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dim, turn on and off, pick scenes – with one click in the menu bar."
+          }
+        }
+      }
+    },
+    "Dimmt aus bis %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fades out until %@"
+          }
+        }
+      }
+    },
+    "Dimmt einen Raum langsam aus, z. B. zum Einschlafen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slowly dims a room off, e.g. for falling asleep."
+          }
+        }
+      }
+    },
+    "Direkt im lokalen Netzwerk, verschlüsselt (HTTPS)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Directly on your local network, encrypted (HTTPS)"
+          }
+        }
+      }
+    },
+    "Direkt mit deiner Bridge. Kein Konto, Cloud nur, wenn du sie einschaltest.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Directly with your bridge. No account, cloud only if you turn it on."
+          }
+        }
+      }
+    },
+    "Direkt mit deiner Bridge. Kein Konto, keine Cloud.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Directly with your bridge. No account, no cloud."
+          }
+        }
+      }
+    },
+    "Do": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thu"
+          }
+        }
+      }
+    },
+    "Do. 21:30": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thu 9:30 PM"
+          }
+        }
+      }
+    },
+    "Drück jetzt die Link-Taste": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Press the link button now"
+          }
+        }
+      }
+    },
+    "Dunkel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dark"
+          }
+        }
+      }
+    },
+    "Dynamik anhalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause Dynamics"
+          }
+        }
+      }
+    },
+    "Dynamisch starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start Dynamic"
+          }
+        }
+      }
+    },
+    "Eigene Reihenfolge": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom order"
+          }
+        }
+      }
+    },
+    "Eigene Siri-Befehle brauchen diese Anmeldung – macOS signiert jeden Kurzbefehl darüber. Melde dich an, dann richtet Hoku die Befehle ein. Alles andere funktioniert auch ohne.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom Siri commands need this sign-in – macOS signs every shortcut with it. Sign in, and Hoku will set up the commands. Everything else works without it."
+          }
+        }
+      }
+    },
+    "Ein paar kurze Schritte, dann steuerst du deine Lichter von hier oben.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A few short steps, then you control your lights from up here."
+          }
+        }
+      }
+    },
+    "Ein-/Ausschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn On or Off"
+          }
+        }
+      }
+    },
+    "Eine Sync-App (z. B. Hue Sync) steuert gerade die Lampen in „%@“. Solange reagieren sie nicht auf Hoku.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A sync app (such as Hue Sync) is controlling the lights in “%@” right now. Until it stops, they won’t respond to Hoku."
+          }
+        }
+      }
+    },
+    "Eine andere App nutzt diese Tastenkombination bereits.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Another app is already using this keyboard shortcut."
+          }
+        }
+      }
+    },
+    "Einmalig": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Once"
+          }
+        }
+      }
+    },
+    "Einrichten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set Up"
+          }
+        }
+      }
+    },
+    "Einrichtung erneut starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart Setup"
+          }
+        }
+      }
+    },
+    "Einrichtung starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start Setup"
+          }
+        }
+      }
+    },
+    "Einschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn On"
+          }
+        }
+      }
+    },
+    "Einschlaf-Timer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sleep Timer"
+          }
+        }
+      }
+    },
+    "Einschlaf-Timer abbrechen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel Sleep Timer"
+          }
+        }
+      }
+    },
+    "Einstellungen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "Einstellungen öffnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Settings"
+          }
+        }
+      }
+    },
+    "Einstellungen → „Licht aus, wenn ich gehe“ – beim Sperren des Macs.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings → “Lights off when I leave” – when the Mac locks."
+          }
+        }
+      }
+    },
+    "Endhelligkeit": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Final brightness"
+          }
+        }
+      }
+    },
+    "Entspannen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relax"
+          }
+        }
+      }
+    },
+    "Erkannt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detected"
+          }
+        }
+      }
+    },
+    "Erlauben": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow"
+          }
+        }
+      }
+    },
+    "Erlaubt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allowed"
+          }
+        }
+      }
+    },
+    "Erlaubt – danke!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allowed – thank you!"
+          }
+        }
+      }
+    },
+    "Erneut": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Again"
+          }
+        }
+      }
+    },
+    "Erneut suchen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search Again"
+          }
+        }
+      }
+    },
+    "Erreichbar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reachable"
+          }
+        }
+      }
+    },
+    "Erscheinungsbild": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appearance"
+          }
+        }
+      }
+    },
+    "Erst den Hue-Fernzugriff unten einrichten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up Hue remote access below first"
+          }
+        }
+      }
+    },
+    "Erzähl kurz von dir": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A bit about you"
+          }
+        }
+      }
+    },
+    "Farbe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Color"
+          }
+        }
+      }
+    },
+    "Farbrad": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Color wheel"
+          }
+        }
+      }
+    },
+    "Farbtemperatur": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Color temperature"
+          }
+        }
+      }
+    },
+    "Fertig übergeben. Sag zum Beispiel „Hey Siri, %@“.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All handed over. Just say, for example, “Hey Siri, %@”."
+          }
+        }
+      }
+    },
+    "Festlegen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set"
+          }
+        }
+      }
+    },
+    "Fr": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fri"
+          }
+        }
+      }
+    },
+    "Funktionieren überall am Mac, auch wenn Hoku geschlossen ist.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "They work everywhere on the Mac, even when Hoku is closed."
+          }
+        }
+      }
+    },
+    "Für Fortgeschrittene": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Advanced"
+          }
+        }
+      }
+    },
+    "Für diese Auswahl gibt es gerade keine Befehle – du kannst sie später in den Einstellungen anlegen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "There are no commands for this selection right now – you can create them later in Settings."
+          }
+        }
+      }
+    },
+    "Für eigene Kurzbefehle, Raycast oder Skripte – per „URLs öffnen“:": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For your own shortcuts, Raycast, or scripts – via “Open URLs”:"
+          }
+        }
+      }
+    },
+    "Gelb": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yellow"
+          }
+        }
+      }
+    },
+    "Gelöschte Szene": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deleted scene"
+          }
+        }
+      }
+    },
+    "Gerade kein Netz erkannt. Ohne Netz meldet sich Hoku nicht.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No network detected right now. Without a network, Hoku stays quiet."
+          }
+        }
+      }
+    },
+    "Gerät": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Device"
+          }
+        }
+      }
+    },
+    "Geräte": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Devices"
+          }
+        }
+      }
+    },
+    "Geräte-Check": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Device Check"
+          }
+        }
+      }
+    },
+    "Getrennt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disconnected"
+          }
+        }
+      }
+    },
+    "Gleich fragt macOS nach. Klick dann auf „Erlauben“.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS will ask in a moment. Then click “Allow”."
+          }
+        }
+      }
+    },
+    "Grün": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Green"
+          }
+        }
+      }
+    },
+    "Gute Nacht": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good night"
+          }
+        }
+      }
+    },
+    "Guten Abend": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good evening"
+          }
+        }
+      }
+    },
+    "Guten Morgen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good morning"
+          }
+        }
+      }
+    },
+    "Hallo": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hello"
+          }
+        }
+      }
+    },
+    "Hast du ein iPhone oder iPad?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do you have an iPhone or iPad?"
+          }
+        }
+      }
+    },
+    "Hell": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light"
+          }
+        }
+      }
+    },
+    "Hellblau": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light blue"
+          }
+        }
+      }
+    },
+    "Helligkeit": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brightness"
+          }
+        }
+      }
+    },
+    "Hier oben wohnt Hoku": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku lives up here"
+          }
+        }
+      }
+    },
+    "Hier wohnt Hoku": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku lives here"
+          }
+        }
+      }
+    },
+    "Hinweis": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notice"
+          }
+        }
+      }
+    },
+    "Hinweise": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notices"
+          }
+        }
+      }
+    },
+    "Hoku beenden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit Hoku"
+          }
+        }
+      }
+    },
+    "Hoku beim Anmelden starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch Hoku at login"
+          }
+        }
+      }
+    },
+    "Hoku braucht dafür deine eigene, kostenlose Hue-App. Einmalig, etwa fünf Minuten. Signify verlangt dafür ein Entwicklerkonto (ab 18) und die Zustimmung zu seinen Nutzungsbedingungen; die Zugangsdaten sind nur für dich.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For this, Hoku needs your own free Hue app. It’s a one-time setup of about five minutes. Signify requires a developer account for this (18 and older) and your agreement to its terms of use; the credentials are for you alone."
+          }
+        }
+      }
+    },
+    "Hoku einrichten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set Up Hoku"
+          }
+        }
+      }
+    },
+    "Hoku ergänzt, was Home nicht kann: Szenen & mehr": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku adds what Home can’t: scenes & more"
+          }
+        }
+      }
+    },
+    "Hoku findet deine Hue Bridge im Netzwerk und steuert deine Lichter direkt, ohne Cloud.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku finds your Hue Bridge on the network and controls your lights directly, without the cloud."
+          }
+        }
+      }
+    },
+    "Hoku findet die Bridge selbst wieder, wenn sich ihre Adresse ändert. Du kannst sie hier auch fest eintragen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku finds the bridge again on its own when its address changes. You can also set it here yourself."
+          }
+        }
+      }
+    },
+    "Hoku in „Programme“ verschieben?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move Hoku to “Applications”?"
+          }
+        }
+      }
+    },
+    "Hoku ist deine komplette Hue-Steuerung am Mac: Räume, Lampen und Szenen in der Menüleiste, per Tastatur und per Siri – ganz ohne Handy und ohne Cloud.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku is your complete Hue control on the Mac: rooms, lights, and scenes in the menu bar, by keyboard, and by Siri – entirely without a phone and without the cloud."
+          }
+        }
+      }
+    },
+    "Hoku ist ein Open-Source-Projekt von Philoni und keine App, kein Produkt und kein Dienst von Signify (Philips Hue). Signify unterstützt oder prüft Hoku nicht – verantwortlich ist allein Philoni. Philips und Philips Hue sind Marken ihrer jeweiligen Inhaber.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku is an open-source project by Philoni and is not an app, product, or service of Signify (Philips Hue). Signify does not endorse or review Hoku – Philoni alone is responsible. Philips and Philips Hue are trademarks of their respective owners."
+          }
+        }
+      }
+    },
+    "Hoku ist nicht mehr gekoppelt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku is no longer paired"
+          }
+        }
+      }
+    },
+    "Hoku legt für jeden Befehl einen Kurzbefehl an. Siri führt Kurzbefehle direkt über ihren Namen aus – auch vor Apple Home. Die Kurzbefehle-App fragt pro Befehl einmal nach: „Kurzbefehl hinzufügen“ klicken. Beim ersten Benutzen fragt macOS je Befehl einmal, ob er Hoku öffnen darf – dauerhaft erlauben, dann nie wieder. Danach kannst du sie auch ins Kontrollzentrum oder die Menüleiste legen. ✦ = Sprechvariante, so wie Siri den Namen versteht (z. B. „Light Strip“ für „Lightstrip“).": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku creates a shortcut for each command. Siri runs shortcuts directly by their name – even before Apple Home. The Shortcuts app asks once per command: click “Add Shortcut”. The first time you use one, macOS asks once per command whether it may open Hoku – allow it permanently, and it never asks again. After that, you can also put them in Control Center or the menu bar. ✦ = spoken variant, the way Siri understands the name (e.g. “Light Strip” for “Lightstrip”)."
+          }
+        }
+      }
+    },
+    "Hoku lernt dein Heimnetz, sobald der Mac einmal zu Hause im WLAN ist und die Bridge sieht. Bis dahin bleibt es still.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku learns your home network once the Mac is on your home Wi-Fi and sees the bridge. Until then, it stays quiet."
+          }
+        }
+      }
+    },
+    "Hoku lädt gerade deine Räume …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku is loading your rooms…"
+          }
+        }
+      }
+    },
+    "Hoku läuft gerade aus einem Ordner wie „Downloads“.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku is currently running from a folder like “Downloads”."
+          }
+        }
+      }
+    },
+    "Hoku läuft gerade direkt vom Image. Hoku kopiert sich und wirft das Image danach aus.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku is currently running directly from the disk image. Hoku will copy itself and then eject the image."
+          }
+        }
+      }
+    },
+    "Hoku macht danach von selbst weiter.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku then continues on its own."
+          }
+        }
+      }
+    },
+    "Hoku richtet Siri-Befehle ganz ohne App-Namen für dich ein.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku sets up Siri commands for you, so you don’t need to say the app name."
+          }
+        }
+      }
+    },
+    "Hoku schaut nach, wenn der Mac außerhalb deines Heimnetzes aufwacht, entsperrt wird oder das WLAN wechselt – danach alle 30 Minuten, solange er wach ist.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku checks when the Mac wakes up outside your home network, is unlocked, or switches Wi-Fi – then every 30 minutes while it’s awake."
+          }
+        }
+      }
+    },
+    "Hoku spricht direkt mit deiner Bridge": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku talks directly to your bridge"
+          }
+        }
+      }
+    },
+    "Hoku vergisst den Schlüssel. Danach musst du die Link-Taste auf der Bridge erneut drücken.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku forgets the key. After that, you’ll need to press the link button on the bridge again."
+          }
+        }
+      }
+    },
+    "Hoku wartet noch %lld Sekunden": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Hoku is waiting another %lld second"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Hoku is waiting another %lld seconds"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Hoku wartet oben in der Menüleiste auf dich.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku is waiting for you up in the menu bar."
+          }
+        }
+      }
+    },
+    "Hoku öffnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Hoku"
+          }
+        }
+      }
+    },
+    "Hoku übernimmt deine Siri-Befehle": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku takes over your Siri commands"
+          }
+        }
+      }
+    },
+    "Hoku – Lichter an": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku – Lights On"
+          }
+        }
+      }
+    },
+    "Hue Bridge": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue Bridge"
+          }
+        }
+      }
+    },
+    "Hue möchte, dass du dich neu anmeldest: Hoku → Einstellungen → Unterwegs-Hinweis.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue wants you to sign in again: Hoku → Settings → Away reminder."
+          }
+        }
+      }
+    },
+    "Hue-Fernzugriff": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue Remote Access"
+          }
+        }
+      }
+    },
+    "IP-Adresse": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP address"
+          }
+        }
+      }
+    },
+    "IP-Adresse, z. B. 192.168.1.20": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP address, e.g. 192.168.1.20"
+          }
+        }
+      }
+    },
+    "Ich habe schon einen Schlüssel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I already have a key"
+          }
+        }
+      }
+    },
+    "Image": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk image"
+          }
+        }
+      }
+    },
+    "In „Programme“ funktionieren Autostart, Siri-Befehle und Updates zuverlässig. Hoku startet danach einmal neu.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In “Applications”, launch at login, Siri commands, and updates work reliably. Hoku then restarts once."
+          }
+        }
+      }
+    },
+    "In „Programme“ verschieben": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move to “Applications”"
+          }
+        }
+      }
+    },
+    "Inhalt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contains"
+          }
+        }
+      }
+    },
+    "Ist dein Mac im selben Netzwerk wie die Bridge, und leuchten ihre Lämpchen?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Is your Mac on the same network as the bridge, and are its lights on?"
+          }
+        }
+      }
+    },
+    "Ja": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yes"
+          }
+        }
+      }
+    },
+    "Ja, über Apple Home": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yes, through Apple Home"
+          }
+        }
+      }
+    },
+    "Jeder Raum, jede Lampe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every room, every light"
+          }
+        }
+      }
+    },
+    "Jederzeit änderbar in den Hoku-Einstellungen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can change this anytime in Hoku Settings."
+          }
+        }
+      }
+    },
+    "Kalt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cool"
+          }
+        }
+      }
+    },
+    "Kein beschreibbarer Programme-Ordner gefunden. Zieh Hoku bitte im Finder nach „Programme“.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No writable Applications folder found. Please drag Hoku to “Applications” in Finder."
+          }
+        }
+      }
+    },
+    "Keine Bridge gefunden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No bridge found"
+          }
+        }
+      }
+    },
+    "Keine Bridge gekoppelt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No bridge paired."
+          }
+        }
+      }
+    },
+    "Keine Lampen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No lights"
+          }
+        }
+      }
+    },
+    "Keine Verbindung": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No connection"
+          }
+        }
+      }
+    },
+    "Keins / anderes": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "None / other"
+          }
+        }
+      }
+    },
+    "Kerze": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Candle"
+          }
+        }
+      }
+    },
+    "Klick auf das Symbol in der Menüleiste – oder drück diese Tasten, egal wo du gerade bist.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click the icon in the menu bar, or press these keys from anywhere."
+          }
+        }
+      }
+    },
+    "Klick auf einen Raum: unten wischst du durch seine Szenen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click a room: swipe through its scenes at the bottom."
+          }
+        }
+      }
+    },
+    "Klick drauf · oder %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click it · or %@"
+          }
+        }
+      }
+    },
+    "Klicken startet die Szene · Rechtsklick: dynamisch oder statisch": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click to start the scene · Right-click: dynamic or static"
+          }
+        }
+      }
+    },
+    "Klicken und Tastenkombination drücken · ⌫ entfernt sie": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click and press a key combination · ⌫ removes it"
+          }
+        }
+      }
+    },
+    "Klicken und neue Tastenkombination drücken": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click and press a new key combination"
+          }
+        }
+      }
+    },
+    "Kopiert": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copied"
+          }
+        }
+      }
+    },
+    "Koppeln": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pair"
+          }
+        }
+      }
+    },
+    "Koppeln, und Hoku kennt deine Lichter.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pair, and Hoku knows your lights."
+          }
+        }
+      }
+    },
+    "Kurz bevor es weitergeht": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Just before we continue"
+          }
+        }
+      }
+    },
+    "Kurzbefehl konnte nicht signiert werden. Bist du in macOS mit deinem Apple Account (iCloud) angemeldet? (%@)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shortcut could not be signed. Are you signed in to macOS with your Apple Account (iCloud)? (%@)"
+          }
+        }
+      }
+    },
+    "Kürzel drücken …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Press shortcut…"
+          }
+        }
+      }
+    },
+    "Kürzel in den Einstellungen neu zuweisen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reassign shortcut in Settings"
+          }
+        }
+      }
+    },
+    "Lampe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light"
+          }
+        }
+      }
+    },
+    "Lampe ausschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn off light"
+          }
+        }
+      }
+    },
+    "Lampe einschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn on light"
+          }
+        }
+      }
+    },
+    "Lampe schalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch light"
+          }
+        }
+      }
+    },
+    "Lampe umschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toggle light"
+          }
+        }
+      }
+    },
+    "Lampen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lights"
+          }
+        }
+      }
+    },
+    "Lampen & Steckdosen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lights & Plugs"
+          }
+        }
+      }
+    },
+    "Lampen ausklappen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show lights"
+          }
+        }
+      }
+    },
+    "Lampen einklappen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide lights"
+          }
+        }
+      }
+    },
+    "Langsam ausdimmen in …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dim slowly over…"
+          }
+        }
+      }
+    },
+    "Leertaste": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Space"
+          }
+        }
+      }
+    },
+    "Licht aus, wenn ich gehe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lights off when I leave"
+          }
+        }
+      }
+    },
+    "Licht dimmt abends langsam herunter.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lights slowly dim in the evening."
+          }
+        }
+      }
+    },
+    "Licht und Gesundheit": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light and health"
+          }
+        }
+      }
+    },
+    "Licht vergessen? Hoku sagt Bescheid.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Left a light on? Hoku lets you know."
+          }
+        }
+      }
+    },
+    "Lichtwecker": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wake-up light"
+          }
+        }
+      }
+    },
+    "Live verbunden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected"
+          }
+        }
+      }
+    },
+    "Lokales Netzwerk": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local Network"
+          }
+        }
+      }
+    },
+    "Läuft auf der Bridge, auch wenn der Mac schläft": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Runs on the bridge, even while your Mac sleeps"
+          }
+        }
+      }
+    },
+    "Läuft leise in der Menüleiste.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Runs quietly in the menu bar."
+          }
+        }
+      }
+    },
+    "Löschen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        }
+      }
+    },
+    "Mehrere Bridges gefunden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Multiple bridges found"
+          }
+        }
+      }
+    },
+    "Melde dich im Browser mit dem Hue-Konto an, das du auch in der Hue-App nutzt, und erlaube Hoku den Zugriff. Dein Passwort sieht Hoku dabei nie.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in in your browser with the Hue account you use in the Hue app, and allow Hoku access. Hoku never sees your password."
+          }
+        }
+      }
+    },
+    "Mi": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wed"
+          }
+        }
+      }
+    },
+    "Minute": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minute"
+          }
+        }
+      }
+    },
+    "Minuten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minutes"
+          }
+        }
+      }
+    },
+    "Mit dem iPhone kannst du Apple Home nutzen – Hoku ergänzt, was Home nicht kann: echte Hue-Szenen und dynamische Szenen, Wecker & Schlafen, Geräte-Check, alles blitzschnell in der Menüleiste. Und sind deine Lampen nicht in Home, bringt Hoku Siri am Mac trotzdem zum Leuchten.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "With your iPhone you can use Apple Home – Hoku adds what Home can’t do: real Hue scenes and dynamic scenes, alarms & Bedtime, Device check, all lightning-fast in the menu bar. And if your lights aren’t in Home, Hoku still brings Siri on the Mac to life."
+          }
+        }
+      }
+    },
+    "Mit einem Schlüssel entfällt die Link-Taste. Hoku speichert ihn nur auf diesem Mac.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "With a key you can skip the link button. Hoku stores it on this Mac only."
+          }
+        }
+      }
+    },
+    "Mitteilung nicht möglich: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notification not possible: %@"
+          }
+        }
+      }
+    },
+    "Mitteilung, wenn zu Hause noch Licht brennt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notification when lights are still on at home"
+          }
+        }
+      }
+    },
+    "Mitteilungen sind aus – in den Systemeinstellungen erlauben": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifications are off – allow them in System Settings"
+          }
+        }
+      }
+    },
+    "Mo": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mon"
+          }
+        }
+      }
+    },
+    "Modell": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Model"
+          }
+        }
+      }
+    },
+    "Nach Name": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By name"
+          }
+        }
+      }
+    },
+    "Nach Name sortieren": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sort by Name"
+          }
+        }
+      }
+    },
+    "Name": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name"
+          }
+        }
+      }
+    },
+    "Nein": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No"
+          }
+        }
+      }
+    },
+    "Netzwerk-Einstellungen öffnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Network Settings"
+          }
+        }
+      }
+    },
+    "Neue Routine": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New routine"
+          }
+        }
+      }
+    },
+    "Neuer Wecker": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New alarm"
+          }
+        }
+      }
+    },
+    "Neutral": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neutral"
+          }
+        }
+      }
+    },
+    "Nicht autorisiert": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not authorized"
+          }
+        }
+      }
+    },
+    "Nicht eingerichtet": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not set up"
+          }
+        }
+      }
+    },
+    "Nicht erlauben": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Don’t Allow"
+          }
+        }
+      }
+    },
+    "Nicht erreichbar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unreachable"
+          }
+        }
+      }
+    },
+    "Nicht festgelegt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not set"
+          }
+        }
+      }
+    },
+    "Nicht gekoppelt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not paired"
+          }
+        }
+      }
+    },
+    "Nicht jetzt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not now"
+          }
+        }
+      }
+    },
+    "Nicht mehr vorhanden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No longer available"
+          }
+        }
+      }
+    },
+    "Nicht mit Hue verbunden.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not connected to Hue."
+          }
+        }
+      }
+    },
+    "Noch unbekannt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not known yet"
+          }
+        }
+      }
+    },
+    "Nochmal prüfen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check again"
+          }
+        }
+      }
+    },
+    "Nur Hoku am Mac": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku on the Mac only"
+          }
+        }
+      }
+    },
+    "Nur auf diesem Mac gespeichert": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stored on this Mac only"
+          }
+        }
+      }
+    },
+    "Nur im Schlüsselbund dieses Macs, nie in iCloud oder in Dateien.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only in this Mac’s Keychain, never in iCloud or in files."
+          }
+        }
+      }
+    },
+    "Nutzt du oft": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Used often"
+          }
+        }
+      }
+    },
+    "Offen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pending"
+          }
+        }
+      }
+    },
+    "Offline (%@)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offline (%@)"
+          }
+        }
+      }
+    },
+    "Ohne Cloud – nur in deinem Netzwerk zu Hause.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No cloud – only in your home network."
+          }
+        }
+      }
+    },
+    "Ohne Wochentag: einmalig": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No weekday: once"
+          }
+        }
+      }
+    },
+    "Ohne iPhone lässt sich Apple Home nicht einrichten – Siri am Mac kennt deine Lampen dann nicht. Genau diese Lücke schließt Hoku: „Hey Siri, Zimmer an“ direkt am Mac. Dazu Szenen, Wecker und alles Weitere in der Menüleiste.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Without an iPhone, Apple Home can’t be set up – Siri on the Mac then doesn’t know your lights. That’s exactly the gap Hoku closes: “Hey Siri, living room on” right on the Mac. Plus scenes, alarms and everything else in the menu bar."
+          }
+        }
+      }
+    },
+    "Ohne ihn findet Hoku deine Bridge nicht. So schaltest du ihn ein:": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Without it, Hoku can’t find your bridge. Here’s how to turn it on:"
+          }
+        }
+      }
+    },
+    "Orange": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orange"
+          }
+        }
+      }
+    },
+    "Ort": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Location"
+          }
+        }
+      }
+    },
+    "Perfekt – genau da findest du Hoku.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfect – that’s exactly where you’ll find Hoku."
+          }
+        }
+      }
+    },
+    "Pink": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pink"
+          }
+        }
+      }
+    },
+    "Probier’s aus: „Hey Siri, %@“": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try it: “Hey Siri, %@”"
+          }
+        }
+      }
+    },
+    "Programme": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applications"
+          }
+        }
+      }
+    },
+    "Prüfe …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking…"
+          }
+        }
+      }
+    },
+    "Prüfen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check"
+          }
+        }
+      }
+    },
+    "Raum": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room"
+          }
+        }
+      }
+    },
+    "Raum ausschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn room off"
+          }
+        }
+      }
+    },
+    "Raum dimmen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dim room"
+          }
+        }
+      }
+    },
+    "Raum einschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn room on"
+          }
+        }
+      }
+    },
+    "Raum oder Lampe wählen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a room or light"
+          }
+        }
+      }
+    },
+    "Raum schalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch room"
+          }
+        }
+      }
+    },
+    "Raum umschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toggle room"
+          }
+        }
+      }
+    },
+    "Rot": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red"
+          }
+        }
+      }
+    },
+    "Räume": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rooms"
+          }
+        }
+      }
+    },
+    "Räume ordnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrange Rooms"
+          }
+        }
+      }
+    },
+    "Sa": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sat"
+          }
+        }
+      }
+    },
+    "Sag einfach: „Hey Siri, Zimmer an“": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Just say: “Hey Siri, living room on”"
+          }
+        }
+      }
+    },
+    "Schalte ${light} ${value}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn ${light} ${value}"
+          }
+        }
+      }
+    },
+    "Schalte ${room} ${value}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn ${room} ${value}"
+          }
+        }
+      }
+    },
+    "Schalter & Sensoren": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switches & Sensors"
+          }
+        }
+      }
+    },
+    "Schaltet alle Lampen in einem Raum oder einer Zone an oder aus.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turns all lights in a room or zone on or off."
+          }
+        }
+      }
+    },
+    "Schaltet eine Lampe oder Steckdose um.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toggles a light or plug."
+          }
+        }
+      }
+    },
+    "Schaltet eine einzelne Lampe oder Steckdose an oder aus.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turns a single light or plug on or off."
+          }
+        }
+      }
+    },
+    "Schaltet einen Raum an, wenn er aus ist, und aus, wenn er an ist.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turns a room on if it’s off, and off if it’s on."
+          }
+        }
+      }
+    },
+    "Schaltet jedes Licht im Zuhause aus.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turns off every light in the home."
+          }
+        }
+      }
+    },
+    "Schlafen gehen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bedtime"
+          }
+        }
+      }
+    },
+    "Schließen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "Schlüssel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Key"
+          }
+        }
+      }
+    },
+    "Schnell aus der Menüleiste": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quick from the menu bar"
+          }
+        }
+      }
+    },
+    "Schritt %lld von %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Schritt %1$lld von %2$lld"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step %lld of %lld"
+          }
+        }
+      }
+    },
+    "Seite öffnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open page"
+          }
+        }
+      }
+    },
+    "Sicherheit": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Security"
+          }
+        }
+      }
+    },
+    "Sichern": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        }
+      }
+    },
+    "Siehst du das Symbol nicht? Systemeinstellungen → Menüleiste → „In Menüleiste erlauben“.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Don’t see the icon? System Settings → Menu Bar → “Allow in Menu Bar”."
+          }
+        }
+      }
+    },
+    "Siri": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri"
+          }
+        }
+      }
+    },
+    "Siri am Mac": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri on the Mac"
+          }
+        }
+      }
+    },
+    "Siri ohne Umwege": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri, no detours"
+          }
+        }
+      }
+    },
+    "Siri-Befehle": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri Commands"
+          }
+        }
+      }
+    },
+    "Siri-Befehle einrichten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri Commands"
+          }
+        }
+      }
+    },
+    "Siri: „Hey Siri, ‹Raum› an“ – weitere Befehle unter Einstellungen → Siri-Befehle.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siri: “Hey Siri, ‹room› on” – more commands under Settings → Siri Commands."
+          }
+        }
+      }
+    },
+    "Smarte Szene %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart scene %@"
+          }
+        }
+      }
+    },
+    "Smarte Szene %@, aktiv": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart scene %@, active"
+          }
+        }
+      }
+    },
+    "Smarte Szene – wechselt im Tagesverlauf": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart scene – changes throughout the day"
+          }
+        }
+      }
+    },
+    "So": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sun"
+          }
+        }
+      }
+    },
+    "So funktioniert’s": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How it works"
+          }
+        }
+      }
+    },
+    "So hilft dir Hoku": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How Hoku helps"
+          }
+        }
+      }
+    },
+    "Software": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Software"
+          }
+        }
+      }
+    },
+    "Sonnenaufgang über": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunrise length"
+          }
+        }
+      }
+    },
+    "Speichern": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        }
+      }
+    },
+    "Später": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Later"
+          }
+        }
+      }
+    },
+    "Später in den Einstellungen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Later in Settings"
+          }
+        }
+      }
+    },
+    "Starte ${scene}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start ${scene}"
+          }
+        }
+      }
+    },
+    "Starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
+          }
+        }
+      }
+    },
+    "Startet eine Hue-Szene in ihrem Raum.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starts a Hue scene in its room."
+          }
+        }
+      }
+    },
+    "Statisch starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start static"
+          }
+        }
+      }
+    },
+    "Status": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status"
+          }
+        }
+      }
+    },
+    "Stellt die Helligkeit eines Raums ein und schaltet ihn dabei an.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sets a room’s brightness and turns it on at the same time."
+          }
+        }
+      }
+    },
+    "Steuerst du deine Hue-Lichter schon mit der Home-App oder Siri auf dem iPhone?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do you already control your Hue lights with the Home app or Siri on your iPhone?"
+          }
+        }
+      }
+    },
+    "Stunde": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hour"
+          }
+        }
+      }
+    },
+    "Suche nach deiner Hue Bridge …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Looking for your Hue Bridge…"
+          }
+        }
+      }
+    },
+    "Sync aktiv": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sync active"
+          }
+        }
+      }
+    },
+    "Sync beenden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop Sync"
+          }
+        }
+      }
+    },
+    "Sync läuft": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sync is running"
+          }
+        }
+      }
+    },
+    "Systemeinstellungen öffnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open System Settings"
+          }
+        }
+      }
+    },
+    "Szene": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scene"
+          }
+        }
+      }
+    },
+    "Szene %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scene %@"
+          }
+        }
+      }
+    },
+    "Szene %@, aktiv": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scene %@, active"
+          }
+        }
+      }
+    },
+    "Szene hinzufügen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add scene"
+          }
+        }
+      }
+    },
+    "Szene im Raum starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start scene in room"
+          }
+        }
+      }
+    },
+    "Szene starten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start scene"
+          }
+        }
+      }
+    },
+    "Szenen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scenes"
+          }
+        }
+      }
+    },
+    "Szenen & Stimmungen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scenes & Moods"
+          }
+        }
+      }
+    },
+    "Tageslicht": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daylight"
+          }
+        }
+      }
+    },
+    "Tastenkürzel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keyboard Shortcuts"
+          }
+        }
+      }
+    },
+    "Tastenkürzel für %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keyboard shortcut for %@"
+          }
+        }
+      }
+    },
+    "Tempo": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speed"
+          }
+        }
+      }
+    },
+    "Tempo der dynamischen Szene": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dynamic scene speed"
+          }
+        }
+      }
+    },
+    "Test": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test"
+          }
+        }
+      }
+    },
+    "Test-Mitteilung": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test notification"
+          }
+        }
+      }
+    },
+    "Trennen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disconnect"
+          }
+        }
+      }
+    },
+    "Täglich": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily"
+          }
+        }
+      }
+    },
+    "Unabhängige App": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Independent app"
+          }
+        }
+      }
+    },
+    "Unbekannter Befehl: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unknown command: %@"
+          }
+        }
+      }
+    },
+    "Unter deinem Namen → „Remote Hue API appids“ → „Add new Remote Hue API app“.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Under your name → “Remote Hue API appids” → “Add new Remote Hue API app”."
+          }
+        }
+      }
+    },
+    "Unter dieser Adresse antwortet eine andere Bridge.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A different bridge answers at this address."
+          }
+        }
+      }
+    },
+    "Unterwegs": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Away"
+          }
+        }
+      }
+    },
+    "Unterwegs bliebe Hoku jetzt still.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If you were away, Hoku would stay quiet now."
+          }
+        }
+      }
+    },
+    "Unterwegs-Hinweis": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Away reminder"
+          }
+        }
+      }
+    },
+    "Unterwegs-Hinweis pausiert": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Away reminder paused"
+          }
+        }
+      }
+    },
+    "Update": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update"
+          }
+        }
+      }
+    },
+    "Verbinde mit der Bridge …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecting to the bridge…"
+          }
+        }
+      }
+    },
+    "Verbinde …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecting…"
+          }
+        }
+      }
+    },
+    "Verbindung": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connection"
+          }
+        }
+      }
+    },
+    "Verbindungsdetails": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connection Details"
+          }
+        }
+      }
+    },
+    "Verbunden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected"
+          }
+        }
+      }
+    },
+    "Verbunden!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected!"
+          }
+        }
+      }
+    },
+    "Verstanden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Got it"
+          }
+        }
+      }
+    },
+    "Verstanden – los geht’s": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Got it – let’s go"
+          }
+        }
+      }
+    },
+    "Violett": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purple"
+          }
+        }
+      }
+    },
+    "Von Signify ausgestellt und an diese Bridge gebunden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Issued by Signify and pinned to this bridge"
+          }
+        }
+      }
+    },
+    "Vorhandener Schlüssel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Existing key"
+          }
+        }
+      }
+    },
+    "Vorschau des Systemdialogs: Klick auf Erlauben": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview of the system dialog: click Allow"
+          }
+        }
+      }
+    },
+    "Vorschau · %lld Min. in 3 Sek.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview · %lld min in 3 s"
+          }
+        }
+      }
+    },
+    "Vorschau · Klicken zum Aktivieren": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview · Click to activate"
+          }
+        }
+      }
+    },
+    "Vorschau: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview: %@"
+          }
+        }
+      }
+    },
+    "Vorschlag für jetzt: %@ im Raum %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Vorschlag für jetzt: %1$@ im Raum %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggestion for now: %@ in room %@"
+          }
+        }
+      }
+    },
+    "Wach mit einem sanften Sonnenaufgang auf.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wake up to a gentle sunrise."
+          }
+        }
+      }
+    },
+    "Warm": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warm"
+          }
+        }
+      }
+    },
+    "Warte auf Eingabe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for keys"
+          }
+        }
+      }
+    },
+    "Warte auf deine Antwort im Systemdialog …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for your answer in the system dialog…"
+          }
+        }
+      }
+    },
+    "Warte auf den Browser …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for the browser…"
+          }
+        }
+      }
+    },
+    "Warte auf macOS …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for macOS…"
+          }
+        }
+      }
+    },
+    "Was ist dir wichtig?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What matters to you?"
+          }
+        }
+      }
+    },
+    "Wecker & Routinen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alarms & Routines"
+          }
+        }
+      }
+    },
+    "Wecker & Schlafen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alarms & Bedtime"
+          }
+        }
+      }
+    },
+    "Wecker & Schlafen gehen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alarms & Bedtime"
+          }
+        }
+      }
+    },
+    "Weg": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Route"
+          }
+        }
+      }
+    },
+    "Weiter": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue"
+          }
+        }
+      }
+    },
+    "Weiß": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "White"
+          }
+        }
+      }
+    },
+    "Weiß · %lld K": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "White · %lld K"
+          }
+        }
+      }
+    },
+    "Welche Lampe?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which light?"
+          }
+        }
+      }
+    },
+    "Welche Szene?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which scene?"
+          }
+        }
+      }
+    },
+    "Welche möchtest du koppeln?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which one would you like to pair?"
+          }
+        }
+      }
+    },
+    "Welchen Raum?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which room?"
+          }
+        }
+      }
+    },
+    "Welches Handy hast du?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which phone do you have?"
+          }
+        }
+      }
+    },
+    "Werktags": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekdays"
+          }
+        }
+      }
+    },
+    "Wie möchtest du Siri nutzen?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How would you like to use Siri?"
+          }
+        }
+      }
+    },
+    "Willkommen bei Hoku": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome to Hoku"
+          }
+        }
+      }
+    },
+    "Wird eingerichtet …": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Setting up…"
+          }
+        }
+      }
+    },
+    "Wird übergeben … %lld/%lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Wird übergeben … %1$lld/%2$lld"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handing over… %lld/%lld"
+          }
+        }
+      }
+    },
+    "Wochenende": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekend"
+          }
+        }
+      }
+    },
+    "Wohnzimmer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Living room"
+          }
+        }
+      }
+    },
+    "Zeig’s mir": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show me"
+          }
+        }
+      }
+    },
+    "Zeitraffer abspielen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play timelapse"
+          }
+        }
+      }
+    },
+    "Zertifikat": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Certificate"
+          }
+        }
+      }
+    },
+    "Zone": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zone"
+          }
+        }
+      }
+    },
+    "Zonen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zones"
+          }
+        }
+      }
+    },
+    "Zu Hause": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "At home"
+          }
+        }
+      }
+    },
+    "Zu Hause brennt noch Licht": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lights are still on at home"
+          }
+        }
+      }
+    },
+    "Zu Hause ist alles aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Everything is off at home"
+          }
+        }
+      }
+    },
+    "Zu Hause ist es jetzt dunkel.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It’s dark at home now."
+          }
+        }
+      }
+    },
+    "Zum Dimmen ziehen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drag to dim"
+          }
+        }
+      }
+    },
+    "Zurück": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        }
+      }
+    },
+    "Zurück (Esc)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back (Esc)"
+          }
+        }
+      }
+    },
+    "Zurück / schließen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back / close"
+          }
+        }
+      }
+    },
+    "Zwei Hinweise, die zu Hoku gehören.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Two notices that come with Hoku."
+          }
+        }
+      }
+    },
+    "Zwei-Finger-Klick auf eine Raumkarte zeigt ihre Lampen. Wischen dimmt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Two-finger click on a room card shows its lights. Swipe to dim."
+          }
+        }
+      }
+    },
+    "an / aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "on / off"
+          }
+        }
+      }
+    },
+    "belegt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "in use"
+          }
+        }
+      }
+    },
+    "hoku://alle/aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hoku://all/off"
+          }
+        }
+      }
+    },
+    "hoku://raum/%@/umschalten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hoku://room/%@/toggle"
+          }
+        }
+      }
+    },
+    "hoku://szene/%@?raum=%@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "hoku://szene/%1$@?raum=%2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hoku://scene/%1$@?room=%2$@"
+          }
+        }
+      }
+    },
+    "keine Ausgabe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "no output"
+          }
+        }
+      }
+    },
+    "keine Lichtgruppe für das ganze Zuhause": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "no light group for the whole home"
+          }
+        }
+      }
+    },
+    "macOS lässt Hoku gerade nicht ins lokale Netzwerk.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS isn’t letting Hoku onto the local network right now."
+          }
+        }
+      }
+    },
+    "macOS möchte das noch bestätigen: Allgemein → Anmeldeobjekte & Erweiterungen → „Hoku“ einschalten.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS still needs to confirm this: General → Login Items & Extensions → turn on “Hoku”."
+          }
+        }
+      }
+    },
+    "schwach": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "low"
+          }
+        }
+      }
+    },
+    "Öffnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open"
+          }
+        }
+      }
+    },
+    "Übernehmen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apply"
+          }
+        }
+      }
+    },
+    "Überspringen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skip"
+          }
+        }
+      }
+    },
+    "„%@“ löschen?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete “%@”?"
+          }
+        }
+      }
+    },
+    "„Hey Siri, Zimmer an“ – ohne App-Namen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“Hey Siri, living room on” – without the app name"
+          }
+        }
+      }
+    },
+    "„Hey Siri, Zimmer an“ – ohne App-Namen und ohne iPhone.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“Hey Siri, living room on” – without the app name and without an iPhone."
+          }
+        }
+      }
+    },
+    "„Zimmer an“": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“Living room on”"
+          }
+        }
+      }
+    },
+    "…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "…"
+          }
+        }
+      }
+    },
+    "→ An": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "→ On"
+          }
+        }
+      }
+    },
+    "→ Aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "→ Off"
+          }
+        }
+      }
+    },
+    "⏰ oben im Panel: Lichtwecker mit Sonnenaufgang und Schlafen gehen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⏰ At the top of the panel: wake-up light with sunrise and Bedtime."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

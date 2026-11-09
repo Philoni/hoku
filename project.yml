@@ -36,6 +36,7 @@ targets:
       path: App/Info.plist
       properties:
         CFBundleDisplayName: Hoku
+        CFBundleLocalizations: [de, en]
         CFBundleIconFile: AppIcon
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)

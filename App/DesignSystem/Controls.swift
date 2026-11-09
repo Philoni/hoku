@@ -4,6 +4,8 @@ struct GlowSwitch: View {
     let isOn: Bool
     var tint: Color = .yellow
     var isCompact = false
+    /// Names the switch for VoiceOver; without it the label is the action ("Einschalten").
+    var label: String?
     let action: () -> Void
 
     var body: some View {
@@ -25,8 +27,9 @@ struct GlowSwitch: View {
             .contentShape(Capsule())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(isOn ? "Ausschalten" : "Einschalten")
-        .accessibilityValue(isOn ? "An" : "Aus")
+        .accessibilityLabel(label ?? (isOn ? String(localized: "Ausschalten") : String(localized: "Einschalten")))
+        .accessibilityValue(isOn ? String(localized: "An") : String(localized: "Aus"))
+        .accessibilityAddTraits(label == nil ? [] : .isToggle)
     }
 }
 
@@ -179,7 +182,7 @@ struct SettingSwitch: View {
                 }
             }
             Spacer(minLength: 8)
-            GlowSwitch(isOn: isOn, tint: .orange) { isOn.toggle() }
+            GlowSwitch(isOn: isOn, tint: .orange, label: title) { isOn.toggle() }
         }
         .contentShape(Rectangle())
     }
@@ -207,6 +210,7 @@ struct FlowChips: View {
                         .background(Capsule().fill(selected ? AnyShapeStyle(Theme.selectedChip) : AnyShapeStyle(Theme.control)))
                 }
                 .buttonStyle(PressableStyle())
+                .accessibilityAddTraits(selected ? .isSelected : [])
             }
         }
     }

@@ -32,6 +32,32 @@ extension HueClient {
                 try await Task.sleep(for: .seconds(1))
             }
         }
-        throw HueError.bridge("Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal.")
+        throw HueError.bridge(String(localized: "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal.", bundle: .hueKit))
+    }
+}
+
+/// An application key the user already has, for example from another tool or an earlier setup.
+public enum ApplicationKey {
+    /// The key without surrounding whitespace, or `nil` if it cannot be one: bridges
+    /// issue 20 to 64 printable characters without spaces.
+    public static func normalized(_ text: String) -> String? {
+        let key = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard (20...64).contains(key.count),
+              key.unicodeScalars.allSatisfy({ $0.isASCII && $0.value > 0x20 && $0.value < 0x7F })
+        else { return nil }
+        return key
+    }
+}
+
+extension HueClient {
+    /// Connects with an existing key instead of the link button. Throws if the bridge rejects it.
+    public func connect(to bridge: DiscoveredBridge, applicationKey: String) async throws -> BridgeCredentials {
+        let credentials = BridgeCredentials(bridgeID: bridge.id, host: bridge.host, applicationKey: applicationKey, name: bridge.name)
+        do {
+            _ = try await resources(credentials, ofType: "bridge")
+        } catch HueError.unauthorized {
+            throw HueError.bridge(String(localized: "Die Bridge kennt diesen Schlüssel nicht.", bundle: .hueKit))
+        }
+        return credentials
     }
 }

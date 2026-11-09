@@ -33,6 +33,17 @@ Hoku ist kostenlos. Damit macOS eine App ohne Nachfrage öffnet, muss Apple sie 
 - **Selbst bauen** (mit Xcode und kostenloser Apple-ID, ohne „Dennoch öffnen“): siehe [README](https://github.com/Philoni/hoku#selbst-bauen).
 </details>
 
+<a id="advanced-connection"></a>
+<details>
+<summary>Für Fortgeschrittene: Verbindung mit der Bridge (ab 0.9.1)</summary>
+
+Normalerweise musst du hier nichts tun: Hoku findet die Bridge von selbst und findet sie auch wieder, wenn sich ihre Adresse ändert.
+
+- **Schon einen Schlüssel?** Gib im Schritt mit der Bridge die IP-Adresse von Hand ein. Danach erscheint **Ich habe schon einen Schlüssel**. Füg dort deinen vorhandenen Hue-Schlüssel (Application Key) ein, und Hoku verbindet sich ohne Link-Taste. Der Schlüssel bleibt nur auf diesem Mac.
+- **Verbindungsdetails:** Einstellungen → **Bridge** → **Verbindungsdetails** zeigen Status, Adresse, Bridge-ID, Modell, Software- und API-Version. Dort steht auch, wie die Verbindung gesichert ist: im lokalen Netzwerk, per HTTPS, mit einem von Signify ausgestellten Zertifikat, das an diese Bridge gebunden ist.
+- **Adresse ändern:** Dort kannst du unter **Adresse von Hand** die IP der Bridge selbst eintragen. Hoku übernimmt sie nur, wenn unter dieser Adresse dieselbe Bridge antwortet.
+</details>
+
 > **Hat nicht geklappt?**
 > → [Kein „Dennoch öffnen“ zu sehen](fehlerbehebung.md#open-anyway) · [Hoku findet die Bridge nicht](fehlerbehebung.md#local-network) · [Symbol fehlt in der Menüleiste](fehlerbehebung.md#menu-bar-icon)
 
@@ -67,6 +78,17 @@ Hoku is free. For macOS to open an app without asking, Apple has to check it fir
 
 - **Zip:** Double-click `Hoku-‹version›.zip`, then drag `Hoku.app` to **Applications**. Continue with step 3.
 - **Build it yourself** (Xcode and a free Apple ID, no “Open Anyway” needed): see the [README](https://github.com/Philoni/hoku#build-from-source).
+</details>
+
+<a id="advanced-connection-en"></a>
+<details>
+<summary>For advanced users: connecting to the bridge (from 0.9.1)</summary>
+
+Normally you don’t need any of this: Hoku finds the bridge on its own and finds it again if its address changes.
+
+- **Already have a key?** In the setup assistant’s bridge step, enter the IP address by hand. **I already have a key** then appears. Paste your existing Hue application key there and Hoku connects without the link button. The key stays on this Mac only.
+- **Connection details:** Settings → **Bridge** → **Connection Details** show status, address, bridge ID, model, software and API version. They also show how the connection is secured: on your local network, over HTTPS, with a certificate issued by Signify and pinned to this bridge.
+- **Change the address:** There, **Manual Address** lets you set the bridge’s IP yourself. Hoku only accepts it if the same bridge answers at that address.
 </details>
 
 > **Didn’t work?**

@@ -1,0 +1,234 @@
+{
+  "sourceLanguage" : "de",
+  "strings" : {
+    "${applicationName} ${light}" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${light}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${light}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${light} an" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${light} an",
+              "Schalte ${light} mit ${applicationName} ein"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${light} on",
+              "Turn on ${light} with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${light} aus" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${light} aus",
+              "Schalte ${light} mit ${applicationName} aus"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${light} off",
+              "Turn off ${light} with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${room}" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${room}",
+              "${applicationName} schalte ${room}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${room}",
+              "${applicationName} toggle ${room}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${room} an" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${room} an",
+              "Schalte ${room} mit ${applicationName} ein",
+              "Mach ${room} mit ${applicationName} an"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${room} on",
+              "Turn on ${room} with ${applicationName}",
+              "Switch on ${room} with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${room} aus" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${room} aus",
+              "Schalte ${room} mit ${applicationName} aus",
+              "Mach ${room} mit ${applicationName} aus"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${room} off",
+              "Turn off ${room} with ${applicationName}",
+              "Switch off ${room} with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} ${scene}" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${scene}",
+              "Starte ${scene} mit ${applicationName}",
+              "${applicationName} Szene ${scene}",
+              "Aktiviere ${scene} mit ${applicationName}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} ${scene}",
+              "Start ${scene} with ${applicationName}",
+              "${applicationName} scene ${scene}",
+              "Activate ${scene} with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} Einschlaftimer ${room}" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} Einschlaftimer ${room}",
+              "Starte den Einschlaftimer mit ${applicationName}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} sleep timer ${room}",
+              "Start the sleep timer with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName} alles aus" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} alles aus",
+              "Alle Lichter aus mit ${applicationName}",
+              "Gute Nacht mit ${applicationName}"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName} all off",
+              "All lights off with ${applicationName}",
+              "Good night with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "Dimme ${room} mit ${applicationName}" : {
+      "localizations" : {
+        "de" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Dimme ${room} mit ${applicationName}",
+              "${applicationName} ${room} dimmen"
+            ]
+          }
+        },
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Dim ${room} with ${applicationName}",
+              "${applicationName} dim ${room}"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

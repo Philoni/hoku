@@ -187,7 +187,7 @@ public struct HueGroup: Codable, Hashable, Sendable, Identifiable {
     public var children: [ResourceIdentifier]?
     public var services: [ResourceIdentifier]?
 
-    public var name: String { metadata?.name ?? "Unbenannt" }
+    public var name: String { metadata?.name ?? String(localized: "Unbenannt", bundle: .hueKit) }
     public var isZone: Bool { type == "zone" }
 
     public var groupedLightID: String? {
@@ -294,7 +294,7 @@ public struct HueScene: Codable, Hashable, Sendable, Identifiable {
         case autoDynamic = "auto_dynamic"
     }
 
-    public var name: String { metadata?.name ?? "Szene" }
+    public var name: String { metadata?.name ?? String(localized: "Szene", bundle: .hueKit) }
 
     /// The scene has a palette the bridge can cycle through.
     public var supportsDynamic: Bool {
@@ -316,7 +316,7 @@ public struct SmartScene: Codable, Hashable, Sendable, Identifiable {
     /// "active" or "inactive".
     public var state: String?
 
-    public var name: String { metadata?.name ?? "Smarte Szene" }
+    public var name: String { metadata?.name ?? String(localized: "Smarte Szene", bundle: .hueKit) }
     public var isActive: Bool { state == "active" }
 }
 
@@ -412,7 +412,7 @@ public struct BehaviorInstance: Codable, Hashable, Sendable, Identifiable {
         case scriptID = "script_id"
     }
 
-    public var name: String { metadata?.name ?? "Automation" }
+    public var name: String { metadata?.name ?? String(localized: "Automation", bundle: .hueKit) }
     public var hour: Int? { configuration?.when?.timePoint?.time?.hour }
     public var minute: Int? { configuration?.when?.timePoint?.time?.minute }
     public var weekdays: [String] { configuration?.when?.recurrenceDays ?? [] }
@@ -464,4 +464,21 @@ public struct DeviceSoftwareUpdate: Codable, Hashable, Sendable, Identifiable {
     public var state: String?
 
     public var hasUpdate: Bool { state != nil && state != "no_update" }
+}
+
+/// An entertainment area. While it is active, a sync app (Hue Sync, a sync box, a game)
+/// streams to its lights many times a second and overrides what anyone else sends them.
+public struct EntertainmentArea: Codable, Hashable, Sendable, Identifiable {
+    public var id: String
+    public var metadata: Metadata?
+    public var status: String?
+
+    public init(id: String, name: String, status: String) {
+        self.id = id
+        self.metadata = Metadata(name: name)
+        self.status = status
+    }
+
+    public var name: String { metadata?.name ?? String(localized: "Entertainment-Bereich", bundle: .hueKit) }
+    public var isStreaming: Bool { status == "active" }
 }

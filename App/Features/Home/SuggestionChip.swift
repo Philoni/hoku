@@ -19,6 +19,7 @@ struct SuggestionChip: View {
                 Circle()
                     .fill(AngularGradient(colors: colors + [colors[0]], center: .center))
                     .frame(width: 12, height: 12)
+                    .accessibilityHidden(true)
                 Text("\(Text(scene.name).fontWeight(.semibold))\(Text(" · \(group.name)").foregroundStyle(.secondary))")
                     .font(.system(size: 11.5, design: .rounded))
                     .lineLimit(1)
@@ -26,6 +27,7 @@ struct SuggestionChip: View {
                 Image(systemName: "wand.and.stars")
                     .font(.system(size: 10, weight: .semibold))
                     .foregroundStyle(.secondary)
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal, 11)
             .padding(.vertical, 6)

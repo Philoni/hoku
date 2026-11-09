@@ -131,38 +131,38 @@ final class WizardModel {
     var primary: Action {
         switch step {
         case .location:
-            Action(title: "In „Programme“ verschieben") { [self] in moveToApplications() }
+            Action(title: String(localized: "In „Programme“ verschieben")) { [self] in moveToApplications() }
         case .welcome:
-            Action(title: steps.count == 1 ? "Verstanden" : "Verstanden – los geht’s") { [self] in acceptNotices() }
+            Action(title: steps.count == 1 ? String(localized: "Verstanden") : String(localized: "Verstanden – los geht’s")) { [self] in acceptNotices() }
         case .home:
-            Action(title: "Weiter", isEnabled: phone != nil) { [self] in advance() }
+            Action(title: String(localized: "Weiter"), isEnabled: phone != nil) { [self] in advance() }
         case .network:
             switch network {
-            case .explaining: Action(title: "Weiter") { [self] in startNetworkCheck() }
-            case .asking: Action(title: "Warte auf macOS …", isEnabled: false) {}
-            case .allowed: Action(title: "Weiter") { [self] in advance() }
-            case .denied: Action(title: "Systemeinstellungen öffnen") { Self.openLocalNetworkSettings() }
+            case .explaining: Action(title: String(localized: "Weiter")) { [self] in startNetworkCheck() }
+            case .asking: Action(title: String(localized: "Warte auf macOS …"), isEnabled: false) {}
+            case .allowed: Action(title: String(localized: "Weiter")) { [self] in advance() }
+            case .denied: Action(title: String(localized: "Systemeinstellungen öffnen")) { Self.openLocalNetworkSettings() }
             }
         case .bridge:
             if isPaired {
-                Action(title: "Weiter") { [self] in advance() }
+                Action(title: String(localized: "Weiter")) { [self] in advance() }
             } else if let bridge = app.discovered.first, app.discovered.count == 1, app.pairingBridge == nil {
-                Action(title: "Koppeln") { [self] in app.pair(with: bridge) }
+                Action(title: String(localized: "Koppeln")) { [self] in app.pair(with: bridge) }
             } else {
-                Action(title: "Koppeln", isEnabled: false) {}
+                Action(title: String(localized: "Koppeln"), isEnabled: false) {}
             }
         case .menuBar:
             if panelWasShown {
-                Action(title: "Weiter") { [self] in advance() }
+                Action(title: String(localized: "Weiter")) { [self] in advance() }
             } else {
-                Action(title: "Zeig’s mir") { [self] in onShowMenuBar() }
+                Action(title: String(localized: "Zeig’s mir")) { [self] in onShowMenuBar() }
             }
         case .login:
-            Action(title: "Weiter") { [self] in advance() }
+            Action(title: String(localized: "Weiter")) { [self] in advance() }
         case .voice:
             voicePrimary
         case .done:
-            Action(title: "Hoku öffnen") { [self] in
+            Action(title: String(localized: "Hoku öffnen")) { [self] in
                 completed.insert(.done)
                 finish(openPanel: true)
             }
@@ -172,15 +172,15 @@ final class WizardModel {
     var secondary: Action? {
         switch step {
         case .location:
-            Action(title: "Nicht jetzt") { [self] in advance() }
+            Action(title: String(localized: "Nicht jetzt")) { [self] in advance() }
         case .network where network == .denied:
-            Action(title: "Nochmal prüfen") { [self] in startNetworkCheck() }
+            Action(title: String(localized: "Nochmal prüfen")) { [self] in startNetworkCheck() }
         case .menuBar where !panelWasShown:
-            Action(title: "Überspringen") { [self] in advance() }
+            Action(title: String(localized: "Überspringen")) { [self] in advance() }
         case .voice where voiceInstall == .idle && voiceQuestion != .commands:
-            Action(title: "Später") { [self] in advance() }
+            Action(title: String(localized: "Später")) { [self] in advance() }
         case .voice where voiceInstall == .idle && !hasICloud:
-            Action(title: "Nochmal prüfen") { [self] in recheckICloud() }
+            Action(title: String(localized: "Nochmal prüfen")) { [self] in recheckICloud() }
         default:
             nil
         }
@@ -457,19 +457,19 @@ final class WizardModel {
 
     private var voicePrimary: Action {
         if voiceQuestion == .commands, !hasICloud, voiceInstall == .idle {
-            return Action(title: "Später") { [self] in advance() }
+            return Action(title: String(localized: "Später")) { [self] in advance() }
         }
         switch (voiceQuestion, voiceInstall) {
         case (.commands, .idle):
             let count = pendingCommands.count
-            if count == 0 { return Action(title: "Weiter") { [self] in advance() } }
-            return Action(title: count == 1 ? "1 Befehl einrichten" : "\(count) Befehle einrichten") { [self] in installVoiceCommands() }
+            if count == 0 { return Action(title: String(localized: "Weiter")) { [self] in advance() } }
+            return Action(title: count == 1 ? String(localized: "1 Befehl einrichten") : String(localized: "\(count) Befehle einrichten")) { [self] in installVoiceCommands() }
         case (.commands, .running):
-            return Action(title: "Wird eingerichtet …", isEnabled: false) {}
+            return Action(title: String(localized: "Wird eingerichtet …"), isEnabled: false) {}
         case (.commands, .finished), (.commands, .failed):
-            return Action(title: "Weiter") { [self] in advance() }
+            return Action(title: String(localized: "Weiter")) { [self] in advance() }
         default:
-            return Action(title: "Weiter", isEnabled: false) {}
+            return Action(title: String(localized: "Weiter"), isEnabled: false) {}
         }
     }
 

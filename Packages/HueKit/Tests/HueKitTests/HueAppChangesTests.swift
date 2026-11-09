@@ -317,3 +317,78 @@ private final class Flag: @unchecked Sendable {
         #expect(store.credentials?.name == "Hue Bridge · Demo")
     }
 }
+
+@Suite @MainActor struct GroupOrderTests {
+    private func demoRooms() -> (HueStore, [String: String]) {
+        let store = HueStore()
+        store.showDemo()
+        return (store, Dictionary(uniqueKeysWithValues: store.rooms.values.map { ($0.name, $0.id) }))
+    }
+
+    @Test func pinnedRoomsComeFirstInNameOrder() {
+        let (store, ids) = demoRooms()
+        store.groupOrder.togglePin(ids["Wohnzimmer"]!)
+        store.groupOrder.togglePin(ids["Küche"]!)
+        #expect(store.sortedRooms.map(\.name) == ["Küche", "Wohnzimmer", "Büro", "Flur", "Schlafzimmer"])
+        store.groupOrder.togglePin(ids["Küche"]!)
+        #expect(store.sortedRooms.map(\.name) == ["Wohnzimmer", "Büro", "Flur", "Küche", "Schlafzimmer"])
+    }
+
+    @Test func movingSwapsNeighboursAndStopsAtTheEdges() {
+        let (store, ids) = demoRooms()
+        let rooms = Array(store.rooms.values)
+        store.groupOrder.move(ids["Flur"]!, up: true, in: rooms)
+        #expect(store.sortedRooms.map(\.name) == ["Flur", "Büro", "Küche", "Schlafzimmer", "Wohnzimmer"])
+        store.groupOrder.move(ids["Flur"]!, up: true, in: rooms)
+        #expect(store.sortedRooms.first?.name == "Flur")
+        #expect(!store.groupOrder.canMove(ids["Flur"]!, up: true, in: rooms))
+        #expect(!store.groupOrder.canMove(ids["Wohnzimmer"]!, up: false, in: rooms))
+    }
+
+    @Test func movesStayInsideThePinnedBlock() {
+        let (store, ids) = demoRooms()
+        let rooms = Array(store.rooms.values)
+        store.groupOrder.togglePin(ids["Wohnzimmer"]!)
+        #expect(!store.groupOrder.canMove(ids["Büro"]!, up: true, in: rooms))
+        store.groupOrder.move(ids["Büro"]!, up: true, in: rooms)
+        #expect(store.sortedRooms.map(\.name) == ["Wohnzimmer", "Büro", "Flur", "Küche", "Schlafzimmer"])
+    }
+
+    @Test func roomsAddedLaterFollowByName() {
+        var order = GroupOrder()
+        order.sequence = ["unknown-b", "unknown-a"]
+        let (store, _) = demoRooms()
+        #expect(order.sorted(Array(store.rooms.values)).map(\.name) == ["Büro", "Flur", "Küche", "Schlafzimmer", "Wohnzimmer"])
+        #expect(order.isCustom)
+    }
+
+    @Test func survivesSavingAndLoading() throws {
+        var order = GroupOrder()
+        order.togglePin("a")
+        order.sequence = ["b", "a"]
+        #expect(try JSONDecoder().decode(GroupOrder.self, from: JSONEncoder().encode(order)) == order)
+    }
+}
+
+@Suite @MainActor struct EntertainmentAreaTests {
+    private func area(status: String) -> JSONValue {
+        ["id": "area-1", "type": "entertainment_configuration", "metadata": ["name": "Musik"], "status": .string(status)]
+    }
+
+    @Test func showsAnAreaOnlyWhileItStreams() {
+        let store = HueStore()
+        store.load([area(status: "inactive")])
+        #expect(store.streamingAreas.isEmpty)
+        store.apply([HueEvent(type: .update, data: [["id": "area-1", "type": "entertainment_configuration", "status": "active"]])])
+        #expect(store.streamingAreas.map(\.name) == ["Musik"])
+        store.apply([HueEvent(type: .update, data: [["id": "area-1", "type": "entertainment_configuration", "status": "inactive"]])])
+        #expect(store.streamingAreas.isEmpty)
+    }
+
+    @Test func stoppingHidesItRightAway() {
+        let store = HueStore()
+        store.load([area(status: "active")])
+        store.stopStreaming(store.streamingAreas[0])
+        #expect(store.streamingAreas.isEmpty)
+    }
+}

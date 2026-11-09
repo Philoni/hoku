@@ -15,10 +15,10 @@ enum DayPhase {
 
     var greeting: String {
         switch self {
-        case .morning: "Guten Morgen"
-        case .day: "Hallo"
-        case .evening: "Guten Abend"
-        case .night: "Gute Nacht"
+        case .morning: String(localized: "Guten Morgen")
+        case .day: String(localized: "Hallo")
+        case .evening: String(localized: "Guten Abend")
+        case .night: String(localized: "Gute Nacht")
         }
     }
 

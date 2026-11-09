@@ -127,7 +127,7 @@ struct SleepTimerIntent: AppIntent {
     func perform() async throws -> some IntentResult & ProvidesDialog {
         if store.lastSync == nil { await store.refresh() }
         guard let group = store.group(room.id) else {
-            throw HueError.bridge("Den Raum \(room.name) gibt es nicht mehr.")
+            throw HueError.bridge(String(localized: "Den Raum \(room.name) gibt es nicht mehr."))
         }
         store.startFadeOut(group, minutes: minutes)
         return .result(dialog: "\(room.name) dimmt in \(minutes) Minuten aus. Schlaf gut!")

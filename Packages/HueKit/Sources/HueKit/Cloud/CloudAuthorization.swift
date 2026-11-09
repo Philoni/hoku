@@ -53,9 +53,9 @@ public struct CloudAuthorization: Sendable {
 
         public var errorDescription: String? {
             switch self {
-            case .wrongState: "Die Antwort passt nicht zu dieser Anmeldung. Bitte noch einmal versuchen."
-            case let .denied(reason): "Hue hat die Anmeldung abgelehnt (\(reason))."
-            case .missingCode: "Hue hat keinen Anmeldecode geschickt."
+            case .wrongState: String(localized: "Die Antwort passt nicht zu dieser Anmeldung. Bitte noch einmal versuchen.", bundle: .hueKit)
+            case let .denied(reason): String(localized: "Hue hat die Anmeldung abgelehnt (\(reason)).", bundle: .hueKit)
+            case .missingCode: String(localized: "Hue hat keinen Anmeldecode geschickt.", bundle: .hueKit)
             }
         }
     }

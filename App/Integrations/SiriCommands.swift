@@ -35,7 +35,7 @@ enum SiriCommands {
         var errorDescription: String? {
             switch self {
             case let .signing(detail):
-                "Kurzbefehl konnte nicht signiert werden. Bist du in macOS mit deinem Apple Account (iCloud) angemeldet? (\(detail))"
+                String(localized: "Kurzbefehl konnte nicht signiert werden. Bist du in macOS mit deinem Apple Account (iCloud) angemeldet? (\(detail))")
             }
         }
     }
@@ -70,7 +70,7 @@ enum SiriCommands {
                 throw InstallError.signing(lastError.localizedDescription)
             }
             guard FileManager.default.fileExists(atPath: output.path) else {
-                throw InstallError.signing("keine Ausgabe")
+                throw InstallError.signing(String(localized: "keine Ausgabe"))
             }
 
             NSWorkspace.shared.open(output)
@@ -123,8 +123,8 @@ enum SiriCommands {
             "WFWorkflowClientVersion": "4711.1.1",
             "WFWorkflowHasOutputFallback": false,
             "WFWorkflowIcon": [
-                "WFWorkflowIconStartColor": command.name.hasSuffix(" aus") ? 255 : 4_282_601_983,
-                "WFWorkflowIconGlyphNumber": command.name.hasSuffix(" aus") ? 59446 : 59511,
+                "WFWorkflowIconStartColor": command.switchesOff ? 255 : 4_282_601_983,
+                "WFWorkflowIconGlyphNumber": command.switchesOff ? 59446 : 59511,
             ],
             "WFWorkflowImportQuestions": [Any](),
             "WFWorkflowTypes": ["WFWorkflowTypeShowInSearch"],
@@ -159,7 +159,7 @@ enum SiriCommands {
         switch command.action {
         case let .roomPower(id, name, isZone, on):
             intent = "SetRoomPowerIntent"
-            parameters["room"] = entity(id, name, isZone ? "Zone" : "Raum", isZone ? "square.on.square" : "house.fill")
+            parameters["room"] = entity(id, name, isZone ? String(localized: "Zone") : String(localized: "Raum"), isZone ? "square.on.square" : "house.fill")
             parameters["value"] = on ? 1 : 0
         case let .lightPower(id, name, roomName, on):
             intent = "SetLightPowerIntent"
@@ -216,5 +216,15 @@ enum SiriCommands {
             )
         }
         return text
+    }
+}
+
+private extension SiriCommand {
+    var switchesOff: Bool {
+        switch action {
+        case let .roomPower(_, _, _, on), let .lightPower(_, _, _, on): !on
+        case .allOff: true
+        case .scene: false
+        }
     }
 }

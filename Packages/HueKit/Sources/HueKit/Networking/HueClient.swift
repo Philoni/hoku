@@ -11,17 +11,17 @@ public enum HueError: Error, LocalizedError, Sendable {
     public var errorDescription: String? {
         switch self {
         case .unauthorized:
-            "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln."
+            String(localized: "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln.", bundle: .hueKit)
         case let .bridgeUnreachable(detail):
-            "Bridge nicht erreichbar (\(detail))."
+            String(localized: "Bridge nicht erreichbar (\(detail)).", bundle: .hueKit)
         case let .http(code, message):
-            "Bridge-Fehler \(code)" + (message.map { ": \($0)" } ?? "")
+            String(localized: "Bridge-Fehler \(code)", bundle: .hueKit) + (message.map { ": \($0)" } ?? "")
         case .linkButtonNotPressed:
-            "Die Link-Taste wurde noch nicht gedrückt."
+            String(localized: "Die Link-Taste wurde noch nicht gedrückt.", bundle: .hueKit)
         case let .bridge(message):
             message
         case let .decoding(detail):
-            "Antwort der Bridge nicht lesbar: \(detail)"
+            String(localized: "Antwort der Bridge nicht lesbar: \(detail)", bundle: .hueKit)
         }
     }
 }
@@ -126,6 +126,10 @@ public final class HueClient: Sendable {
         try await resources(credentials, path: "/clip/v2/resource")
     }
 
+    func resources(_ credentials: BridgeCredentials, ofType type: String) async throws -> [JSONValue] {
+        try await resources(credentials, path: "/clip/v2/resource/\(type)")
+    }
+
     public func resource(_ credentials: BridgeCredentials, type: String, id: String) async throws -> JSONValue? {
         try await resources(credentials, path: "/clip/v2/resource/\(type)/\(id)").first
     }
@@ -201,7 +205,7 @@ public final class HueClient: Sendable {
         components.scheme = "https"
         components.host = host
         components.path = path
-        guard let url = components.url else { throw HueError.bridgeUnreachable("ungültige Adresse \(host)") }
+        guard let url = components.url else { throw HueError.bridgeUnreachable(String(localized: "ungültige Adresse \(host)", bundle: .hueKit)) }
         return url
     }
 
@@ -214,7 +218,7 @@ public final class HueClient: Sendable {
             throw HueError.bridgeUnreachable(error.localizedDescription)
         }
         guard let http = response as? HTTPURLResponse else {
-            throw HueError.bridgeUnreachable("keine HTTP-Antwort")
+            throw HueError.bridgeUnreachable(String(localized: "keine HTTP-Antwort", bundle: .hueKit))
         }
         switch http.statusCode {
         case 200..<300:

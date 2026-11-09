@@ -30,6 +30,7 @@ struct SpeedCard: View {
             }
             HStack(spacing: 10) {
                 Image(systemName: "tortoise.fill").foregroundStyle(.secondary)
+                    .accessibilityHidden(true)
                 GeometryReader { geometry in
                     ZStack(alignment: .leading) {
                         Capsule().fill(Theme.control)
@@ -50,12 +51,21 @@ struct SpeedCard: View {
                 }
                 .frame(height: 10)
                 Image(systemName: "hare.fill").foregroundStyle(.secondary)
+                    .accessibilityHidden(true)
             }
             .font(.system(size: 10.5))
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Tempo")
+            .accessibilityValue("\(Int((speed * 100).rounded())) %")
+            .accessibilityAdjustableAction { direction in
+                let step = direction == .increment ? 0.1 : -0.1
+                let value = min(max(speed + step, 0), 1)
+                store.setSpeed(value, scene: scene)
+            }
         }
         .padding(11)
         .background(CardBackground(tint: colors.first))
-        .accessibilityElement(children: .combine)
+        .accessibilityElement(children: .contain)
         .accessibilityLabel("Tempo der dynamischen Szene")
     }
 }

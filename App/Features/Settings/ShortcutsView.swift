@@ -11,11 +11,11 @@ struct ShortcutsView: View {
         @Bindable var model = model
 
         VStack(spacing: 10) {
-            PageHeader(title: "Tastenkürzel", onBack: pop) { EmptyView() }
+            PageHeader(title: String(localized: "Tastenkürzel"), onBack: pop) { EmptyView() }
 
             PageScroll(maxHeight: 440) {
                 VStack(spacing: 7) {
-                    Text(notice ?? "Funktionieren überall am Mac, auch wenn Hoku geschlossen ist.")
+                    Text(notice ?? String(localized: "Funktionieren überall am Mac, auch wenn Hoku geschlossen ist."))
                         .font(.system(size: 11, design: .rounded))
                         .foregroundStyle(notice == nil ? AnyShapeStyle(.secondary) : AnyShapeStyle(Color.orange))
                         .contentTransition(.opacity)
@@ -25,28 +25,28 @@ struct ShortcutsView: View {
 
                     card {
                         HStack {
-                            RowLabel(title: "Hoku öffnen", systemImage: "menubar.arrow.up.rectangle")
+                            RowLabel(title: String(localized: "Hoku öffnen"), systemImage: "menubar.arrow.up.rectangle")
                             Spacer()
                             if model.isPanelHotKeyUnavailable { TakenBadge() }
                             HotKeyRecorder(combination: Binding(
                                 get: { model.hotKeyCombination },
                                 set: { if let new = $0 { model.hotKeyCombination = new } }
-                            ), isRequired: true)
+                            ), isRequired: true, name: String(localized: "Hoku öffnen"))
                         }
                         Divider().opacity(0.4)
-                        row("Alles aus", systemImage: "power", target: .allOff)
+                        row(String(localized: "Alles aus"), systemImage: "power", target: .allOff)
                     }
 
                     if !store.sortedRooms.isEmpty {
-                        SectionTitle(text: "Räume", trailing: "an / aus")
+                        SectionTitle(text: String(localized: "Räume"), trailing: String(localized: "an / aus"))
                         card { rows(for: store.sortedRooms) }
                     }
                     if !store.sortedZones.isEmpty {
-                        SectionTitle(text: "Zonen", trailing: "an / aus")
+                        SectionTitle(text: String(localized: "Zonen"), trailing: String(localized: "an / aus"))
                         card { rows(for: store.sortedZones) }
                     }
 
-                    SectionTitle(text: "Szenen")
+                    SectionTitle(text: String(localized: "Szenen"))
                     card {
                         ForEach(sceneShortcuts) { shortcut in
                             if case let .scene(id) = shortcut.target {
@@ -66,7 +66,7 @@ struct ShortcutsView: View {
     }
 
     private func sceneTitle(_ id: String) -> String {
-        guard let scene = store.scenes[id] else { return "Gelöschte Szene" }
+        guard let scene = store.scenes[id] else { return String(localized: "Gelöschte Szene") }
         let room = scene.group.flatMap { store.group($0.rid) }?.name
         return room.map { "\(scene.name) · \($0)" } ?? scene.name
     }
@@ -88,7 +88,7 @@ struct ShortcutsView: View {
                         assign($0, to: .scene(pendingScene))
                         self.pendingScene = nil
                     }
-                ), startsRecording: true, onCancel: { self.pendingScene = nil })
+                ), startsRecording: true, onCancel: { self.pendingScene = nil }, name: sceneTitle(pendingScene))
             }
         } else {
             Menu {
@@ -103,7 +103,7 @@ struct ShortcutsView: View {
                     }
                 }
             } label: {
-                RowLabel(title: "Szene hinzufügen", systemImage: "plus")
+                RowLabel(title: String(localized: "Szene hinzufügen"), systemImage: "plus")
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .menuStyle(.button)
@@ -128,13 +128,13 @@ struct ShortcutsView: View {
             HotKeyRecorder(combination: Binding(
                 get: { model.combination(for: target) },
                 set: { assign($0, to: target) }
-            ))
+            ), name: title)
         }
     }
 
     private func assign(_ combination: HotKey.Combination?, to target: LightShortcut.Target) {
         guard !model.setCombination(combination, for: target) else { return }
-        notice = "\(model.hotKeyCombination.displayString) öffnet schon Hoku."
+        notice = String(localized: "\(model.hotKeyCombination.displayString) öffnet schon Hoku.")
         Task {
             try? await Task.sleep(for: .seconds(3))
             notice = nil
@@ -179,6 +179,7 @@ struct HotKeyRecorder: View {
     var isRequired = false
     var startsRecording = false
     var onCancel: () -> Void = {}
+    var name: String = ""
 
     @State private var id = UUID()
     @State private var monitor: Any?
@@ -189,7 +190,7 @@ struct HotKeyRecorder: View {
         Button {
             isRecording ? cancel() : start()
         } label: {
-            Text(isRecording ? "Kürzel drücken …" : combination?.displayString ?? "Festlegen")
+            Text(isRecording ? String(localized: "Kürzel drücken …") : combination?.displayString ?? String(localized: "Festlegen"))
                 .font(.system(size: 12, weight: .semibold, design: .rounded))
                 .foregroundStyle(combination == nil && !isRecording ? .secondary : .primary)
                 .frame(minWidth: 70)
@@ -198,6 +199,8 @@ struct HotKeyRecorder: View {
         .buttonStyle(.glass)
         .controlSize(.small)
         .help(isRequired ? "Klicken und neue Tastenkombination drücken" : "Klicken und Tastenkombination drücken · ⌫ entfernt sie")
+        .accessibilityLabel(name.isEmpty ? Text("Tastenkürzel") : Text("Tastenkürzel für \(name)"))
+        .accessibilityValue(isRecording ? String(localized: "Warte auf Eingabe") : combination?.displayString ?? String(localized: "Nicht festgelegt"))
         .animation(Theme.spring, value: isRecording)
         .onAppear { if startsRecording { start() } }
         .onDisappear(perform: stop)

@@ -124,23 +124,23 @@ final class LeftOnWatcher {
     func sendTestNotification() async {
         guard await requestNotificationPermission() else { return }
         guard let credentials = store.credentials else {
-            error = "Keine Bridge gekoppelt."
+            error = String(localized: "Keine Bridge gekoppelt.")
             return
         }
         await locate(credentials, retries: 0)
         // Only what this check fetched: never an older report dressed up as the test.
         guard let report = await fetchReport() else {
-            if error == nil { error = "Nicht mit Hue verbunden." }
+            if error == nil { error = String(localized: "Nicht mit Hue verbunden.") }
             return
         }
         do {
             if report.isEmpty {
-                try await post(title: "Zu Hause ist alles aus", subtitle: "Test", body: "Unterwegs bliebe Hoku jetzt still.", actions: false)
+                try await post(title: String(localized: "Zu Hause ist alles aus"), subtitle: String(localized: "Test"), body: String(localized: "Unterwegs bliebe Hoku jetzt still."), actions: false)
             } else {
-                try await post(title: "Zu Hause brennt noch Licht", subtitle: "Test", body: report.message, actions: true, colors: lastColors)
+                try await post(title: String(localized: "Zu Hause brennt noch Licht"), subtitle: String(localized: "Test"), body: report.message, actions: true, colors: lastColors)
             }
         } catch {
-            self.error = "Mitteilung nicht möglich: \(error.localizedDescription)"
+            self.error = String(localized: "Mitteilung nicht möglich: \(error.localizedDescription)")
         }
     }
 
@@ -180,7 +180,7 @@ final class LeftOnWatcher {
             } catch {
                 // Not shown (e.g. notifications switched off): don't count it as given.
                 policy.reminderFailed()
-                self.error = "Mitteilung nicht möglich: \(error.localizedDescription)"
+                self.error = String(localized: "Mitteilung nicht möglich: \(error.localizedDescription)")
                 await refreshNotificationStatus()
             }
         }
@@ -204,7 +204,7 @@ final class LeftOnWatcher {
         guard connection.isConnected else { return nil }
         // Never report (or offer to switch off) a bridge other than the paired one.
         guard !connection.grantsOtherBridge(than: store.credentials) else {
-            error = "Dein Hue-Konto gibt eine andere Bridge frei als die gekoppelte."
+            error = String(localized: "Dein Hue-Konto gibt eine andere Bridge frei als die gekoppelte.")
             return nil
         }
         isChecking = true
@@ -225,7 +225,7 @@ final class LeftOnWatcher {
             // settings page. Once per lost sign-in, and only if the reminder is on.
             if isEnabled, !signInNoticeShown {
                 signInNoticeShown = true
-                try? await post(title: "Unterwegs-Hinweis pausiert", body: "Hue möchte, dass du dich neu anmeldest: Hoku → Einstellungen → Unterwegs-Hinweis.", actions: false)
+                try? await post(title: String(localized: "Unterwegs-Hinweis pausiert"), body: String(localized: "Hue möchte, dass du dich neu anmeldest: Hoku → Einstellungen → Unterwegs-Hinweis."), actions: false)
             }
         } catch {
             self.error = error.localizedDescription
@@ -244,24 +244,24 @@ final class LeftOnWatcher {
                 try await store.switchEverythingOff()
             } else {
                 guard !connection.grantsOtherBridge(than: store.credentials) else {
-                    throw CloudError.unexpected("Dein Hue-Konto gibt eine andere Bridge frei als die gekoppelte.")
+                    throw CloudError.unexpected(String(localized: "Dein Hue-Konto gibt eine andere Bridge frei als die gekoppelte."))
                 }
                 var homeID = lastReport?.homeGroupedLightID
                 if homeID == nil { homeID = LeftOnReport.from(resources: try await cloud.resources()).homeGroupedLightID }
-                guard let homeID else { throw CloudError.unexpected("keine Lichtgruppe für das ganze Zuhause") }
+                guard let homeID else { throw CloudError.unexpected(String(localized: "keine Lichtgruppe für das ganze Zuhause")) }
                 try await cloud.setOn(false, groupedLight: homeID)
             }
             let switchedOff = lastReport?.lightIDs.count ?? 0
             lastReport = LeftOnReport(rooms: [], lightIDs: [], homeGroupedLightID: lastReport?.homeGroupedLightID)
             _ = policy.record(lastReport!, at: .now)
             try? await post(
-                title: "Alles aus",
-                body: switchedOff > 1 ? "\(switchedOff) Lampen sind ausgeschaltet. Zu Hause ist es jetzt dunkel." : "Zu Hause ist es jetzt dunkel.",
+                title: String(localized: "Alles aus"),
+                body: switchedOff > 1 ? String(localized: "\(switchedOff) Lampen sind ausgeschaltet. Zu Hause ist es jetzt dunkel.") : String(localized: "Zu Hause ist es jetzt dunkel."),
                 actions: false
             )
         } catch {
             self.error = error.localizedDescription
-            try? await post(title: "Ausschalten hat nicht geklappt", body: "\(error.localizedDescription) Die Hue-App auf dem Handy schaltet auch von unterwegs.", actions: false)
+            try? await post(title: String(localized: "Ausschalten hat nicht geklappt"), body: String(localized: "\(error.localizedDescription) Die Hue-App auf dem Handy schaltet auch von unterwegs."), actions: false)
         }
     }
 
@@ -270,7 +270,7 @@ final class LeftOnWatcher {
     private func registerCategory() {
         let turnOff = UNNotificationAction(
             identifier: Self.turnOffAction,
-            title: "Alles ausschalten",
+            title: String(localized: "Alles ausschalten"),
             // A locked Mac must be unlocked first: nobody else switches the home off.
             options: [.authenticationRequired]
         )
@@ -286,7 +286,7 @@ final class LeftOnWatcher {
     }
 
     private func notify(_ report: LeftOnReport) async throws {
-        try await post(title: "Zu Hause brennt noch Licht", body: report.message, actions: true, colors: lastColors)
+        try await post(title: String(localized: "Zu Hause brennt noch Licht"), body: report.message, actions: true, colors: lastColors)
     }
 
     private func post(title: String, subtitle: String = "", body: String, actions: Bool, colors: [Color] = []) async throws {

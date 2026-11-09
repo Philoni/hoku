@@ -46,7 +46,7 @@ enum InstallLocation {
         case noWritableApplicationsFolder
 
         var errorDescription: String? {
-            "Kein beschreibbarer Programme-Ordner gefunden. Zieh Hoku bitte im Finder nach „Programme“."
+            String(localized: "Kein beschreibbarer Programme-Ordner gefunden. Zieh Hoku bitte im Finder nach „Programme“.")
         }
     }
 
