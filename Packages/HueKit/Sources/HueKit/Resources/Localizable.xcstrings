@@ -1,254 +1,834 @@
 {
-  "sourceLanguage" : "de",
-  "strings" : {
-    "%@ und %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ und %2$@"
+  "sourceLanguage": "de",
+  "strings": {
+    "%@ und %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ und %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ and %@"
           }
         }
       }
     },
-    "%@, %@ und %lld weitere Räume" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@, %2$@ und %3$lld weitere Räume"
+    "%@, %@ und %lld weitere Räume": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@, %2$@ und %3$lld weitere Räume"
+          }
+        },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%@, %@ and %lld other room"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%@, %@ and %lld other rooms"
+                }
+              }
+            }
           }
         }
       }
     },
-    "%lld Lampen an" : {
-
-    },
-    "1 Lampe an" : {
-
-    },
-    "Alles aus" : {
-
-    },
-    "Antwort der Bridge nicht lesbar: %@" : {
-
-    },
-    "Arbeitsplatte" : {
-
-    },
-    "Arktische Aurora" : {
-
-    },
-    "Automation" : {
-
-    },
-    "Bitte einen Raum wählen." : {
-
-    },
-    "Bitte melde dich erneut bei Hue an." : {
-
-    },
-    "Bridge nicht erreichbar (%@)." : {
-
-    },
-    "Bridge-Fehler %lld" : {
-
-    },
-    "Büro" : {
-
-    },
-    "Das Zertifikat unter %@ passt nicht zur Bridge-ID." : {
-
-    },
-    "Deckenlampe" : {
-
-    },
-    "Deckenspots" : {
-
-    },
-    "Der Hue-Fernzugriff ist noch nicht eingerichtet." : {
-
-    },
-    "Die Antwort passt nicht zu dieser Anmeldung. Bitte noch einmal versuchen." : {
-
-    },
-    "Die Bridge bietet diese Automation nicht an." : {
-
-    },
-    "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln." : {
-
-    },
-    "Die Bridge meldet keine Lichtgruppe für das ganze Zuhause." : {
-
-    },
-    "Die Firmware der Bridge ist zu alt. Bitte in der Hue-App aktualisieren." : {
-
-    },
-    "Die Hue-Cloud bremst gerade. Später noch einmal versuchen." : {
-
-    },
-    "Die Link-Taste wurde noch nicht gedrückt." : {
-
-    },
-    "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal." : {
-
-    },
-    "Energie tanken" : {
-
-    },
-    "Entspannen" : {
-
-    },
-    "Flur" : {
-
-    },
-    "Flurlicht" : {
-
-    },
-    "Gaming" : {
-
-    },
-    "Gemütlich" : {
-
-    },
-    "Gespeicherte Hue-Anmeldung ist beschädigt. Bitte neu einrichten." : {
-
-    },
-    "Gute Nacht" : {
-
-    },
-    "Hell" : {
-
-    },
-    "Hoku ist noch mit keiner Hue Bridge gekoppelt. Öffne Hoku und koppel deine Bridge." : {
-
-    },
-    "Hue hat die Anmeldung abgelehnt (%@)." : {
-
-    },
-    "Hue hat keinen Anmeldecode geschickt." : {
-
-    },
-    "Hue-Cloud nicht erreichbar (%@)." : {
-
-    },
-    "Hue-Cloud-Fehler %lld" : {
-
-    },
-    "Keine Lichtgruppe für das ganze Zuhause gefunden." : {
-
-    },
-    "Konzentrieren" : {
-
-    },
-    "Küche" : {
-
-    },
-    "Lampe" : {
-
-    },
-    "Lampe „%@“ nicht gefunden." : {
-
-    },
-    "Lampen" : {
-
-    },
-    "Leselampe" : {
-
-    },
-    "Lesen" : {
-
-    },
-    "Nachtlicht" : {
-
-    },
-    "Nachttisch links" : {
-
-    },
-    "Nachttisch rechts" : {
-
-    },
-    "Play-Bars" : {
-
-    },
-    "Raum „%@“ nicht gefunden." : {
-
-    },
-    "Regal" : {
-
-    },
-    "Ressourcen nicht lesbar" : {
-
-    },
-    "Räume" : {
-
-    },
-    "Schlafzimmer" : {
-
-    },
-    "Schlüsselbund: %@" : {
-
-    },
-    "Schreibtisch" : {
-
-    },
-    "Smarte Szene" : {
-
-    },
-    "Sofa-Lightstrip" : {
-
-    },
-    "Sonnenuntergang" : {
-
-    },
-    "Stehlampe" : {
-
-    },
-    "Stream beendet" : {
-
-    },
-    "Szene" : {
-
-    },
-    "Szene „%@“ nicht gefunden." : {
-
-    },
-    "Szenen" : {
-
-    },
-    "Tropendämmerung" : {
-
-    },
-    "Unbenannt" : {
-
-    },
-    "Unerwartete Antwort der Hue-Cloud: %@" : {
-
-    },
-    "Wohnzimmer" : {
-
-    },
-    "Zuhause" : {
-
-    },
-    "an" : {
-      "comment" : "Siri command ending that switches on: 'Wohnzimmer an'"
-    },
-    "aus" : {
-      "comment" : "Siri command ending that switches off: 'Wohnzimmer aus'"
-    },
-    "keine Bridge im Hue-Konto" : {
-
-    },
-    "keine HTTP-Antwort" : {
-
-    },
-    "keine Tokens in der Antwort" : {
-
-    },
-    "ungültige Adresse %@" : {
-
+    "%lld Lampen an": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld light on"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld lights on"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "1 Lampe an": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 light on"
+          }
+        }
+      }
+    },
+    "Alles aus": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All Off"
+          }
+        }
+      }
+    },
+    "Antwort der Bridge nicht lesbar: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn’t read the bridge’s response: %@"
+          }
+        }
+      }
+    },
+    "Arbeitsplatte": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Countertop"
+          }
+        }
+      }
+    },
+    "Arktische Aurora": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arctic Aurora"
+          }
+        }
+      }
+    },
+    "Automation": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automation"
+          }
+        }
+      }
+    },
+    "Bitte einen Raum wählen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please choose a room."
+          }
+        }
+      }
+    },
+    "Bitte melde dich erneut bei Hue an.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please sign in to Hue again."
+          }
+        }
+      }
+    },
+    "Bridge nicht erreichbar (%@).": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge unreachable (%@)."
+          }
+        }
+      }
+    },
+    "Bridge-Fehler %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge error %lld"
+          }
+        }
+      }
+    },
+    "Büro": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Office"
+          }
+        }
+      }
+    },
+    "Das Zertifikat unter %@ passt nicht zur Bridge-ID.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The certificate at %@ doesn’t match the bridge ID."
+          }
+        }
+      }
+    },
+    "Deckenlampe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ceiling light"
+          }
+        }
+      }
+    },
+    "Deckenspots": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ceiling spots"
+          }
+        }
+      }
+    },
+    "Der Hue-Fernzugriff ist noch nicht eingerichtet.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue remote access isn’t set up yet."
+          }
+        }
+      }
+    },
+    "Die Antwort passt nicht zu dieser Anmeldung. Bitte noch einmal versuchen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The response doesn’t match this sign-in. Please try again."
+          }
+        }
+      }
+    },
+    "Die Bridge bietet diese Automation nicht an.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The bridge doesn’t offer this automation."
+          }
+        }
+      }
+    },
+    "Die Bridge kennt diese App nicht mehr. Bitte neu koppeln.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The bridge no longer recognizes this app. Please pair again."
+          }
+        }
+      }
+    },
+    "Die Bridge kennt diesen Schlüssel nicht.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The bridge doesn’t know this key."
+          }
+        }
+      }
+    },
+    "Die Bridge meldet keine Lichtgruppe für das ganze Zuhause.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The bridge doesn’t report a light group for the whole home."
+          }
+        }
+      }
+    },
+    "Die Firmware der Bridge ist zu alt. Bitte in der Hue-App aktualisieren.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The bridge firmware is too old. Please update it in the Hue app."
+          }
+        }
+      }
+    },
+    "Die Hue-Cloud bremst gerade. Später noch einmal versuchen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Hue cloud is rate-limiting requests right now. Try again later."
+          }
+        }
+      }
+    },
+    "Die Link-Taste wurde noch nicht gedrückt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The link button hasn’t been pressed yet."
+          }
+        }
+      }
+    },
+    "Die Zeit ist abgelaufen. Drück die Link-Taste auf der Bridge und versuch es gleich noch einmal.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Time’s up. Press the link button on the bridge and try again right away."
+          }
+        }
+      }
+    },
+    "Energie tanken": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Energize"
+          }
+        }
+      }
+    },
+    "Entspannen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relax"
+          }
+        }
+      }
+    },
+    "Flur": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hallway"
+          }
+        }
+      }
+    },
+    "Flurlicht": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hallway light"
+          }
+        }
+      }
+    },
+    "Gaming": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gaming"
+          }
+        }
+      }
+    },
+    "Gemütlich": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cozy"
+          }
+        }
+      }
+    },
+    "Gespeicherte Hue-Anmeldung ist beschädigt. Bitte neu einrichten.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The saved Hue sign-in is damaged. Please set it up again."
+          }
+        }
+      }
+    },
+    "Gute Nacht": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good night"
+          }
+        }
+      }
+    },
+    "Hell": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bright"
+          }
+        }
+      }
+    },
+    "Hoku ist noch mit keiner Hue Bridge gekoppelt. Öffne Hoku und koppel deine Bridge.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoku isn’t paired with a Hue Bridge yet. Open Hoku and pair your bridge."
+          }
+        }
+      }
+    },
+    "Hue hat die Anmeldung abgelehnt (%@).": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue rejected the sign-in (%@)."
+          }
+        }
+      }
+    },
+    "Hue hat keinen Anmeldecode geschickt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue didn’t send a sign-in code."
+          }
+        }
+      }
+    },
+    "Hue-Cloud nicht erreichbar (%@).": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue cloud unreachable (%@)."
+          }
+        }
+      }
+    },
+    "Hue-Cloud-Fehler %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hue cloud error %lld"
+          }
+        }
+      }
+    },
+    "Keine Lichtgruppe für das ganze Zuhause gefunden.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No light group found for the whole home."
+          }
+        }
+      }
+    },
+    "Konzentrieren": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concentrate"
+          }
+        }
+      }
+    },
+    "Küche": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kitchen"
+          }
+        }
+      }
+    },
+    "Lampe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light"
+          }
+        }
+      }
+    },
+    "Lampe „%@“ nicht gefunden.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light “%@” not found."
+          }
+        }
+      }
+    },
+    "Lampen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lights"
+          }
+        }
+      }
+    },
+    "Leselampe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading light"
+          }
+        }
+      }
+    },
+    "Lesen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read"
+          }
+        }
+      }
+    },
+    "Nachtlicht": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night light"
+          }
+        }
+      }
+    },
+    "Nachttisch links": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Left nightstand"
+          }
+        }
+      }
+    },
+    "Nachttisch rechts": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Right nightstand"
+          }
+        }
+      }
+    },
+    "Play-Bars": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play bars"
+          }
+        }
+      }
+    },
+    "Raum „%@“ nicht gefunden.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room “%@” not found."
+          }
+        }
+      }
+    },
+    "Regal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shelf"
+          }
+        }
+      }
+    },
+    "Ressourcen nicht lesbar": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn’t read resources"
+          }
+        }
+      }
+    },
+    "Räume": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rooms"
+          }
+        }
+      }
+    },
+    "Schlafzimmer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bedroom"
+          }
+        }
+      }
+    },
+    "Schlüsselbund: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keychain: %@"
+          }
+        }
+      }
+    },
+    "Schreibtisch": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desk"
+          }
+        }
+      }
+    },
+    "Smarte Szene": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart scene"
+          }
+        }
+      }
+    },
+    "Sofa-Lightstrip": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sofa lightstrip"
+          }
+        }
+      }
+    },
+    "Sonnenuntergang": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunset"
+          }
+        }
+      }
+    },
+    "Stehlampe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floor lamp"
+          }
+        }
+      }
+    },
+    "Stream beendet": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stream ended"
+          }
+        }
+      }
+    },
+    "Szene": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scene"
+          }
+        }
+      }
+    },
+    "Szene „%@“ nicht gefunden.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scene “%@” not found."
+          }
+        }
+      }
+    },
+    "Szenen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scenes"
+          }
+        }
+      }
+    },
+    "Tropendämmerung": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tropical Twilight"
+          }
+        }
+      }
+    },
+    "Unbenannt": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Untitled"
+          }
+        }
+      }
+    },
+    "Unerwartete Antwort der Hue-Cloud: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unexpected response from the Hue cloud: %@"
+          }
+        }
+      }
+    },
+    "Wohnzimmer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Living room"
+          }
+        }
+      }
+    },
+    "Zuhause": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home"
+          }
+        }
+      }
+    },
+    "an": {
+      "comment": "Siri command ending that switches on: 'Wohnzimmer an'",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "on"
+          }
+        }
+      }
+    },
+    "aus": {
+      "comment": "Siri command ending that switches off: 'Wohnzimmer aus'",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "off"
+          }
+        }
+      }
+    },
+    "keine Bridge im Hue-Konto": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "no bridge in the Hue account"
+          }
+        }
+      }
+    },
+    "keine HTTP-Antwort": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "no HTTP response"
+          }
+        }
+      }
+    },
+    "keine Tokens in der Antwort": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "no tokens in the response"
+          }
+        }
+      }
+    },
+    "ungültige Adresse %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "invalid address %@"
+          }
+        }
+      }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

@@ -162,8 +162,21 @@ struct SettingsView: View {
                     VStack(alignment: .leading, spacing: 5) {
                         row("Name", store.credentials?.name ?? String(localized: "Hue Bridge"))
                         row("Adresse", store.credentials?.host ?? "–")
-                        row("Status", statusText)
+                        row("Status", store.connection.title)
                         row("Inhalt", String(localized: "\(store.lights.count) Lampen · \(store.rooms.count) Räume · \(store.scenes.count) Szenen"))
+                        Divider().opacity(0.4).padding(.vertical, 3)
+                        Button {
+                            push(.connection)
+                        } label: {
+                            HStack {
+                                Text("Verbindungsdetails")
+                                Spacer()
+                                Image(systemName: "chevron.right").font(.system(size: 10, weight: .bold)).foregroundStyle(.tertiary)
+                            }
+                            .font(.system(size: 12.5, weight: .medium, design: .rounded))
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(PressableStyle())
                     }
                     .padding(12)
                     .background(CardBackground())
@@ -209,16 +222,6 @@ struct SettingsView: View {
     private var leftOnStatus: String {
         if model.leftOn.isEnabled { return String(localized: "An") }
         return model.cloud.isConnected ? String(localized: "Aus") : String(localized: "Einrichten")
-    }
-
-    private var statusText: String {
-        switch store.connection {
-        case .live: String(localized: "Live verbunden")
-        case .connecting: String(localized: "Verbinde …")
-        case .disconnected: String(localized: "Getrennt")
-        case let .offline(reason): String(localized: "Offline (\(reason))")
-        case .unauthorized: String(localized: "Nicht autorisiert")
-        }
     }
 
     private func row(_ label: LocalizedStringKey, _ value: String) -> some View {

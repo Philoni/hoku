@@ -541,6 +541,7 @@ private struct PermissionDialogPreview: View {
 private struct BridgeStep: View {
     @Bindable var model: WizardModel
     @State private var showsManualEntry = false
+    @State private var showsKeyEntry = false
 
     var body: some View {
         let app = model.app
@@ -649,6 +650,23 @@ private struct BridgeStep: View {
                 Text("Die IP findest du in der Hue-App unter Einstellungen → Hue Bridges → ⓘ.")
                     .font(.system(size: 12, design: .rounded))
                     .foregroundStyle(.white.opacity(0.5))
+                if showsKeyEntry {
+                    SecureField("Vorhandener Schlüssel", text: $app.manualKey)
+                        .textFieldStyle(.plain)
+                        .font(.system(size: 14, design: .rounded))
+                        .padding(.horizontal, 12)
+                        .frame(height: 34)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(.white.opacity(0.08)))
+                        .onSubmit { Task { await app.addManualBridge() } }
+                    Text("Mit einem Schlüssel entfällt die Link-Taste. Hoku speichert ihn nur auf diesem Mac.")
+                        .font(.system(size: 12, design: .rounded))
+                        .foregroundStyle(.white.opacity(0.5))
+                } else {
+                    Button("Ich habe schon einen Schlüssel") {
+                        withAnimation(Theme.softSpring) { showsKeyEntry = true }
+                    }
+                    .buttonStyle(WizardQuietButtonStyle())
+                }
             }
         }
         .padding(.top, 12)

@@ -79,3 +79,15 @@ extension HueStore {
         )
     }
 }
+
+extension HueStore.ConnectionState {
+    var title: String {
+        switch self {
+        case .live: String(localized: "Live verbunden")
+        case .connecting: String(localized: "Verbinde …")
+        case .disconnected: String(localized: "Getrennt")
+        case let .offline(reason): String(localized: "Offline (\(reason))")
+        case .unauthorized: String(localized: "Nicht autorisiert")
+        }
+    }
+}

@@ -30,6 +30,8 @@ final class AppModel {
     private(set) var pairingSecondsLeft = 0
     var onboardingError: String?
     var manualHost = ""
+    /// An existing application key, entered instead of pressing the link button.
+    var manualKey = ""
 
     // Preferences
     var hotKeyCombination: HotKey.Combination = Preferences.load("hotKey") ?? .default {
@@ -168,9 +170,42 @@ final class AppModel {
         onboardingError = nil
         do {
             let bridge = try await BridgeDiscovery.bridge(at: host, using: store.client)
-            if !discovered.contains(bridge) { discovered.append(bridge) }
+            let keyText = manualKey.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !keyText.isEmpty else {
+                if !discovered.contains(bridge) { discovered.append(bridge) }
+                return
+            }
+            guard let key = ApplicationKey.normalized(keyText) else {
+                onboardingError = String(localized: "Das sieht nicht nach einem Hue-Schlüssel aus.")
+                return
+            }
+            let credentials = try await store.client.connect(to: bridge, applicationKey: key)
+            try CredentialStore.save(credentials)
+            manualKey = ""
+            phase = .ready
+            store.connect(credentials)
         } catch {
             onboardingError = error.localizedDescription
+        }
+    }
+
+    /// Points Hoku at a new address for the bridge it already knows, e.g. after the
+    /// router gave it another one. Returns an error message, or nil on success.
+    func changeBridgeHost(to text: String) async -> String? {
+        let host = text.trimmingCharacters(in: .whitespaces)
+        guard !host.isEmpty, let credentials = store.credentials else { return nil }
+        do {
+            let bridge = try await BridgeDiscovery.bridge(at: host, using: store.client)
+            guard bridge.id == credentials.bridgeID.lowercased() else {
+                return String(localized: "Unter dieser Adresse antwortet eine andere Bridge.")
+            }
+            var updated = credentials
+            updated.host = host
+            try CredentialStore.save(updated)
+            store.connect(updated)
+            return nil
+        } catch {
+            return error.localizedDescription
         }
     }
 
