@@ -4,8 +4,7 @@ cask "hoku" do
   version "0.9.0"
   sha256 "23527d82d89cb9b60833721568ad7664e4ec55f27714d13baefa09e7edf6707b"
 
-  url "https://github.com/Philoni/hoku/releases/download/v#{version}/Hoku-#{version}.dmg",
-      verified: "github.com/Philoni/hoku/"
+  url "https://github.com/Philoni/hoku/releases/download/v#{version}/Hoku-#{version}.dmg"
   name "Hoku"
   desc "Menu bar app for Philips Hue lights"
   homepage "https://philoni.github.io/hoku/"
@@ -15,7 +14,7 @@ cask "hoku" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Hoku.app"
 
