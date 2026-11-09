@@ -32,6 +32,10 @@ struct HomeView: View {
                 DeviceIssueChip(issues: issues) { push(.devices) }
                     .transition(.blurReplace)
             }
+            ForEach(store.streamingAreas) { area in
+                SyncChip(area: area)
+                    .transition(.blurReplace)
+            }
             // Only a habit Hoku has actually learned, and only while the light differs.
             if let suggestion, suggestion.isLearned {
                 SuggestionChip(scene: suggestion.scene, group: suggestion.group, isLearned: true)
@@ -82,6 +86,7 @@ struct HomeView: View {
                 }
             }
         }
+        .animation(Theme.spring, value: store.streamingAreas)
         .keyboardNavigation(
             count: items.count,
             selection: $selection,

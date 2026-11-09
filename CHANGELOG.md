@@ -16,6 +16,8 @@ Versions `0.9.x` are public betas.
 - Connect with an existing application key instead of the link button, see the connection details and set
   the bridge address by hand (Settings → Bridge → Connection Details).
 - Pin rooms and zones to the top and arrange them in your own order (Settings → Arrange Rooms).
+- Sync detection: while Hue Sync or another sync app controls an entertainment area, Hoku says so on the
+  home page and offers to stop it.
 
 ### Planned
 - In-app updates via Sparkle (EdDSA-signed).

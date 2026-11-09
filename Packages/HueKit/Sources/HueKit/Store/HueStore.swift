@@ -44,6 +44,7 @@ public final class HueStore {
     public private(set) var devicePower: [String: DevicePower] = [:]
     public private(set) var connectivity: [String: ZigbeeConnectivity] = [:]
     public private(set) var softwareUpdates: [String: DeviceSoftwareUpdate] = [:]
+    public private(set) var entertainmentAreas: [String: EntertainmentArea] = [:]
     /// Running sleep timers, keyed by room/zone ID.
     public internal(set) var fadeOuts: [String: FadeOut] = [:]
 
@@ -256,6 +257,7 @@ public final class HueStore {
         replace(\.devicePower, with: decoded("device_power", as: DevicePower.self))
         replace(\.connectivity, with: decoded("zigbee_connectivity", as: ZigbeeConnectivity.self))
         replace(\.softwareUpdates, with: decoded("device_software_update", as: DeviceSoftwareUpdate.self))
+        replace(\.entertainmentAreas, with: decoded("entertainment_configuration", as: EntertainmentArea.self))
     }
 
     func rebuild(_ id: String, type: String?) {
@@ -274,6 +276,7 @@ public final class HueStore {
         case "device_power": assign(\.devicePower, id, value)
         case "zigbee_connectivity": assign(\.connectivity, id, value)
         case "device_software_update": assign(\.softwareUpdates, id, value)
+        case "entertainment_configuration": assign(\.entertainmentAreas, id, value)
         default: break
         }
     }
@@ -352,6 +355,17 @@ public final class HueStore {
 
     public func zones(in room: HueGroup) -> [HueGroup] {
         sortedZones.filter { parentRoom(of: $0)?.id == room.id }
+    }
+
+    /// Areas a sync app is streaming to right now.
+    public var streamingAreas: [EntertainmentArea] {
+        entertainmentAreas.values.filter(\.isStreaming)
+            .sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+    }
+
+    /// Ends the stream, which hands the lights back to normal control.
+    public func stopStreaming(_ area: EntertainmentArea) {
+        write(type: "entertainment_configuration", id: area.id, body: ["action": "stop"], localPatch: ["status": "inactive"])
     }
 
     public func activeScene(in group: HueGroup) -> HueScene? {

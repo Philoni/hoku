@@ -1195,6 +1195,16 @@
         }
       }
     },
+    "Beendet die Synchronisierung. Danach steuerst du die Lampen wieder wie gewohnt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ends the sync. After that you control the lights as usual."
+          }
+        }
+      }
+    },
     "Bei Hue anmelden": {
       "localizations": {
         "en": {
@@ -1787,6 +1797,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "A few short steps, then you control your lights from up here."
+          }
+        }
+      }
+    },
+    "Eine Sync-App (z. B. Hue Sync) steuert gerade die Lampen in „%@“. Solange reagieren sie nicht auf Hoku.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A sync app (such as Hue Sync) is controlling the lights in “%@” right now. Until it stops, they won’t respond to Hoku."
           }
         }
       }
@@ -4095,6 +4115,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sync active"
+          }
+        }
+      }
+    },
+    "Sync beenden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop Sync"
+          }
+        }
+      }
+    },
+    "Sync läuft": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sync is running"
           }
         }
       }

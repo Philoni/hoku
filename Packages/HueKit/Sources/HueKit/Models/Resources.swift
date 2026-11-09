@@ -465,3 +465,20 @@ public struct DeviceSoftwareUpdate: Codable, Hashable, Sendable, Identifiable {
 
     public var hasUpdate: Bool { state != nil && state != "no_update" }
 }
+
+/// An entertainment area. While it is active, a sync app (Hue Sync, a sync box, a game)
+/// streams to its lights many times a second and overrides what anyone else sends them.
+public struct EntertainmentArea: Codable, Hashable, Sendable, Identifiable {
+    public var id: String
+    public var metadata: Metadata?
+    public var status: String?
+
+    public init(id: String, name: String, status: String) {
+        self.id = id
+        self.metadata = Metadata(name: name)
+        self.status = status
+    }
+
+    public var name: String { metadata?.name ?? String(localized: "Entertainment-Bereich", bundle: .hueKit) }
+    public var isStreaming: Bool { status == "active" }
+}

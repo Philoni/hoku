@@ -369,3 +369,26 @@ private final class Flag: @unchecked Sendable {
         #expect(try JSONDecoder().decode(GroupOrder.self, from: JSONEncoder().encode(order)) == order)
     }
 }
+
+@Suite @MainActor struct EntertainmentAreaTests {
+    private func area(status: String) -> JSONValue {
+        ["id": "area-1", "type": "entertainment_configuration", "metadata": ["name": "Musik"], "status": .string(status)]
+    }
+
+    @Test func showsAnAreaOnlyWhileItStreams() {
+        let store = HueStore()
+        store.load([area(status: "inactive")])
+        #expect(store.streamingAreas.isEmpty)
+        store.apply([HueEvent(type: .update, data: [["id": "area-1", "type": "entertainment_configuration", "status": "active"]])])
+        #expect(store.streamingAreas.map(\.name) == ["Musik"])
+        store.apply([HueEvent(type: .update, data: [["id": "area-1", "type": "entertainment_configuration", "status": "inactive"]])])
+        #expect(store.streamingAreas.isEmpty)
+    }
+
+    @Test func stoppingHidesItRightAway() {
+        let store = HueStore()
+        store.load([area(status: "active")])
+        store.stopStreaming(store.streamingAreas[0])
+        #expect(store.streamingAreas.isEmpty)
+    }
+}
