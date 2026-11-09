@@ -31,6 +31,6 @@ struct SyncChip: View {
         .background(Capsule().fill(Theme.tile))
         .overlay(Capsule().strokeBorder(Theme.tileStroke, lineWidth: 1))
         .help("Eine Sync-App (z. B. Hue Sync) steuert gerade die Lampen in „\(area.name)“. Solange reagieren sie nicht auf Hoku.")
-        .accessibilityElement(children: .combine)
+        .accessibilityElement(children: .contain)
     }
 }

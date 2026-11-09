@@ -134,14 +134,7 @@ struct SliderCard<Label: View>: View {
         .accessibilityLabel(accessibilityName)
         .accessibilityValue(accessibilityState)
         .accessibilityAddTraits(.isButton)
-        .accessibilityAdjustableAction { direction in
-            guard isDimmable, let onAdjust else { return }
-            switch direction {
-            case .increment: onAdjust(10)
-            case .decrement: onAdjust(-10)
-            @unknown default: break
-            }
-        }
+        .modifier(AdjustableBrightness(onAdjust: isDimmable ? onAdjust : nil))
         .accessibilityAction {
             if let onOpen { onOpen() } else { onToggle() }
         }
@@ -220,6 +213,26 @@ struct CardLabel: View {
                 .transition(.opacity)
                 .contentTransition(.numericText())
             }
+        }
+    }
+}
+
+/// Only dimmable cards announce themselves as adjustable; a plug would promise
+/// VoiceOver a slider that does nothing.
+private struct AdjustableBrightness: ViewModifier {
+    let onAdjust: ((Double) -> Void)?
+
+    func body(content: Content) -> some View {
+        if let onAdjust {
+            content.accessibilityAdjustableAction { direction in
+                switch direction {
+                case .increment: onAdjust(10)
+                case .decrement: onAdjust(-10)
+                @unknown default: break
+                }
+            }
+        } else {
+            content
         }
     }
 }
