@@ -31,7 +31,21 @@ title_en: Gestures & keyboard
 | **esc** | Eine Seite zurück, auf der Startseite: schließen |
 | **⌘ ,** | Einstellungen |
 
-**Kürzel ändern:** Einstellungen → **Hoku öffnen** → auf das Kürzel klicken → neue Kombination drücken (mit ⌘, ⌥ oder ⌃). **esc** bricht ab.
+**Kürzel ändern:** Einstellungen → **Tastenkürzel** → bei **Hoku öffnen** auf **Festlegen** klicken → neue Kombination drücken (mit ⌘, ⌥ oder ⌃). **esc** bricht ab.
+
+### Tastenkürzel fürs Licht
+*Ab 0.9.1.* Du kannst Licht auch per Tastenkombination schalten, ohne Hoku zu öffnen. Die Kürzel gelten überall am Mac, auch wenn das Hoku-Fenster geschlossen ist.
+
+- **Raum oder Zone:** schaltet sie an oder aus.
+- **Alles aus:** schaltet alle Lichter aus.
+- **Szene:** startet eine Szene. Klick auf **Szene hinzufügen**, wähl den Raum, dann die Szene, und drück die Tasten.
+
+**So legst du eins fest:** Einstellungen → **Tastenkürzel** → bei der Zeile auf **Festlegen** klicken → Kombination drücken. Sie braucht mindestens eine der Tasten ⌘, ⌥ oder ⌃. **esc** bricht ab, **⌫** entfernt ein Kürzel.
+
+Eine kleine Kapsel unter dem Menüleisten-Symbol zeigt dir, was passiert ist, z. B. „Wohnzimmer · An“. Steht neben einem Kürzel **belegt**, nutzt eine andere App diese Kombination schon. Wähl dann eine andere.
+
+### Räume ordnen
+Einstellungen → **Räume ordnen** (ebenfalls ab 0.9.1): Heft Räume und Zonen oben an und schieb sie nach oben oder unten. **Nach Name sortieren** setzt die Reihenfolge zurück. Sie gilt überall in Hoku.
 
 > **Hat nicht geklappt?**
 > → [Zwei-Finger-Klick klappt nichts auf](fehlerbehebung.md#secondary-click) · [⌃⌥L tut nichts](fehlerbehebung.md#hotkey) · [Symbol fehlt in der Menüleiste](fehlerbehebung.md#menu-bar-icon)
@@ -66,7 +80,21 @@ title_en: Gestures & keyboard
 | **esc** | Go back one page; on the start page: close |
 | **⌘ ,** | Settings |
 
-**Change the shortcut:** Settings → **Open Hoku** → click the shortcut → press the new combination (with ⌘, ⌥ or ⌃). **esc** cancels.
+**Change the shortcut:** Settings → **Keyboard Shortcuts** → click **Set** next to **Open Hoku** → press the new combination (with ⌘, ⌥ or ⌃). **esc** cancels.
+
+### Keyboard shortcuts for your lights
+*From 0.9.1.* You can also switch lights with a key combination, without opening Hoku. The shortcuts work everywhere on your Mac, even while Hoku’s panel is closed.
+
+- **Room or zone:** toggles it on or off.
+- **All off:** turns all lights off.
+- **Scene:** starts a scene. Click **Add scene**, pick the room, then the scene, and press the keys.
+
+**To set one:** Settings → **Keyboard Shortcuts** → click **Set** on its row → press the combination. It needs at least one of ⌘, ⌥ or ⌃. **esc** cancels, **⌫** removes a shortcut.
+
+A small capsule under the menu bar icon confirms what happened, e.g. “Living Room · On”. If **in use** appears next to a shortcut, another app already uses that combination. Pick a different one.
+
+### Arrange rooms
+Settings → **Arrange Rooms** (also from 0.9.1): pin rooms and zones to the top and move them up or down. **Sort by Name** resets the order. It applies everywhere in Hoku.
 
 > **Didn’t work?**
 > → [Two-finger click doesn’t unfold anything](fehlerbehebung.md#secondary-click) · [⌃⌥L does nothing](fehlerbehebung.md#hotkey) · [No icon in the menu bar](fehlerbehebung.md#menu-bar-icon)

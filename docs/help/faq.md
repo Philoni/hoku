@@ -51,7 +51,16 @@ Jeder Mac koppelt sich einmal selbst mit der Link-Taste, die Bridge erlaubt viel
 Noch nicht. Hoku steuert im Moment eine Bridge. Mehrere sind geplant.
 
 **Welche Sprachen?**
-Derzeit Deutsch; Englisch folgt. Siri-Befehle richten sich dann nach der Sprache von Siri.
+Deutsch und Englisch (ab 0.9.1). App, Hinweise, Einrichtungs-Assistent und Siri-Befehle folgen der Systemsprache. Persönliche Siri-Befehle legt Hoku in der Sprache der App an („Wohnzimmer an“ bzw. „Living room on“). Früher angelegte Befehle funktionieren weiter. Gesprochen wird in der Sprache von Siri.
+
+**Kann ich Licht per Tastenkürzel schalten?**
+Ja (ab 0.9.1). Unter Einstellungen → **Tastenkürzel** gibst du jedem Raum und jeder Zone ein Kürzel, dazu eins für **Alles aus** und für Szenen (**Szene hinzufügen**). Sie gelten überall am Mac, auch bei geschlossenem Hoku. → [Gesten & Tastatur](gesten-und-tastatur.md)
+
+**Kann ich die Reihenfolge der Räume ändern?**
+Ja. Einstellungen → **Räume ordnen**: oben anheften, nach oben oder unten schieben, **Nach Name sortieren** setzt zurück. → [Gesten & Tastatur](gesten-und-tastatur.md)
+
+**Kann ich Hoku mit einem vorhandenen Hue-Schlüssel verbinden?**
+Ja, für Fortgeschrittene (ab 0.9.1). Gib im Einrichtungs-Assistenten die IP-Adresse der Bridge von Hand ein und wähl **Ich habe schon einen Schlüssel**. Dann braucht es keine Link-Taste, und der Schlüssel bleibt nur auf diesem Mac. Einstellungen → **Bridge** → **Verbindungsdetails** zeigen Adresse, Bridge-ID und wie die Verbindung gesichert ist. → [Installieren](installieren.md#advanced-connection)
 
 **Was ist mit meinen Daten?**
 Alles bleibt auf deinem Mac und in deinem Netzwerk, bis auf drei klar benannte Ausnahmen. → [Datenschutz](datenschutz.md)
@@ -115,7 +124,16 @@ Each Mac pairs once with the link button, and the bridge allows many devices. Yo
 Not yet. Hoku controls one bridge for now. Support for more is planned.
 
 **Which languages?**
-German and English. Siri commands follow Siri’s language.
+German and English (from 0.9.1). The app, notifications, setup assistant and Siri commands follow the system language. Hoku creates personal Siri commands in the app’s language (“Wohnzimmer an” / “Living room on”). Commands created earlier keep working. You speak them in Siri’s language.
+
+**Can I switch lights with keyboard shortcuts?**
+Yes (from 0.9.1). In Settings → **Keyboard Shortcuts** you can give any room or zone a shortcut, plus one for **All off** and for scenes (**Add scene**). They work everywhere on your Mac, even while Hoku is closed. → [Gestures & keyboard](gesten-und-tastatur.md)
+
+**Can I change the order of my rooms?**
+Yes. Settings → **Arrange Rooms**: pin to the top, move up or down, **Sort by Name** resets. → [Gestures & keyboard](gesten-und-tastatur.md)
+
+**Can I connect Hoku with an existing Hue key?**
+Yes, for advanced users (from 0.9.1). In the setup assistant, enter the bridge’s IP address by hand and choose **I already have a key**. No link button needed, and the key stays on this Mac only. Settings → **Bridge** → **Connection Details** show the address, bridge ID and how the connection is secured. → [Install](installieren.md#advanced-connection-en)
 
 **What about my data?**
 Everything stays on your Mac and your network, with three clearly named exceptions. → [Privacy](datenschutz.md)

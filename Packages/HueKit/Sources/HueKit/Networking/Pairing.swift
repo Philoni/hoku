@@ -39,11 +39,11 @@ extension HueClient {
 /// An application key the user already has, for example from another tool or an earlier setup.
 public enum ApplicationKey {
     /// The key without surrounding whitespace, or `nil` if it cannot be one: bridges
-    /// issue 20 to 64 letters, digits and hyphens.
+    /// issue 20 to 64 printable characters without spaces.
     public static func normalized(_ text: String) -> String? {
         let key = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard (20...64).contains(key.count),
-              key.allSatisfy({ $0.isASCII && ($0.isLetter || $0.isNumber || $0 == "-") })
+              key.unicodeScalars.allSatisfy({ $0.isASCII && $0.value > 0x20 && $0.value < 0x7F })
         else { return nil }
         return key
     }
@@ -54,7 +54,7 @@ extension HueClient {
     public func connect(to bridge: DiscoveredBridge, applicationKey: String) async throws -> BridgeCredentials {
         let credentials = BridgeCredentials(bridgeID: bridge.id, host: bridge.host, applicationKey: applicationKey, name: bridge.name)
         do {
-            _ = try await resource(credentials, type: "bridge", id: "")
+            _ = try await resources(credentials, ofType: "bridge")
         } catch HueError.unauthorized {
             throw HueError.bridge(String(localized: "Die Bridge kennt diesen Schlüssel nicht.", bundle: .hueKit))
         }

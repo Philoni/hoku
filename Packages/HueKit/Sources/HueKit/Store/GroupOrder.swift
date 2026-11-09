@@ -26,7 +26,12 @@ public struct GroupOrder: Codable, Equatable, Sendable {
     }
 
     public mutating func togglePin(_ id: String) {
-        if pinned.remove(id) == nil { pinned.insert(id) }
+        if pinned.remove(id) == nil {
+            pinned.insert(id)
+        } else {
+            // Its place in the sequence was a place among the pinned ones.
+            sequence.removeAll { $0 == id }
+        }
     }
 
     /// Moves a group one place up or down among the groups shown with it. Pinned and

@@ -123,8 +123,8 @@ enum SiriCommands {
             "WFWorkflowClientVersion": "4711.1.1",
             "WFWorkflowHasOutputFallback": false,
             "WFWorkflowIcon": [
-                "WFWorkflowIconStartColor": command.name.hasSuffix(" aus") ? 255 : 4_282_601_983,
-                "WFWorkflowIconGlyphNumber": command.name.hasSuffix(" aus") ? 59446 : 59511,
+                "WFWorkflowIconStartColor": command.switchesOff ? 255 : 4_282_601_983,
+                "WFWorkflowIconGlyphNumber": command.switchesOff ? 59446 : 59511,
             ],
             "WFWorkflowImportQuestions": [Any](),
             "WFWorkflowTypes": ["WFWorkflowTypeShowInSearch"],
@@ -216,5 +216,15 @@ enum SiriCommands {
             )
         }
         return text
+    }
+}
+
+private extension SiriCommand {
+    var switchesOff: Bool {
+        switch action {
+        case let .roomPower(_, _, _, on), let .lightPower(_, _, _, on): !on
+        case .allOff: true
+        case .scene: false
+        }
     }
 }

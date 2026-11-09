@@ -76,7 +76,7 @@ final class AppModel {
         var order = store.groupOrder
         change(&order)
         store.groupOrder = order
-        Preferences.save(order, as: "groupOrder")
+        if !Snapshot.isDemo { Preferences.save(order, as: "groupOrder") }
     }
 
     /// What the user turns on when; makes suggestions personal.
@@ -209,6 +209,8 @@ final class AppModel {
             guard bridge.id == credentials.bridgeID.lowercased() else {
                 return String(localized: "Unter dieser Adresse antwortet eine andere Bridge.")
             }
+            // The bridge may have been disconnected while the address was being checked.
+            guard store.credentials?.bridgeID == credentials.bridgeID else { return nil }
             var updated = credentials
             updated.host = host
             try CredentialStore.save(updated)
@@ -254,6 +256,7 @@ final class AppModel {
     /// Removes the stored key. The bridge keeps its whitelist entry; it can be
     /// removed in the Hue app under Settings → Apps.
     func forgetBridge() {
+        manualKey = ""
         store.forget()
         CredentialStore.delete()
         discovered = []

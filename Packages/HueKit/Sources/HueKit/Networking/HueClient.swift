@@ -126,6 +126,10 @@ public final class HueClient: Sendable {
         try await resources(credentials, path: "/clip/v2/resource")
     }
 
+    func resources(_ credentials: BridgeCredentials, ofType type: String) async throws -> [JSONValue] {
+        try await resources(credentials, path: "/clip/v2/resource/\(type)")
+    }
+
     public func resource(_ credentials: BridgeCredentials, type: String, id: String) async throws -> JSONValue? {
         try await resources(credentials, path: "/clip/v2/resource/\(type)/\(id)").first
     }

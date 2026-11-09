@@ -33,7 +33,7 @@ Der Einrichtungs-Assistent fragt das beim ersten Start ab. Hier geht es um den W
 - **Auf jedem Mac:** Deine Kurzbefehle kommen per iCloud auch auf deine anderen Macs. Dort brauchen sie nur Hoku.
 - **Als Knopf:** Jeder Befehl lässt sich ins Kontrollzentrum legen: Kontrollzentrum öffnen → **Steuerelemente bearbeiten** → Kurzbefehle.
 - **Löschen** geht nur in der Kurzbefehle-App (Rechtsklick auf den Befehl → Löschen). Apple erlaubt Apps nicht, Kurzbefehle zu löschen.
-- **Sprache:** Die Befehle richten sich nach Siris Sprache (Systemeinstellungen → **Apple Intelligence & Siri** → **Sprache**), nicht nach der Sprache von Hoku.
+- **Sprache:** Hoku legt persönliche Befehle in der Sprache der App an („Wohnzimmer an“ bzw. „Living room on“, ab 0.9.1). Früher angelegte Befehle funktionieren weiter. Sprich sie in der Sprache von Siri (Systemeinstellungen → **Apple Intelligence & Siri** → **Sprache**): Die Sprache des Befehls muss zu Siri passen.
 
 <a id="without-icloud"></a>
 ### Ohne iCloud
@@ -82,7 +82,7 @@ The setup assistant asks this on first launch. This page covers the way through 
 - **On every Mac:** Your shortcuts sync to your other Macs via iCloud. All they need there is Hoku.
 - **As a button:** Put any command in Control Center: open Control Center → **Edit Controls** → Shortcuts.
 - **Delete** commands in the Shortcuts app (right-click → Delete). Apple doesn’t let apps delete shortcuts.
-- **Language:** Commands follow Siri’s language (System Settings → **Apple Intelligence & Siri** → **Language**), not Hoku’s.
+- **Language:** Hoku creates personal commands in the app’s language (“Wohnzimmer an” / “Living room on”, from 0.9.1). Commands created earlier keep working. Say them in Siri’s language (System Settings → **Apple Intelligence & Siri** → **Language**): the command’s language has to match Siri.
 
 <a id="without-icloud-en"></a>
 ### Without iCloud

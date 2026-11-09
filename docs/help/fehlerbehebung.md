@@ -34,6 +34,11 @@ Hoku zeigt „Der Zugriff aufs lokale Netzwerk ist aus“ oder „Bridge gerade 
 2. Ist dein Mac im WLAN deines Routers, nicht im Gast-WLAN? Schalte ein VPN kurz aus.
 3. Klick in Hoku auf **Erneut suchen**.
 4. Oder gib die IP-Adresse von Hand ein. Du findest sie in der Hue-App unter **Einstellungen → Hue Bridges → ⓘ**. In Hoku: **IP-Adresse eingeben** → **Prüfen**.
+5. Für Fortgeschrittene: Hast du schon einen Hue-Schlüssel, klick nach der Adresse auf **Ich habe schon einen Schlüssel** und füg ihn ein. Dann braucht es keine Link-Taste. → [Installieren](installieren.md#advanced-connection)
+
+<a id="connection-details"></a>
+## Hoku zeigt die falsche Adresse für die Bridge
+Normalerweise findet Hoku die Bridge von selbst wieder. Wenn nicht, schau nach: Einstellungen → **Bridge** → **Verbindungsdetails** zeigen Status, Adresse und Bridge-ID. Mit **Adresse von Hand** trägst du die IP selbst ein. Hoku übernimmt sie nur, wenn unter dieser Adresse dieselbe Bridge antwortet. Sonst übernimmt Hoku sie nicht. (ab 0.9.1)
 
 <a id="pairing-timeout"></a>
 ## Die Zeit beim Koppeln ist abgelaufen
@@ -52,7 +57,7 @@ Hoku zeigt „Der Zugriff aufs lokale Netzwerk ist aus“ oder „Bridge gerade 
 **Warum:** Siri hat keinen Kurzbefehl mit genau diesem Namen gefunden und den Satz an Apple Home weitergereicht. Ohne Apple Home klappt das am Mac nicht.
 1. Öffne die Kurzbefehle-App und such den Befehl, z. B. „Wohnzimmer an“. Fehlt er? Dann wurde **Kurzbefehl hinzufügen** übersprungen. Richte ihn in Hoku noch einmal ein: Einstellungen → **Siri-Befehle einrichten**.
 2. Sag den Namen **genau so**, wie er in der Kurzbefehle-App steht. Siri schreibt manche Namen anders („Light Strip“ statt „Lightstrip“). Wähl dafür in Hoku die Varianten mit ✦.
-3. Prüf die Sprache: Befehle auf Deutsch brauchen Siri auf Deutsch (Systemeinstellungen → **Apple Intelligence & Siri** → **Sprache**).
+3. Prüf die Sprache: Die Sprache des Befehls muss zur Sprache von Siri passen, deutsche Befehle brauchen Siri auf Deutsch, englische Siri auf Englisch (Systemeinstellungen → **Apple Intelligence & Siri** → **Sprache**).
 4. Ist deine Bridge in Apple Home, übernimmt Siri „Raum an/aus“ selbst. Das ist so gewollt.
 
 <a id="siri-icloud"></a>
@@ -98,7 +103,8 @@ Tipp: Hue-Lampen am besten immer am Strom lassen und mit Hoku oder einem Hue-Sch
 <a id="hotkey"></a>
 ## ⌃⌥L tut nichts
 **Warum:** Eine andere App benutzt dieselbe Tastenkombination.
-1. Öffne in Hoku die Einstellungen → **Hoku öffnen** → klick auf das Kürzel und drück eine neue Kombination (mit ⌘, ⌥ oder ⌃).
+1. Öffne in Hoku die Einstellungen → **Tastenkürzel** → klick bei **Hoku öffnen** auf **Festlegen** und drück eine neue Kombination (mit ⌘, ⌥ oder ⌃).
+2. Steht dort **belegt**, nutzt eine andere App die Kombination schon. Das gilt auch für deine Kürzel fürs Licht.
 
 > **Hat nicht geklappt?** → [Häufige Fragen](faq.md) · Oder schreib uns auf [GitHub](https://github.com/Philoni/hoku/issues/new): macOS-Version, Hoku-Version (Finder → Programme → Hoku → ⌘I), Bridge-Modell und was du gemacht hast. Bitte keine IP-Adressen oder Schlüssel posten.
 
@@ -133,6 +139,11 @@ Tipp: Hue-Lampen am besten immer am Strom lassen und mit Hoku oder einem Hue-Sch
 2. Is your Mac on your router’s Wi-Fi, not the guest network? Turn off any VPN for a moment.
 3. Click **Search Again** in Hoku.
 4. Or enter the IP address yourself. You’ll find it in the Hue app under **Settings → Hue Bridges → ⓘ**. In Hoku: **Enter IP address** → **Check**.
+5. For advanced users: if you already have a Hue key, click **I already have a key** after the address and paste it. No link button needed. → [Install](installieren.md#advanced-connection-en)
+
+<a id="connection-details-en"></a>
+## Hoku shows the wrong address for the bridge
+Normally Hoku finds the bridge again on its own. If not, take a look: Settings → **Bridge** → **Connection Details** show status, address and bridge ID. **Manual Address** lets you enter the IP yourself. Hoku only accepts it if the same bridge answers at that address. Otherwise Hoku doesn’t take it. (from 0.9.1)
 
 <a id="pairing-timeout-en"></a>
 ## Pairing timed out
@@ -151,7 +162,7 @@ Tipp: Hue-Lampen am besten immer am Strom lassen und mit Hoku oder einem Hue-Sch
 **Why:** Siri found no shortcut with exactly that name and handed the sentence to Apple Home. Without Apple Home that fails on a Mac.
 1. Open the Shortcuts app and look for the command, e.g. “Living Room on”. Missing? Then **Add Shortcut** was skipped. Set it up again in Hoku: Settings → **Set Up Siri Commands**.
 2. Say the name **exactly** as it appears in the Shortcuts app. Siri spells some names differently (“Light Strip” vs. “Lightstrip”), so pick the ✦ variants in Hoku.
-3. Check the language: English commands need Siri in English (System Settings → **Apple Intelligence & Siri** → **Language**).
+3. Check the language: the command’s language must match Siri’s language. German commands need Siri in German, English commands Siri in English (System Settings → **Apple Intelligence & Siri** → **Language**).
 4. If your bridge is in Apple Home, Siri handles “room on/off” itself. That’s intended.
 
 <a id="siri-icloud-en"></a>
@@ -197,6 +208,7 @@ Tip: Keep Hue lamps powered and switch them with Hoku or a Hue switch.
 <a id="hotkey-en"></a>
 ## ⌃⌥L does nothing
 **Why:** Another app uses the same key combination.
-1. In Hoku, open Settings → **Open Hoku** → click the shortcut and press a new combination (with ⌘, ⌥ or ⌃).
+1. In Hoku, open Settings → **Keyboard Shortcuts** → click **Set** next to **Open Hoku** and press a new combination (with ⌘, ⌥ or ⌃).
+2. If it says **in use**, another app already uses that combination. This goes for your light shortcuts, too.
 
 > **Didn’t work?** → [FAQ](faq.md) · Or tell us on [GitHub](https://github.com/Philoni/hoku/issues/new): your macOS version, Hoku version (Finder → Applications → Hoku → ⌘I), bridge model and what you did. Please don’t post IP addresses or keys.

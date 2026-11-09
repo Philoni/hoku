@@ -397,6 +397,8 @@ import Testing
         #expect(ApplicationKey.normalized("zu kurz") == nil)
         #expect(ApplicationKey.normalized(String(repeating: "a", count: 65)) == nil)
         #expect(ApplicationKey.normalized(String(repeating: "ä", count: 30)) == nil)
+        #expect(ApplicationKey.normalized(String(repeating: "a", count: 20) + "\tb") == nil)
+        #expect(ApplicationKey.normalized(String(repeating: "a_", count: 12)) != nil)
         #expect(ApplicationKey.normalized(String(repeating: "a", count: 20) + " b") == nil)
     }
 }
