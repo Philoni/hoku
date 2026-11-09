@@ -12,7 +12,7 @@ Versions `0.9.x` are public betas.
 - English localization of the app and of the generated Siri commands.
 - In-app updates via Sparkle (EdDSA-signed).
 
-## [0.9.0] - unreleased
+## [0.9.0] - 2026-11-09
 
 First public beta.
 
